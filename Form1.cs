@@ -16,5 +16,11 @@ namespace _2025_CS_Project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+            Product p_form = new Product();
+            p_form.ShowDialog();  // 모달 창
+        }
     }
 }

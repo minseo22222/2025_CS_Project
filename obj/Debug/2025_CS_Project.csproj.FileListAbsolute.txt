@@ -1,0 +1,14 @@
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\bin\Debug\2025_CS_Project.exe.config
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\bin\Debug\2025_CS_Project.exe
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\bin\Debug\2025_CS_Project.pdb
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.csproj.AssemblyReference.cache
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\_2025_CS_Project.Form1.resources
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\_2025_CS_Project.Product.resources
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\_2025_CS_Project.Properties.Resources.resources
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.csproj.GenerateResource.cache
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.csproj.CoreCompileInputs.cache
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.exe
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.pdb
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_Project.exe.config
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\bin\Debug\Oracle.DataAccess.dll
+C:\Users\박은서\Desktop\CSProject\2025_CS_Project\2025_CS_Project\obj\Debug\2025_CS_.FEBF1F47.Up2Date
