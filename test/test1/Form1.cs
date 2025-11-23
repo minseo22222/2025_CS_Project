@@ -24,7 +24,7 @@ namespace test1
             InitializeComponent();
             tradePage = new TradePage();
 
-            // ② 再加到 panelMain 里
+            
             tradePage.Dock = DockStyle.Fill;
             panelMain.Controls.Add(tradePage);
         }

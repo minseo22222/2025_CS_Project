@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\1Learning\\c#\\test\\test\\",
+  "WorkspaceRootPath": "F:\\1Learning\\test\\2025_CS_Project\\test\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|f:\\1learning\\test\\2025_cs_project\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|f:\\1learning\\c#\\test\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +50,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Program.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Program.cs",
               "RelativeDocumentMoniker": "test1\\Program.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Program.cs",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Program.cs",
               "RelativeToolTip": "test1\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,11 +63,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TradePage.Designer.cs",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.Designer.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.Designer.cs",
               "RelativeDocumentMoniker": "test1\\TradePage.Designer.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.Designer.cs",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.Designer.cs",
               "RelativeToolTip": "test1\\TradePage.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -76,24 +76,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "TradePage.cs",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.cs",
               "RelativeDocumentMoniker": "test1\\TradePage.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.cs",
               "RelativeToolTip": "test1\\TradePage.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBMAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAmwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T09:49:42.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "TradePage.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.cs",
               "RelativeDocumentMoniker": "test1\\TradePage.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs [\uB514\uC790\uC778]",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\TradePage.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "test1\\TradePage.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T09:48:56.86Z",
@@ -103,11 +103,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Form1.cs",
               "RelativeDocumentMoniker": "test1\\Form1.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Form1.cs",
               "RelativeToolTip": "test1\\Form1.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAABwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T10:09:42.596Z",
               "EditorCaption": ""
@@ -116,9 +116,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "DocumentMoniker": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Form1.cs",
               "RelativeDocumentMoniker": "test1\\Form1.cs",
-              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs [\uB514\uC790\uC778]",
+              "ToolTip": "F:\\1Learning\\test\\2025_CS_Project\\test\\test1\\Form1.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "test1\\Form1.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T09:47:24.839Z",
