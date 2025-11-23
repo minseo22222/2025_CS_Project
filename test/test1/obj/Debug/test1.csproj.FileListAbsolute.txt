@@ -1,0 +1,12 @@
+F:\1Learning\c#\test\test\test1\bin\Debug\test1.exe.config
+F:\1Learning\c#\test\test\test1\bin\Debug\test1.exe
+F:\1Learning\c#\test\test\test1\bin\Debug\test1.pdb
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.csproj.AssemblyReference.cache
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.Form1.resources
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.Properties.Resources.resources
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.TradePage.resources
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.csproj.GenerateResource.cache
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.csproj.CoreCompileInputs.cache
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.exe
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.pdb
+F:\1Learning\c#\test\test\test1\obj\Debug\test1.exe.config

@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\1Learning\\c#\\test\\test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|f:\\1learning\\c#\\test\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|F:\\1Learning\\c#\\test\\test\\test1\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6AB9826-6F0E-4605-9E6E-B261EA3857A7}|test1\\test1.csproj|solutionrelative:test1\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Program.cs",
+              "RelativeDocumentMoniker": "test1\\Program.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Program.cs",
+              "RelativeToolTip": "test1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T12:36:56.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TradePage.Designer.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.Designer.cs",
+              "RelativeDocumentMoniker": "test1\\TradePage.Designer.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.Designer.cs",
+              "RelativeToolTip": "test1\\TradePage.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:15:46.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TradePage.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "RelativeDocumentMoniker": "test1\\TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "RelativeToolTip": "test1\\TradePage.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T09:49:42.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TradePage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs",
+              "RelativeDocumentMoniker": "test1\\TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\TradePage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "test1\\TradePage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T09:48:56.86Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "RelativeDocumentMoniker": "test1\\Form1.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "RelativeToolTip": "test1\\Form1.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA0wBwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T10:09:42.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs",
+              "RelativeDocumentMoniker": "test1\\Form1.cs",
+              "ToolTip": "F:\\1Learning\\c#\\test\\test\\test1\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "test1\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T09:47:24.839Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
