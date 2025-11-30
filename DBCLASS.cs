@@ -11,6 +11,8 @@ namespace _2025_CS_Project
 {
     public class DBCLASS //DBClass 정의 시작
     {
+        string id = "park"; 
+        string pw=  "tiger"; 
         private int selectedRowIndex;//수정하거나 삭제하기 위해 선택된 행의 인덱스를 저장한다.
         private int selectedKeyValue; // 수정, 삭제할 때 필요한 레코드의 키값을 보관할 필드
         OracleDataAdapter dBAdapter; // Data Provider인 DBAdapter 입니다.
@@ -27,7 +29,7 @@ namespace _2025_CS_Project
             set { myCommandBuilder = value; }
         }
         public DataTable PhoneTable { get { return MyTable; } set { MyTable = value; } }
-        public void DB_Open(string id,string pw,string cmd)
+        public void DB_Open(string cmd)
         {
             try
             {

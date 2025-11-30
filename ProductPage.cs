@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Runtime.CompilerServices.RuntimeHelpers;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _2025_CS_Project
 {
     public partial class ProductPage : UserControl
     {
         DBCLASS db = new DBCLASS();
+        DataTable table;
         public ProductPage()
         {
             InitializeComponent();
             ProductType.SelectedIndex = 0;
             db.DB_ObjCreate();
-            db.DB_Open("HONG1", "1111", "SELECT * FROM product");
+            db.DB_Open("SELECT * FROM product");
+            
         }
         void ShowTable()
         {
@@ -28,8 +31,7 @@ namespace _2025_CS_Project
             {
                 db.DS.Clear();
                 db.DBAdapter.Fill(db.DS, "product");
-
-                var table = new DataTable();
+                table = new DataTable();
                 
                 table.Columns.Add("상품코드", typeof(int));
                 table.Columns.Add("상품명", typeof(string));
@@ -127,37 +129,46 @@ namespace _2025_CS_Project
         {
             try
             {
-                if(!isDBLoaded())
+                if (!isDBLoaded())
+                    return;
+
+                if (DBGrid.CurrentRow == null)
                 {
+                    MessageBox.Show("수정할 행을 선택하세요.");
                     return;
                 }
 
-                if (rowIndex == null)
+                //  DataGridView에서 "상품코드(PK)" 값 가져오기
+                int productID = Convert.ToInt32(
+                    DBGrid.CurrentRow.Cells["상품코드"].Value
+                );
+
+                // 원본 DataTable에서 PK로 정확한 Row 찾기
+                DataTable table = db.DS.Tables["Product"];
+                table.PrimaryKey = new DataColumn[] { table.Columns["ProductID"] };
+
+                DataRow pRow = table.Rows.Find(productID);
+
+                if (pRow == null)
                 {
-                    rowIndex = db.SelectedRowIndex;
-                    if(rowIndex == -1)
-                    {
-                        MessageBox.Show("수정할 행을 선택하세요.");
-                        return;
-                    }
+                    MessageBox.Show("원본 데이터를 찾을 수 없습니다.");
+                    return;
                 }
-                    
-                DataRow pRow = db.DS.Tables["Product"].Rows[rowIndex.Value];
+
                 /***입력값이 숫자인지 판별***/
                 if (!isNum(txtProductNum.Text, "상품번호를 숫자로 입력하세요."))
-                {
                     return;
-                }
                 if (!isNum(txtPrice.Text, "가격을 숫자로 입력하세요."))
-                {
                     return;
-                }
+
+                // 안전하게 실제 DB Row 수정
                 pRow["ProductName"] = txtProductName.Text;
                 pRow["UnitPrice"] = Convert.ToInt32(txtPrice.Text);
                 if (ProductType.SelectedIndex == 0)
                     pRow["category"] = "원재료";
                 else
                     pRow["category"] = "완제품";
+
                 db.DBAdapter.Update(db.DS, "Product");
             }
             catch (DataException DE)
@@ -165,6 +176,7 @@ namespace _2025_CS_Project
                 MessageBox.Show(DE.Message);
             }
         }
+
         void DeleteProduct()
         {
             try
@@ -285,11 +297,29 @@ namespace _2025_CS_Project
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            var table = (DataTable)DBGrid.DataSource;
-            ProductSearchPage SearchPage = new ProductSearchPage(table);
-            DBGrid.ClearSelection();
-            SearchPage.CellValueSelected += getSelectRow;
-            SearchPage.Show();
+            if (table == null)
+            {
+                MessageBox.Show("먼저 데이터를 불러오세요.");
+                return;
+            }
+
+            string keyword = txtProductName.Text.Trim();
+
+            DataView dv = table.DefaultView;
+
+            // 상품명 LIKE 검색
+            dv.RowFilter = $"상품명 LIKE '%{SearchText.Text}%'";
+        }
+
+        private void SearchText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmp_button_Click(object sender, EventArgs e)
+        {
+            ProductInfo frm = new ProductInfo();
+            frm.Show();
         }
     }
 }

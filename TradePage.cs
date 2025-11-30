@@ -29,7 +29,7 @@ namespace _2025_CS_Project
         {
             try
             {
-                dbCommon.DB_Open(id, ps,
+                dbCommon.DB_Open(
                     "SELECT WarehouseID, WarehouseName FROM Warehouse ORDER BY WarehouseID");
                 dbCommon.DB_ObjCreate();
                 dbCommon.DBAdapter.Fill(dbCommon.DS, "Warehouse");
@@ -52,7 +52,7 @@ namespace _2025_CS_Project
         {
             try
             {
-                dbCommon.DB_Open(id, ps,
+                dbCommon.DB_Open(
                     "SELECT ProductID, ProductName, UnitPrice FROM Product ORDER BY ProductID");
                 dbCommon.DB_ObjCreate();
                 dbCommon.DBAdapter.Fill(dbCommon.DS, "Product");

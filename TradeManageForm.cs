@@ -21,8 +21,6 @@ namespace _2025_CS_Project
         {
             InitializeComponent();
             dbc.DB_Open(
-                    DbUser,
-                    DbPw,
                     "SELECT TradeID, TradeDate, TradeType, TotalAmount " +
                     "FROM Trade ORDER BY TradeID"
                 );

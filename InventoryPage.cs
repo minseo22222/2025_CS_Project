@@ -18,7 +18,7 @@ namespace _2025_CS_Project
         {
             InitializeComponent();
             db.DB_ObjCreate();
-            db.DB_Open("park", "tiger", "SELECT * FROM Warehouse");
+            db.DB_Open("SELECT * FROM Warehouse");
         }
 
         void ShowList()
