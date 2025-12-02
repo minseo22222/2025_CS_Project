@@ -51,7 +51,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBCLASS.cs" />
-    <Compile Include="InventroyUpdate.cs" />
+    <Compile Include="InventoryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryInfo.Designer.cs">
+      <DependentUpon>InventoryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventroyUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="InventroyUpdate.Designer.cs">
       <DependentUpon>InventroyUpdate.cs</DependentUpon>
     </Compile>
@@ -93,6 +101,9 @@
     <Compile Include="TradePage.Designer.cs">
       <DependentUpon>TradePage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InventoryInfo.resx">
+      <DependentUpon>InventoryInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InventroyUpdate.resx">
       <DependentUpon>InventroyUpdate.cs</DependentUpon>
     </EmbeddedResource>

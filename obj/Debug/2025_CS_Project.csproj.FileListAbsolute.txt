@@ -88,3 +88,5 @@ C:\Users\PARK\git_cs\obj\Debug\2025_CS_Project.csproj.CoreCompileInputs.cache
 C:\Users\PARK\git_cs\obj\Debug\2025_CS_.FEBF1F47.Up2Date
 C:\Users\PARK\git_cs\obj\Debug\2025_CS_Project.exe
 C:\Users\PARK\git_cs\obj\Debug\2025_CS_Project.pdb
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.InventoryInfo.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.InventroyUpdate.resources

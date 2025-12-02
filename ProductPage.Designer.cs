@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SearchText = new System.Windows.Forms.TextBox();
@@ -49,9 +50,12 @@
             this.OpenDBBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.AppendBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ShowInventoryInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -204,6 +208,7 @@
             this.DBGrid.Size = new System.Drawing.Size(1121, 417);
             this.DBGrid.TabIndex = 4;
             this.DBGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DBGrid_CellClick);
+            this.DBGrid.MouseDown += new System.Windows.Forms.MouseEventHandler(this.DBGrid_MouseDown);
             // 
             // txtPrice
             // 
@@ -298,6 +303,21 @@
             this.AppendBtn.UseVisualStyleBackColor = true;
             this.AppendBtn.Click += new System.EventHandler(this.AppendBtn_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ShowInventoryInfo});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 36);
+            // 
+            // ShowInventoryInfo
+            // 
+            this.ShowInventoryInfo.Name = "ShowInventoryInfo";
+            this.ShowInventoryInfo.Size = new System.Drawing.Size(240, 32);
+            this.ShowInventoryInfo.Text = "재고보기";
+            this.ShowInventoryInfo.Click += new System.EventHandler(this.ShowInventoryInfo_Click);
+            // 
             // ProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -310,6 +330,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -337,5 +358,7 @@
         private System.Windows.Forms.RadioButton SortNum;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox SearchText;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ShowInventoryInfo;
     }
 }
