@@ -163,6 +163,7 @@
             this.DBGrid.Size = new System.Drawing.Size(644, 483);
             this.DBGrid.TabIndex = 36;
             this.DBGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DBGrid_CellClick);
+            this.DBGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DBGrid_CellDoubleClick);
             // 
             // ProductInfo
             // 

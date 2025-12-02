@@ -51,6 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBCLASS.cs" />
+    <Compile Include="InventroyUpdate.cs" />
+    <Compile Include="InventroyUpdate.Designer.cs">
+      <DependentUpon>InventroyUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +93,9 @@
     <Compile Include="TradePage.Designer.cs">
       <DependentUpon>TradePage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="InventroyUpdate.resx">
+      <DependentUpon>InventroyUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductInfo.resx">
       <DependentUpon>ProductInfo.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,16 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ShowBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.AppendBtn = new System.Windows.Forms.Button();
             this.txtWarehouseName = new System.Windows.Forms.TextBox();
             this.txtWarehouseNum = new System.Windows.Forms.TextBox();
             this.WarehouseList = new System.Windows.Forms.ListBox();
-            this.ShowBtn = new System.Windows.Forms.Button();
+            this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtInvSearch = new System.Windows.Forms.TextBox();
+            this.invSearchBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -79,6 +91,18 @@
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "창고관리";
+            // 
+            // ShowBtn
+            // 
+            this.ShowBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ShowBtn.Location = new System.Drawing.Point(333, 149);
+            this.ShowBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ShowBtn.Name = "ShowBtn";
+            this.ShowBtn.Size = new System.Drawing.Size(188, 42);
+            this.ShowBtn.TabIndex = 17;
+            this.ShowBtn.Text = "조회";
+            this.ShowBtn.UseVisualStyleBackColor = true;
+            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
             // 
             // DeleteBtn
             // 
@@ -130,28 +154,96 @@
             this.WarehouseList.TabIndex = 13;
             this.WarehouseList.SelectedIndexChanged += new System.EventHandler(this.WarehouseList_SelectedIndexChanged);
             // 
-            // ShowBtn
+            // dataGridViewInventory
             // 
-            this.ShowBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ShowBtn.Location = new System.Drawing.Point(333, 149);
-            this.ShowBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.ShowBtn.Name = "ShowBtn";
-            this.ShowBtn.Size = new System.Drawing.Size(188, 42);
-            this.ShowBtn.TabIndex = 17;
-            this.ShowBtn.Text = "조회";
-            this.ShowBtn.UseVisualStyleBackColor = true;
-            this.ShowBtn.Click += new System.EventHandler(this.ShowBtn_Click);
+            this.dataGridViewInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInventory.Location = new System.Drawing.Point(26, 92);
+            this.dataGridViewInventory.Name = "dataGridViewInventory";
+            this.dataGridViewInventory.RowHeadersWidth = 62;
+            this.dataGridViewInventory.RowTemplate.Height = 30;
+            this.dataGridViewInventory.Size = new System.Drawing.Size(883, 696);
+            this.dataGridViewInventory.TabIndex = 14;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.invSearchBtn);
+            this.groupBox2.Controls.Add(this.txtInvSearch);
+            this.groupBox2.Controls.Add(this.dataGridViewInventory);
+            this.groupBox2.Font = new System.Drawing.Font("SimSun", 14.25F);
+            this.groupBox2.Location = new System.Drawing.Point(629, 60);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(927, 852);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "재고목록(우클릭으로 관리)";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addStockToolStripMenuItem,
+            this.updateStockToolStripMenuItem,
+            this.deleteStockToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 100);
+            // 
+            // addStockToolStripMenuItem
+            // 
+            this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.addStockToolStripMenuItem.Text = "재고추가";
+            this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
+            // 
+            // updateStockToolStripMenuItem
+            // 
+            this.updateStockToolStripMenuItem.Name = "updateStockToolStripMenuItem";
+            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.updateStockToolStripMenuItem.Text = "재고수정";
+            this.updateStockToolStripMenuItem.Click += new System.EventHandler(this.updateStockToolStripMenuItem_Click);
+            // 
+            // deleteStockToolStripMenuItem
+            // 
+            this.deleteStockToolStripMenuItem.Name = "deleteStockToolStripMenuItem";
+            this.deleteStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.deleteStockToolStripMenuItem.Text = "재고삭제";
+            this.deleteStockToolStripMenuItem.Click += new System.EventHandler(this.deleteStockToolStripMenuItem_Click);
+            // 
+            // txtInvSearch
+            // 
+            this.txtInvSearch.Location = new System.Drawing.Point(26, 45);
+            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtInvSearch.Name = "txtInvSearch";
+            this.txtInvSearch.Size = new System.Drawing.Size(785, 40);
+            this.txtInvSearch.TabIndex = 18;
+            // 
+            // invSearchBtn
+            // 
+            this.invSearchBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.invSearchBtn.Location = new System.Drawing.Point(830, 43);
+            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.invSearchBtn.Name = "invSearchBtn";
+            this.invSearchBtn.Size = new System.Drawing.Size(79, 42);
+            this.invSearchBtn.TabIndex = 18;
+            this.invSearchBtn.Text = "검색";
+            this.invSearchBtn.UseVisualStyleBackColor = true;
+            this.invSearchBtn.Click += new System.EventHandler(this.invSearchBtn_Click);
             // 
             // InventoryPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "InventoryPage";
             this.Size = new System.Drawing.Size(1573, 984);
             this.Load += new System.EventHandler(this.InventoryPage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -167,5 +259,13 @@
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button AppendBtn;
         private System.Windows.Forms.Button ShowBtn;
+        private System.Windows.Forms.DataGridView dataGridViewInventory;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem addStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteStockToolStripMenuItem;
+        private System.Windows.Forms.Button invSearchBtn;
+        private System.Windows.Forms.TextBox txtInvSearch;
     }
 }

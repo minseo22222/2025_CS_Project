@@ -13,12 +13,16 @@ namespace _2025_CS_Project
 {
     public partial class InventoryPage : UserControl
     {
-        DBCLASS db = new DBCLASS();
+        DBCLASS db = new DBCLASS();   // Warehouse 전용
+        DBCLASS db2 = new DBCLASS();  // Inventory 전용
+
         public InventoryPage()
         {
             InitializeComponent();
             db.DB_ObjCreate();
             db.DB_Open("SELECT * FROM Warehouse");
+            db2.DB_ObjCreate();
+            dataGridViewInventory.ContextMenuStrip = contextMenuStrip1;
         }
 
         void ShowList()
@@ -39,7 +43,7 @@ namespace _2025_CS_Project
                 MessageBox.Show(DE.Message);
             }
         }
-        
+
         void InventoryPage_Load(object sender, EventArgs e)
         {
             ShowList();
@@ -49,6 +53,7 @@ namespace _2025_CS_Project
         {
             ShowList();
         }
+
         bool isNum(string str, string err_msg)
         {
             int num;
@@ -59,33 +64,29 @@ namespace _2025_CS_Project
             }
             return true;
         }
+
         void AddWarehouse()
         {
             try
             {
-                // 숫자 검증
                 if (!isNum(txtWarehouseNum.Text, "창고번호를 숫자로 입력하세요."))
                     return;
 
                 int warehouseID = Convert.ToInt32(txtWarehouseNum.Text);
                 string warehouseName = txtWarehouseName.Text;
 
-                // DataTable 가져오기
                 DataTable table = db.DS.Tables["Warehouse"];
                 table.PrimaryKey = new DataColumn[] { table.Columns["WarehouseID"] };
 
-                // 기존 행 찾기
                 DataRow existingRow = table.Rows.Find(warehouseID);
 
                 if (existingRow != null)
                 {
-                    // 이미 존재하면 수정
                     existingRow["WarehouseName"] = warehouseName;
                     MessageBox.Show("기존 창고 정보를 수정했습니다.");
                 }
                 else
                 {
-                    // 새 행 추가
                     DataRow newRow = table.NewRow();
                     newRow["WarehouseID"] = warehouseID;
                     newRow["WarehouseName"] = warehouseName;
@@ -93,7 +94,6 @@ namespace _2025_CS_Project
                     MessageBox.Show("새 창고를 추가했습니다.");
                 }
 
-                // DB 업데이트
                 db.DBAdapter.Update(db.DS, "Warehouse");
             }
             catch (DataException DE)
@@ -101,6 +101,7 @@ namespace _2025_CS_Project
                 MessageBox.Show(DE.Message);
             }
         }
+
         void DeleteWarehouse()
         {
             try
@@ -114,20 +115,15 @@ namespace _2025_CS_Project
                 string selectedName = WarehouseList.SelectedItem.ToString();
                 DataTable table = db.DS.Tables["Warehouse"];
 
-                // 선택된 창고명을 기준으로 행 찾기
                 DataRow[] rows = table.Select($"WarehouseName = '{selectedName.Replace("'", "''")}'");
 
                 if (rows.Length > 0)
                 {
                     if (MessageBox.Show("선택한 창고를 정말 삭제하시겠습니까?", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        // DataRow 삭제
                         rows[0].Delete();
-
-                        // DB 반영
                         db.DBAdapter.Update(db.DS, "Warehouse");
 
-                        // ListBox 갱신
                         ShowList();
                         txtWarehouseNum.Clear();
                         txtWarehouseName.Clear();
@@ -146,7 +142,6 @@ namespace _2025_CS_Project
             }
         }
 
-
         private void AppendBtn_Click(object sender, EventArgs e)
         {
             AddWarehouse();
@@ -160,13 +155,15 @@ namespace _2025_CS_Project
             string selectedName = WarehouseList.SelectedItem.ToString();
             DataTable table = db.DS.Tables["Warehouse"];
 
-            // 선택된 창고명을 기준으로 DataRow 찾기
             DataRow[] rows = table.Select($"WarehouseName = '{selectedName.Replace("'", "''")}'");
 
             if (rows.Length > 0)
             {
-                txtWarehouseNum.Text = rows[0]["WarehouseID"].ToString();
+                int warehouseID = Convert.ToInt32(rows[0]["WarehouseID"]);
+
+                txtWarehouseNum.Text = warehouseID.ToString();
                 txtWarehouseName.Text = rows[0]["WarehouseName"].ToString();
+                ShowInventoryByWarehouse(warehouseID);
             }
         }
 
@@ -174,6 +171,143 @@ namespace _2025_CS_Project
         {
             DeleteWarehouse();
             ShowList();
+        }
+
+        // ✅ Inventory 관련은 모두 db2 사용
+        void ShowInventoryByWarehouse(int warehouseID)
+        {
+            try
+            {
+                db2.DB_Close();
+                db2.DB_Open(
+                     "SELECT p.ProductID AS \"상품번호\", " +
+            "p.ProductName AS \"상품명\", " +
+            "i.Quantity AS \"재고수\" " +
+            "FROM Inventory i " +
+            "JOIN Product p ON i.ProductID = p.ProductID " +
+            "WHERE i.WarehouseID = :WarehouseID"
+                );
+
+                db2.DBAdapter.SelectCommand.Parameters.Clear();
+                db2.DBAdapter.SelectCommand.Parameters.Add("WarehouseID", warehouseID);
+
+                if (db2.DS.Tables.Contains("InventoryView"))
+                    db2.DS.Tables["InventoryView"].Clear();
+
+                db2.DBAdapter.Fill(db2.DS, "InventoryView");
+
+                dataGridViewInventory.DataSource = db2.DS.Tables["InventoryView"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("재고 조회 오류: " + ex.Message);
+            }
+        }
+
+        private void addStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int warehouseID;
+            if (!int.TryParse(txtWarehouseNum.Text, out warehouseID))
+            {
+                MessageBox.Show("창고를 먼저 선택하세요.");
+                return;
+            }
+
+            InventroyUpdate frm = new InventroyUpdate(warehouseID);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                ShowInventoryByWarehouse(warehouseID);
+            }
+        }
+
+        private void updateStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInventory.CurrentRow == null)
+            {
+                MessageBox.Show("수정할 상품을 선택하세요.");
+                return;
+            }
+
+            int warehouseID = Convert.ToInt32(txtWarehouseNum.Text);
+            int productID = Convert.ToInt32(dataGridViewInventory.CurrentRow.Cells["상품번호"].Value);
+            string productName = dataGridViewInventory.CurrentRow.Cells["상품명"].Value.ToString();
+            int currentQty = Convert.ToInt32(dataGridViewInventory.CurrentRow.Cells["재고수"].Value);
+
+            InventroyUpdate frm = new InventroyUpdate(warehouseID);
+            frm.SetProduct(productID, productName, currentQty);
+
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                ShowInventoryByWarehouse(warehouseID);
+            }
+        }
+
+        private void deleteStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridViewInventory.CurrentRow == null || dataGridViewInventory.CurrentRow.Index < 0)
+                {
+                    MessageBox.Show("삭제할 재고를 선택하세요.");
+                    return;
+                }
+
+                int warehouseID = Convert.ToInt32(txtWarehouseNum.Text);
+
+                // 안전하게 컬럼명 또는 인덱스로 접근
+                int productID = Convert.ToInt32(dataGridViewInventory.CurrentRow.Cells["상품번호"].Value);
+
+                db2.DB_Open("SELECT * FROM Inventory");
+                db2.DBAdapter.Fill(db2.DS, "Inventory");
+
+                DataTable table = db2.DS.Tables["Inventory"];
+                table.PrimaryKey = new DataColumn[] { table.Columns["WarehouseID"], table.Columns["ProductID"] };
+
+                DataRow row = table.Rows.Find(new object[] { warehouseID, productID });
+
+                if (row != null)
+                {
+                    if (MessageBox.Show("선택한 재고를 삭제하시겠습니까?", "삭제 확인", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        row.Delete();
+                        db2.DBAdapter.Update(db2.DS, "Inventory");
+                        MessageBox.Show("재고가 삭제되었습니다.");
+                        ShowInventoryByWarehouse(warehouseID);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("삭제할 재고를 찾을 수 없습니다.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("재고 삭제 중 오류: " + ex.Message);
+            }
+        }
+
+
+        private void invSearchBtn_Click(object sender, EventArgs e)
+        {
+            if (db2.DS.Tables.Contains("InventoryView") == false)
+                return; // 테이블이 없으면 종료
+
+            string keyword = txtInvSearch.Text.Trim(); // 검색어
+            DataTable dt = db2.DS.Tables["InventoryView"];
+            DataView dv = dt.DefaultView;
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // 검색어 없으면 필터 초기화
+                dv.RowFilter = "";
+            }
+            else
+            {
+                // 상품명 LIKE 검색
+                dv.RowFilter = $"상품명 LIKE '%{keyword.Replace("'", "''")}%'";
+            }
+
+            dataGridViewInventory.DataSource = dv;
         }
     }
 }

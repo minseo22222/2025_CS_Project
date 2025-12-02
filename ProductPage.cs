@@ -316,10 +316,5 @@ namespace _2025_CS_Project
 
         }
 
-        private void tmp_button_Click(object sender, EventArgs e)
-        {
-            ProductInfo frm = new ProductInfo();
-            frm.Show();
-        }
     }
 }

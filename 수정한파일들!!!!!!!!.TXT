@@ -1,11 +1,13 @@
-날짜:25/11/30 
+날짜:25/12/02
 작성자:박민서
 --------------수정-----------------
 dbclass.cs
-productPage.cs
+InventoryPage.cs
+ProductPage.cs
+ProductInfo.cs
 --------------추가-----------------
-productInfo.cs
+InventoryUpdate.cs
 --------------삭제-----------------
-ProductSearch.cs
+
 
 

@@ -49,7 +49,6 @@
             this.OpenDBBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.AppendBtn = new System.Windows.Forms.Button();
-            this.tmp_button = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
@@ -57,7 +56,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tmp_button);
             this.groupBox2.Controls.Add(this.groupBox1);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.ProductType);
@@ -300,16 +298,6 @@
             this.AppendBtn.UseVisualStyleBackColor = true;
             this.AppendBtn.Click += new System.EventHandler(this.AppendBtn_Click);
             // 
-            // tmp_button
-            // 
-            this.tmp_button.Location = new System.Drawing.Point(919, 307);
-            this.tmp_button.Name = "tmp_button";
-            this.tmp_button.Size = new System.Drawing.Size(259, 46);
-            this.tmp_button.TabIndex = 6;
-            this.tmp_button.Text = "상품정보폼(임시)";
-            this.tmp_button.UseVisualStyleBackColor = true;
-            this.tmp_button.Click += new System.EventHandler(this.tmp_button_Click);
-            // 
             // ProductPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -349,6 +337,5 @@
         private System.Windows.Forms.RadioButton SortNum;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox SearchText;
-        private System.Windows.Forms.Button tmp_button;
     }
 }
