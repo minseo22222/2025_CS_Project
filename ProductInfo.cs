@@ -12,6 +12,7 @@ namespace _2025_CS_Project
 {
     public partial class ProductInfo : Form
     {
+        public event Action<int, string> ProductSelected;
         DBCLASS db = new DBCLASS();
         DataTable table;
         public ProductInfo()
@@ -160,6 +161,19 @@ namespace _2025_CS_Project
 
             // 상품명 LIKE 검색
             dv.RowFilter = $"상품명 LIKE '%{SearchText.Text}%'";
+        }
+
+        private void DBGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            int productID = Convert.ToInt32(DBGrid.Rows[e.RowIndex].Cells["상품코드"].Value);
+            string productName = DBGrid.Rows[e.RowIndex].Cells["상품명"].Value.ToString();
+
+            // ✅ 부모폼(InventoryUpdate)으로 전달
+            ProductSelected?.Invoke(productID, productName);
+
+            this.Close();
         }
     }
 }

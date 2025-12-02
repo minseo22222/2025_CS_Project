@@ -1,16 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\PARK\\git_cs\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\park\\git_cs\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\PARK\\git_cs\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,31 +20,8 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductPage.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\PARK\\git_cs\\ProductPage.cs",
-              "RelativeDocumentMoniker": "ProductPage.cs",
-              "ToolTip": "C:\\Users\\PARK\\git_cs\\ProductPage.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "ProductPage.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T02:11:26.16Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\PARK\\git_cs\\main.cs",
-              "RelativeDocumentMoniker": "main.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "..\\..\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T02:09:51.264Z"
             }
           ]
         }

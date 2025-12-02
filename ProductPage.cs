@@ -23,6 +23,8 @@ namespace _2025_CS_Project
             ProductType.SelectedIndex = 0;
             db.DB_ObjCreate();
             db.DB_Open("SELECT * FROM product");
+
+            DBGrid.ContextMenuStrip = contextMenuStrip1;
             
         }
         void ShowTable()
@@ -316,10 +318,54 @@ namespace _2025_CS_Project
 
         }
 
-        private void tmp_button_Click(object sender, EventArgs e)
+        private void ShowInventoryInfo_Click(object sender, EventArgs e)
         {
-            ProductInfo frm = new ProductInfo();
-            frm.Show();
+            // 선택된 셀 확인
+            if (DBGrid.SelectedCells.Count > 0)
+            {
+                var selectedCell = DBGrid.SelectedCells[0];
+                var row = DBGrid.Rows[selectedCell.RowIndex];
+
+                // 상품코드(int) 가져오기
+                if (int.TryParse(row.Cells["상품코드"].Value.ToString(), out int productNum))
+                {
+                    // InventoryInfo 폼 생성 + 값 전달
+                    InventoryInfo inventoryForm = new InventoryInfo
+                    {
+                        ProductId = productNum
+                    };
+                    inventoryForm.WarehouseSelected += warehouseID =>
+                    {
+                        // 이 곳에서 MessageBox 또는 다른 처리
+                        MessageBox.Show($"선택된 창고번호: {warehouseID}");
+                    };
+
+
+                    inventoryForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("상품코드가 올바르지 않습니다.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("올바른 셀을 선택해주세요.");
+            }
+        }
+
+        private void DBGrid_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hit = DBGrid.HitTest(e.X, e.Y);
+                if (hit.RowIndex >= 0)
+                {
+                    DBGrid.ClearSelection();
+                    DBGrid.Rows[hit.RowIndex].Selected = true;
+                    DBGrid.CurrentCell = DBGrid.Rows[hit.RowIndex].Cells[hit.ColumnIndex];
+                }
+            }
         }
     }
 }
