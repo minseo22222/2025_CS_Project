@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\",
-  "Documents": [],
+  "WorkspaceRootPath": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -17,11 +42,90 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TradeManageForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeDocumentMoniker": "TradeManageForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeToolTip": "TradeManageForm.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFIAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T15:02:55.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TradeManageForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeDocumentMoniker": "TradeManageForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradeManageForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T15:02:54.578Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TradePage.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeDocumentMoniker": "TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeToolTip": "TradePage.cs",
+              "ViewState": "AgIAAOsDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:53:23.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "employee.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\employee.cs",
+              "RelativeDocumentMoniker": "employee.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\employee.cs",
+              "RelativeToolTip": "employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:47:35.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TradePage.Designer.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.Designer.cs",
+              "RelativeDocumentMoniker": "TradePage.Designer.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.Designer.cs",
+              "RelativeToolTip": "TradePage.Designer.cs",
+              "ViewState": "AgIAACUBAAAAAAAAAAAjwD0BAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T14:42:25.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TradePage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeDocumentMoniker": "TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradePage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T09:06:55.685Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             }
           ]
         }
