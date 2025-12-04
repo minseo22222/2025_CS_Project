@@ -98,3 +98,6 @@ F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.StaffSel
 F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.WarehouseSelectForm.resources
 F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.employee.resources
 F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.EmployeeSearch.resources
+F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.ProductSelectForm.resources
+F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.TradeSearchForm.resources
+F:\1Learning\c#\team_project\2025_CS_Project\obj\Debug\_2025_CS_Project.TradeStatisticsForm.resources

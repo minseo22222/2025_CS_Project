@@ -93,6 +93,12 @@
     <Compile Include="ProductInfo.Designer.cs">
       <DependentUpon>ProductInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSelectForm.Designer.cs">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,18 @@
     <Compile Include="TradePage.Designer.cs">
       <DependentUpon>TradePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TradeSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeSearchForm.Designer.cs">
+      <DependentUpon>TradeSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradeStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeStatisticsForm.Designer.cs">
+      <DependentUpon>TradeStatisticsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WarehouseSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +176,9 @@
     <EmbeddedResource Include="ProductInfo.resx">
       <DependentUpon>ProductInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductSelectForm.resx">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffSelectForm.resx">
       <DependentUpon>StaffSelectForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +205,12 @@
     </Compile>
     <EmbeddedResource Include="TradePage.resx">
       <DependentUpon>TradePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeSearchForm.resx">
+      <DependentUpon>TradeSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeStatisticsForm.resx">
+      <DependentUpon>TradeStatisticsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WarehouseSelectForm.resx">
       <DependentUpon>WarehouseSelectForm.cs</DependentUpon>

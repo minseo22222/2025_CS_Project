@@ -28,15 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgvTradeList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTradeDetail = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.상품추가ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.상품삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.수량수정ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnWarehouseSearch = new System.Windows.Forms.Button();
             this.btnStaffSearch = new System.Windows.Forms.Button();
             this.btnCustomerSearch = new System.Windows.Forms.Button();
+            this.txtWarehouse = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtStaff = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,11 +59,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnWarehouseSearch = new System.Windows.Forms.Button();
-            this.txtWarehouse = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.btnTradeSearch = new System.Windows.Forms.Button();
+            this.btnStatistics = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeDetail)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,21 +101,54 @@
             // dgvTradeDetail
             // 
             this.dgvTradeDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTradeDetail.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvTradeDetail.Location = new System.Drawing.Point(663, 62);
             this.dgvTradeDetail.Name = "dgvTradeDetail";
             this.dgvTradeDetail.RowTemplate.Height = 23;
             this.dgvTradeDetail.Size = new System.Drawing.Size(603, 225);
             this.dgvTradeDetail.TabIndex = 4;
+            this.dgvTradeDetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTradeDetail_CellEndEdit);
             // 
-            // button4
+            // contextMenuStrip1
             // 
-            this.button4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(577, 536);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 38);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Del";
-            this.button4.UseVisualStyleBackColor = true;
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.상품추가ToolStripMenuItem,
+            this.상품삭제ToolStripMenuItem,
+            this.수량수정ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(125, 70);
+            // 
+            // 상품추가ToolStripMenuItem
+            // 
+            this.상품추가ToolStripMenuItem.Name = "상품추가ToolStripMenuItem";
+            this.상품추가ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.상품추가ToolStripMenuItem.Text = "상품추가";
+            this.상품추가ToolStripMenuItem.Click += new System.EventHandler(this.상품추가ToolStripMenuItem_Click);
+            // 
+            // 상품삭제ToolStripMenuItem
+            // 
+            this.상품삭제ToolStripMenuItem.Name = "상품삭제ToolStripMenuItem";
+            this.상품삭제ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.상품삭제ToolStripMenuItem.Text = "상품삭제";
+            this.상품삭제ToolStripMenuItem.Click += new System.EventHandler(this.상품삭제ToolStripMenuItem_Click);
+            // 
+            // 수량수정ToolStripMenuItem
+            // 
+            this.수량수정ToolStripMenuItem.Name = "수량수정ToolStripMenuItem";
+            this.수량수정ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.수량수정ToolStripMenuItem.Text = "수량수정";
+            this.수량수정ToolStripMenuItem.Click += new System.EventHandler(this.수량수정ToolStripMenuItem_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDel.Location = new System.Drawing.Point(577, 536);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(93, 38);
+            this.btnDel.TabIndex = 9;
+            this.btnDel.Text = "Del";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
@@ -148,6 +190,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "매매관리";
             // 
+            // btnWarehouseSearch
+            // 
+            this.btnWarehouseSearch.Location = new System.Drawing.Point(594, 121);
+            this.btnWarehouseSearch.Name = "btnWarehouseSearch";
+            this.btnWarehouseSearch.Size = new System.Drawing.Size(79, 31);
+            this.btnWarehouseSearch.TabIndex = 26;
+            this.btnWarehouseSearch.Text = "Search";
+            this.btnWarehouseSearch.UseVisualStyleBackColor = true;
+            this.btnWarehouseSearch.Click += new System.EventHandler(this.btnWarehouseSearch_Click);
+            // 
             // btnStaffSearch
             // 
             this.btnStaffSearch.Location = new System.Drawing.Point(607, 47);
@@ -167,6 +219,23 @@
             this.btnCustomerSearch.Text = "Search";
             this.btnCustomerSearch.UseVisualStyleBackColor = true;
             this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
+            // 
+            // txtWarehouse
+            // 
+            this.txtWarehouse.Location = new System.Drawing.Point(443, 124);
+            this.txtWarehouse.Name = "txtWarehouse";
+            this.txtWarehouse.Size = new System.Drawing.Size(145, 30);
+            this.txtWarehouse.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(400, 124);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 19);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "창고";
             // 
             // txtStaff
             // 
@@ -301,41 +370,50 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "거래번호";
             // 
-            // btnWarehouseSearch
+            // btnTradeSearch
             // 
-            this.btnWarehouseSearch.Location = new System.Drawing.Point(594, 121);
-            this.btnWarehouseSearch.Name = "btnWarehouseSearch";
-            this.btnWarehouseSearch.Size = new System.Drawing.Size(79, 31);
-            this.btnWarehouseSearch.TabIndex = 26;
-            this.btnWarehouseSearch.Text = "Search";
-            this.btnWarehouseSearch.UseVisualStyleBackColor = true;
-            this.btnWarehouseSearch.Click += new System.EventHandler(this.btnWarehouseSearch_Click);
+            this.btnTradeSearch.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTradeSearch.Location = new System.Drawing.Point(775, 321);
+            this.btnTradeSearch.Name = "btnTradeSearch";
+            this.btnTradeSearch.Size = new System.Drawing.Size(123, 42);
+            this.btnTradeSearch.TabIndex = 12;
+            this.btnTradeSearch.Text = "거래검색";
+            this.btnTradeSearch.UseVisualStyleBackColor = true;
+            this.btnTradeSearch.Click += new System.EventHandler(this.btnTradeSearch_Click);
             // 
-            // txtWarehouse
+            // btnStatistics
             // 
-            this.txtWarehouse.Location = new System.Drawing.Point(443, 124);
-            this.txtWarehouse.Name = "txtWarehouse";
-            this.txtWarehouse.Size = new System.Drawing.Size(145, 30);
-            this.txtWarehouse.TabIndex = 25;
+            this.btnStatistics.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStatistics.Location = new System.Drawing.Point(904, 321);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(123, 42);
+            this.btnStatistics.TabIndex = 13;
+            this.btnStatistics.Text = "거래통계";
+            this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
             // 
-            // label10
+            // btnClose
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(400, 124);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 19);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "창고";
+            this.btnClose.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClose.Location = new System.Drawing.Point(1300, 575);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(123, 42);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // TradeManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1435, 629);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnStatistics);
+            this.Controls.Add(this.btnTradeSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.dgvTradeDetail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -345,6 +423,7 @@
             this.Load += new System.EventHandler(this.TradeManageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeDetail)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -358,7 +437,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvTradeDetail;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnStaffSearch;
@@ -380,5 +459,12 @@
         private System.Windows.Forms.Button btnWarehouseSearch;
         private System.Windows.Forms.TextBox txtWarehouse;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 상품추가ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 상품삭제ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 수량수정ToolStripMenuItem;
+        private System.Windows.Forms.Button btnTradeSearch;
+        private System.Windows.Forms.Button btnStatistics;
+        private System.Windows.Forms.Button btnClose;
     }
 }
