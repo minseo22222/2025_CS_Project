@@ -414,59 +414,21 @@ namespace _2025_CS_Project
         }
 
         // ─────────────────────────────────────
-        // 상세 저장 함수
-        //   - 같은 Connection / Transaction 을 사용
-        //   - 기존 TradeDetail 모두 삭제 후, 그리드 기준으로 INSERT
+        // 상세 저장 함수 (안전 버전)
+        //   - 같은 Connection / Transaction 사용
+        //   - 기존 TradeDetail 모두 삭제 후, 그리드(DataTable) 기준으로 INSERT
         //   - out 매개변수로 총금액 반환
+        //   - tradeType / warehouseId 는 나중에 재고 연동용으로 사용 가능
         // ─────────────────────────────────────
         private void SaveTradeDetailWithCurrentGrid(
-    OracleConnection conn,
-    OracleTransaction tran,
-    int tradeId,
-    string tradeType,      // "매입" / "매출"
-    int warehouseId,
-    out decimal totalAmount)
+            OracleConnection conn,
+            OracleTransaction tran,
+            int tradeId,
+            string tradeType,   // "매입" / "매출"
+            int warehouseId,    // 창고 ID (없으면 0 같은 값)
+            out decimal totalAmount)
         {
-            totalAmount = 0;
-
-            // 0) 이전 거래상세를 읽어서, 재고에서 먼저 "되돌리기"
-            var oldDetails = new System.Collections.Generic.List<(int ProdId, int Qty)>();
-
-            using (var cmdSel = new OracleCommand(
-                "SELECT ProductID, Quantity FROM TradeDetail WHERE TradeID = :tid", conn))
-            {
-                cmdSel.Transaction = tran;
-                cmdSel.Parameters.Add("tid", OracleDbType.Int32).Value = tradeId;
-
-                using (var rd = cmdSel.ExecuteReader())
-                {
-                    while (rd.Read())
-                    {
-                        int p = rd.GetInt32(0);
-                        int q = rd.GetInt32(1);
-                        oldDetails.Add((p, q));
-                    }
-                }
-            }
-
-            // 매입이면 기존 수량을 빼고, 매출이면 기존 수량을 더한다(역연산).
-            int revertSign = (tradeType == "매입") ? -1 : +1;
-
-            foreach (var od in oldDetails)
-            {
-                using (var cmdInv = new OracleCommand(
-                    @"UPDATE Inventory
-                 SET Quantity = Quantity + :delta
-               WHERE WarehouseID = :wid
-                 AND ProductID   = :pid", conn))
-                {
-                    cmdInv.Transaction = tran;
-                    cmdInv.Parameters.Add("delta", OracleDbType.Int32).Value = revertSign * od.Qty;
-                    cmdInv.Parameters.Add("wid", OracleDbType.Int32).Value = warehouseId;
-                    cmdInv.Parameters.Add("pid", OracleDbType.Int32).Value = od.ProdId;
-                    cmdInv.ExecuteNonQuery();
-                }
-            }
+            totalAmount = 0m;
 
             // 1) 기존 상세 삭제
             using (var cmdDel = new OracleCommand(
@@ -477,7 +439,15 @@ namespace _2025_CS_Project
                 cmdDel.ExecuteNonQuery();
             }
 
-            // 2) 현재 그리드 내용을 다시 INSERT + 재고 반영
+            // 2) 현재 그리드의 DataTable 가져오기
+            var dt = dgvTradeDetail.DataSource as DataTable;
+            if (dt == null || dt.Rows.Count == 0)
+            {
+                // 상세가 하나도 없으면 총금액 0
+                totalAmount = 0m;
+                return;
+            }
+
             string insertSql = @"
         INSERT INTO TradeDetail
             (TradeID, LineNo, ProductID, Quantity, UnitPrice, Amount)
@@ -488,80 +458,45 @@ namespace _2025_CS_Project
             {
                 cmdIns.Transaction = tran;
 
-                cmdIns.Parameters.Add("TradeID", OracleDbType.Int32);
-                cmdIns.Parameters.Add("LineNo", OracleDbType.Int32);
-                cmdIns.Parameters.Add("ProductID", OracleDbType.Int32);
-                cmdIns.Parameters.Add("Quantity", OracleDbType.Int32);
-                cmdIns.Parameters.Add("UnitPrice", OracleDbType.Decimal);
-                cmdIns.Parameters.Add("Amount", OracleDbType.Decimal);
+                // 파라미터 미리 생성
+                var pTradeId = cmdIns.Parameters.Add("TradeID", OracleDbType.Int32);
+                var pLineNo = cmdIns.Parameters.Add("LineNo", OracleDbType.Int32);
+                var pProdId = cmdIns.Parameters.Add("ProductID", OracleDbType.Int32);
+                var pQty = cmdIns.Parameters.Add("Quantity", OracleDbType.Int32);
+                var pUnit = cmdIns.Parameters.Add("UnitPrice", OracleDbType.Decimal);
+                var pAmt = cmdIns.Parameters.Add("Amount", OracleDbType.Decimal);
 
                 int lineNo = 1;
 
-                int applySign = (tradeType == "매입") ? +1 : -1;   // 매입=+, 매출=-
-
-                foreach (DataGridViewRow r in dgvTradeDetail.Rows)
+                foreach (DataRow row in dt.Rows)
                 {
-                    if (r.IsNewRow) continue;
-                    if (r.Cells["PRODUCTID"].Value == null) continue;
+                    if (row.RowState == DataRowState.Deleted) continue;
+                    if (row["PRODUCTID"] == DBNull.Value) continue;
 
-                    int productId;
-                    int qty;
-                    decimal unitPrice;
-
-                    if (!int.TryParse(r.Cells["PRODUCTID"].Value.ToString(), out productId))
-                        continue;
-
-                    int.TryParse(Convert.ToString(r.Cells["QUANTITY"].Value), out qty);
-                    decimal.TryParse(Convert.ToString(r.Cells["UNITPRICE"].Value), out unitPrice);
-
+                    // ★ DataTable 에서 직접 변환 → 캐스트 오류 방지
+                    int productId = Convert.ToInt32(row["PRODUCTID"]);
+                    int qty = Convert.ToInt32(row["QUANTITY"]);
+                    decimal unitPrice = Convert.ToDecimal(row["UNITPRICE"]);
                     decimal amount = unitPrice * qty;
 
-                    // 2-1) TradeDetail INSERT
-                    cmdIns.Parameters["TradeID"].Value = tradeId;
-                    cmdIns.Parameters["LineNo"].Value = lineNo++;
-                    cmdIns.Parameters["ProductID"].Value = productId;
-                    cmdIns.Parameters["Quantity"].Value = qty;
-                    cmdIns.Parameters["UnitPrice"].Value = unitPrice;
-                    cmdIns.Parameters["Amount"].Value = amount;
+                    pTradeId.Value = tradeId;
+                    pLineNo.Value = lineNo++;
+                    pProdId.Value = productId;
+                    pQty.Value = qty;
+                    pUnit.Value = unitPrice;
+                    pAmt.Value = amount;
 
                     cmdIns.ExecuteNonQuery();
 
                     totalAmount += amount;
 
-                    // 2-2) Inventory 반영 (UPDATE 후 없으면 INSERT)
-                    int delta = applySign * qty;
-
-                    using (var cmdUpdInv = new OracleCommand(
-                        @"UPDATE Inventory
-                     SET Quantity = Quantity + :delta
-                   WHERE WarehouseID = :wid
-                     AND ProductID   = :pid", conn))
-                    {
-                        cmdUpdInv.Transaction = tran;
-                        cmdUpdInv.Parameters.Add("delta", OracleDbType.Int32).Value = delta;
-                        cmdUpdInv.Parameters.Add("wid", OracleDbType.Int32).Value = warehouseId;
-                        cmdUpdInv.Parameters.Add("pid", OracleDbType.Int32).Value = productId;
-
-                        int updated = cmdUpdInv.ExecuteNonQuery();
-
-                        if (updated == 0)
-                        {
-                            // 해당 (창고,상품) 재고가 없으면 새로 INSERT
-                            using (var cmdInsInv = new OracleCommand(
-                                @"INSERT INTO Inventory (WarehouseID, ProductID, Quantity)
-                          VALUES (:wid, :pid, :qty)", conn))
-                            {
-                                cmdInsInv.Transaction = tran;
-                                cmdInsInv.Parameters.Add("wid", OracleDbType.Int32).Value = warehouseId;
-                                cmdInsInv.Parameters.Add("pid", OracleDbType.Int32).Value = productId;
-                                cmdInsInv.Parameters.Add("qty", OracleDbType.Int32).Value = delta;
-                                cmdInsInv.ExecuteNonQuery();
-                            }
-                        }
-                    }
+                    // TODO: 여기서 tradeType / warehouseId 를 이용해서
+                    // Inventory 테이블 수량을 조정하고 싶으면
+                    // 별도 함수로 빼서 UPDATE / INSERT 하면 됨.
                 }
             }
         }
+
 
 
         // ─────────────────────────────────────
@@ -576,7 +511,6 @@ namespace _2025_CS_Project
             }
 
             int tradeId = SelectedTradeId.Value;
-
             string conStr = GetConnectionString();
 
             using (var conn = new OracleConnection(conStr))
@@ -589,14 +523,14 @@ namespace _2025_CS_Project
                     {
                         // 1) 거래헤더 UPDATE
                         string updateSql = @"
-                            UPDATE Trade
-                               SET TradeDate     = :TradeDate,
-                                   TradeType     = :TradeType,
-                                   CustomerID    = :CustomerID,
-                                   StaffID       = :StaffID,
-                                   DefaultWhID   = :WarehouseID,
-                                   PaymentMethod = :PaymentMethod
-                             WHERE TradeID      = :TradeID";
+                    UPDATE Trade
+                       SET TradeDate     = :TradeDate,
+                           TradeType     = :TradeType,
+                           CustomerID    = :CustomerID,
+                           StaffID       = :StaffID,
+                           DefaultWhID   = :WarehouseID,
+                           PaymentMethod = :PaymentMethod
+                     WHERE TradeID      = :TradeID";
 
                         using (var cmd = new OracleCommand(updateSql, conn))
                         {
@@ -635,24 +569,12 @@ namespace _2025_CS_Project
                         // 2) 상세 다시 저장 & 총금액 계산
                         decimal total;
 
-                        // 거래유형 / 창고ID 체크
-                        string tradeType = cboTradeType.SelectedItem?.ToString();
-                        if (string.IsNullOrEmpty(tradeType))
-                        {
-                            throw new Exception("매매유형 정보가 없습니다.");
-                        }
-                        if (!selectedWarehouseId.HasValue)
-                        {
-                            throw new Exception("창고 정보가 없습니다.(DefaultWhID)");
-                        }
+                        // 현재 선택된 매매유형 / 창고 ID 를 인수로 넘겨줌
+                        string tradeType = cboTradeType.SelectedItem?.ToString() ?? "";
+                        int warehouseId = selectedWarehouseId.HasValue ? selectedWarehouseId.Value : 0;
 
-                        SaveTradeDetailWithCurrentGrid(
-                            conn,
-                            tran,
-                            tradeId,
-                            tradeType,
-                            selectedWarehouseId.Value,
-                            out total);
+                        SaveTradeDetailWithCurrentGrid(conn, tran, tradeId, tradeType, warehouseId, out total);
+
 
                         // 3) 헤더의 총금액 반영
                         using (var cmdTotal = new OracleCommand(
@@ -676,11 +598,13 @@ namespace _2025_CS_Project
                     catch (Exception ex)
                     {
                         tran.Rollback();
-                        MessageBox.Show("수정 중 오류 : " + ex.Message);
+                        // ★ 디버깅을 위해 전체 예외 정보 출력
+                        MessageBox.Show("수정 중 오류 : " + ex.ToString());
                     }
                 }
             }
         }
+
 
         // ─────────────────────────────────────
         // Add 버튼 (새 거래 등록 필요 시 구현)
@@ -1016,14 +940,6 @@ namespace _2025_CS_Project
             }
         }
 
-        private void btnStatistics_Click(object sender, EventArgs e)
-        {
-            // 현재 사용 중인 접속 문자열 재사용
-            using (var frm = new TradeStatisticsForm(GetConnectionString()))
-            {
-                frm.ShowDialog();
-            }
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {

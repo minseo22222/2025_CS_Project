@@ -51,6 +51,8 @@ namespace _2025_CS_Project
             if (cboTypeFilter.SelectedItem == null) return null;
 
             string txt = cboTypeFilter.SelectedItem.ToString();
+            if (txt == "매입") { label8.Text = "총 구입 수량";label9.Text = "총 구입 금액"; }
+            if (txt == "매출") { label8.Text = "총 매출 수량"; label9.Text = "총 매출 금액"; }
             if (txt == "매입" || txt == "매출")
                 return txt;
 
@@ -72,6 +74,10 @@ namespace _2025_CS_Project
 
         private void cboTypeFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // 거래유형 바뀌면 상품 리스트도 다시 필터링해서 로드
+            LoadProductCombo();
+
+            // 날짜/유형 바뀔 때 전체 통계 다시 계산
             ReloadAllStatistics();
         }
 
@@ -154,14 +160,33 @@ namespace _2025_CS_Project
         }
 
         // ─────────────────────────────────────
-        // 상품 콤보박스 로드
+        // 상품 콤보박스 로드 (거래유형에 따라 카테고리 필터링)
+        //   - 전체 : 모든 상품
+        //   - 매입 : CATEGORY = '원재료'
+        //   - 매출 : CATEGORY = '완제품'
         // ─────────────────────────────────────
         private void LoadProductCombo()
         {
+            // 현재 선택된 거래유형 (전체일 경우 null)
+            string tradeTypeFilter = GetSelectedTradeTypeFilter();
+
             string sql = @"
                 SELECT ProductID, ProductName
-                  FROM Product
-                 ORDER BY ProductName";
+                FROM Product";
+
+            // TradeType 에 따라 카테고리를 나눔
+            if (tradeTypeFilter == "매입")
+            {
+                // 매입이면 원재료만
+                sql += " WHERE Category = '원재료'";
+            }
+            else if (tradeTypeFilter == "매출")
+            {
+                // 매출이면 완제품만
+                sql += " WHERE Category = '완제품'";
+            }
+
+            sql += " ORDER BY ProductName";
 
             try
             {
@@ -173,6 +198,7 @@ namespace _2025_CS_Project
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
+                    // 맨 앞에 "상품 선택" 더미 행 추가
                     DataRow row = dt.NewRow();
                     row["ProductID"] = DBNull.Value;
                     row["ProductName"] = "상품 선택";

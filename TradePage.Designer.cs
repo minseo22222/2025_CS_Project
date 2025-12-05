@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnWarehouseSearch = new System.Windows.Forms.Button();
             this.btnStaffSearch = new System.Windows.Forms.Button();
             this.btnCustomerSearch = new System.Windows.Forms.Button();
-            this.txtWarehouse = new System.Windows.Forms.TextBox();
             this.txtStaff = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,12 +40,14 @@
             this.dtpTradeDate = new System.Windows.Forms.DateTimePicker();
             this.cboTradeType = new System.Windows.Forms.ComboBox();
             this.txtTradeNo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnWarehouseSearch = new System.Windows.Forms.Button();
+            this.txtWarehouse = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ProductAdd = new System.Windows.Forms.Button();
             this.ProductDel = new System.Windows.Forms.Button();
             this.ClearBtn = new System.Windows.Forms.Button();
@@ -62,6 +62,7 @@
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStockQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnStatistics = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetail)).BeginInit();
@@ -93,16 +94,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "매매관리";
             // 
-            // btnWarehouseSearch
-            // 
-            this.btnWarehouseSearch.Location = new System.Drawing.Point(257, 325);
-            this.btnWarehouseSearch.Name = "btnWarehouseSearch";
-            this.btnWarehouseSearch.Size = new System.Drawing.Size(79, 31);
-            this.btnWarehouseSearch.TabIndex = 23;
-            this.btnWarehouseSearch.Text = "Search";
-            this.btnWarehouseSearch.UseVisualStyleBackColor = true;
-            this.btnWarehouseSearch.Click += new System.EventHandler(this.btnWarehouseSearch_Click);
-            // 
             // btnStaffSearch
             // 
             this.btnStaffSearch.Location = new System.Drawing.Point(607, 47);
@@ -122,13 +113,6 @@
             this.btnCustomerSearch.Text = "Search";
             this.btnCustomerSearch.UseVisualStyleBackColor = true;
             this.btnCustomerSearch.Click += new System.EventHandler(this.btnCustomerSearch_Click);
-            // 
-            // txtWarehouse
-            // 
-            this.txtWarehouse.Location = new System.Drawing.Point(106, 328);
-            this.txtWarehouse.Name = "txtWarehouse";
-            this.txtWarehouse.Size = new System.Drawing.Size(145, 21);
-            this.txtWarehouse.TabIndex = 20;
             // 
             // txtStaff
             // 
@@ -213,16 +197,6 @@
             this.txtTradeNo.Size = new System.Drawing.Size(169, 30);
             this.txtTradeNo.TabIndex = 9;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(63, 328);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 19);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "창고";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -273,10 +247,37 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "거래번호";
             // 
+            // btnWarehouseSearch
+            // 
+            this.btnWarehouseSearch.Location = new System.Drawing.Point(257, 325);
+            this.btnWarehouseSearch.Name = "btnWarehouseSearch";
+            this.btnWarehouseSearch.Size = new System.Drawing.Size(79, 31);
+            this.btnWarehouseSearch.TabIndex = 23;
+            this.btnWarehouseSearch.Text = "Search";
+            this.btnWarehouseSearch.UseVisualStyleBackColor = true;
+            this.btnWarehouseSearch.Click += new System.EventHandler(this.btnWarehouseSearch_Click);
+            // 
+            // txtWarehouse
+            // 
+            this.txtWarehouse.Location = new System.Drawing.Point(106, 328);
+            this.txtWarehouse.Name = "txtWarehouse";
+            this.txtWarehouse.Size = new System.Drawing.Size(145, 21);
+            this.txtWarehouse.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(63, 328);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 19);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "창고";
+            // 
             // ProductAdd
             // 
             this.ProductAdd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ProductAdd.Location = new System.Drawing.Point(240, 269);
+            this.ProductAdd.Location = new System.Drawing.Point(262, 264);
             this.ProductAdd.Name = "ProductAdd";
             this.ProductAdd.Size = new System.Drawing.Size(75, 32);
             this.ProductAdd.TabIndex = 2;
@@ -287,7 +288,7 @@
             // ProductDel
             // 
             this.ProductDel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ProductDel.Location = new System.Drawing.Point(321, 269);
+            this.ProductDel.Location = new System.Drawing.Point(343, 264);
             this.ProductDel.Name = "ProductDel";
             this.ProductDel.Size = new System.Drawing.Size(75, 32);
             this.ProductDel.TabIndex = 3;
@@ -309,22 +310,22 @@
             // SaveBtn
             // 
             this.SaveBtn.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SaveBtn.Location = new System.Drawing.Point(401, 269);
+            this.SaveBtn.Location = new System.Drawing.Point(749, 329);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 32);
             this.SaveBtn.TabIndex = 5;
-            this.SaveBtn.Text = "저장";
+            this.SaveBtn.Text = "거래저장";
             this.SaveBtn.UseVisualStyleBackColor = true;
             this.SaveBtn.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // SearchBtn
             // 
             this.SearchBtn.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SearchBtn.Location = new System.Drawing.Point(749, 36);
+            this.SearchBtn.Location = new System.Drawing.Point(700, 26);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(75, 32);
+            this.SearchBtn.Size = new System.Drawing.Size(123, 42);
             this.SearchBtn.TabIndex = 7;
-            this.SearchBtn.Text = "조회";
+            this.SearchBtn.Text = "거래내역";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
@@ -333,7 +334,6 @@
             this.groupBox2.Controls.Add(this.dgvDetail);
             this.groupBox2.Controls.Add(this.ProductDel);
             this.groupBox2.Controls.Add(this.ProductAdd);
-            this.groupBox2.Controls.Add(this.SaveBtn);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(67, 367);
             this.groupBox2.Name = "groupBox2";
@@ -407,13 +407,26 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "매매등록";
             // 
+            // btnStatistics
+            // 
+            this.btnStatistics.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnStatistics.Location = new System.Drawing.Point(571, 26);
+            this.btnStatistics.Name = "btnStatistics";
+            this.btnStatistics.Size = new System.Drawing.Size(123, 42);
+            this.btnStatistics.TabIndex = 24;
+            this.btnStatistics.Text = "거래통계";
+            this.btnStatistics.UseVisualStyleBackColor = true;
+            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
+            // 
             // TradePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.btnStatistics);
             this.Controls.Add(this.btnWarehouseSearch);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.txtWarehouse);
@@ -421,7 +434,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Name = "TradePage";
-            this.Size = new System.Drawing.Size(927, 656);
+            this.Size = new System.Drawing.Size(893, 656);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -467,5 +480,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStockQty;
+        private System.Windows.Forms.Button btnStatistics;
     }
 }

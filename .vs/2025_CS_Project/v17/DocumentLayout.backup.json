@@ -3,15 +3,55 @@
   "WorkspaceRootPath": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\staffselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:staffselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|f:\\1learning\\c#\\team_project\\2025_cs_project\\staffselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:staffselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|F:\\1Learning\\c#\\team_project\\2025_CS_Project\\tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,31 +87,154 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TradeStatisticsForm.cs",
-              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs",
-              "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
-              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs",
-              "RelativeToolTip": "TradeStatisticsForm.cs",
-              "ViewState": "AgIAAGIBAAAAAAAAAAAuwIMBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:14:58.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs",
               "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
               "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:06:27.803Z",
+              "WhenOpened": "2025-12-05T14:42:01.514Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "WarehouseSelectForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\WarehouseSelectForm.cs",
+              "RelativeDocumentMoniker": "WarehouseSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\WarehouseSelectForm.cs",
+              "RelativeToolTip": "WarehouseSelectForm.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAUwGkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T14:26:48.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\WarehouseSelectForm.cs",
+              "RelativeDocumentMoniker": "WarehouseSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T14:21:20.431Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StaffSelectForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\StaffSelectForm.cs",
+              "RelativeDocumentMoniker": "StaffSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\StaffSelectForm.cs",
+              "RelativeToolTip": "StaffSelectForm.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAApwK0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T12:28:53.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaffSelectForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\StaffSelectForm.cs",
+              "RelativeDocumentMoniker": "StaffSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\StaffSelectForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "StaffSelectForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T11:33:31.274Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerSelectForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\CustomerSelectForm.cs",
+              "RelativeDocumentMoniker": "CustomerSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\CustomerSelectForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "CustomerSelectForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T11:33:37.679Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TradePage.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeDocumentMoniker": "TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeToolTip": "TradePage.cs",
+              "ViewState": "AgIAAJsBAAAAAAAAAAAewKoBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T11:26:50.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TradeStatisticsForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs",
+              "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeStatisticsForm.cs",
+              "RelativeToolTip": "TradeStatisticsForm.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAewE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:14:58.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CustomerSelectForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\CustomerSelectForm.cs",
+              "RelativeDocumentMoniker": "CustomerSelectForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\CustomerSelectForm.cs",
+              "RelativeToolTip": "CustomerSelectForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T11:35:55.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TradePage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs",
+              "RelativeDocumentMoniker": "TradePage.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradePage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradePage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T11:26:25.514Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TradeManageForm.cs",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeDocumentMoniker": "TradeManageForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeToolTip": "TradeManageForm.cs",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAewEwBAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:44:28.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TradeManageForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs",
+              "RelativeDocumentMoniker": "TradeManageForm.cs",
+              "ToolTip": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeManageForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradeManageForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T09:44:11.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "TradeSearchForm.cs",
               "DocumentMoniker": "F:\\1Learning\\c#\\team_project\\2025_CS_Project\\TradeSearchForm.cs",
               "RelativeDocumentMoniker": "TradeSearchForm.cs",
@@ -79,8 +242,7 @@
               "RelativeToolTip": "TradeSearchForm.cs",
               "ViewState": "AgIAAI8AAAAAAAAAAAAAAJ8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T08:40:00.129Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T08:40:00.129Z"
             }
           ]
         }

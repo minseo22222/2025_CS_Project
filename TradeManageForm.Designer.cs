@@ -60,7 +60,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnTradeSearch = new System.Windows.Forms.Button();
-            this.btnStatistics = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeDetail)).BeginInit();
@@ -381,17 +380,6 @@
             this.btnTradeSearch.UseVisualStyleBackColor = true;
             this.btnTradeSearch.Click += new System.EventHandler(this.btnTradeSearch_Click);
             // 
-            // btnStatistics
-            // 
-            this.btnStatistics.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnStatistics.Location = new System.Drawing.Point(904, 321);
-            this.btnStatistics.Name = "btnStatistics";
-            this.btnStatistics.Size = new System.Drawing.Size(123, 42);
-            this.btnStatistics.TabIndex = 13;
-            this.btnStatistics.Text = "거래통계";
-            this.btnStatistics.UseVisualStyleBackColor = true;
-            this.btnStatistics.Click += new System.EventHandler(this.btnStatistics_Click);
-            // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -409,7 +397,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1435, 629);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnStatistics);
             this.Controls.Add(this.btnTradeSearch);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnUpdate);
@@ -464,7 +451,6 @@
         private System.Windows.Forms.ToolStripMenuItem 상품삭제ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 수량수정ToolStripMenuItem;
         private System.Windows.Forms.Button btnTradeSearch;
-        private System.Windows.Forms.Button btnStatistics;
         private System.Windows.Forms.Button btnClose;
     }
 }

@@ -997,7 +997,22 @@ namespace _2025_CS_Project
                                 MessageBoxIcon.Error);
             }
         }
-
-
+        String DbUser = "hong1";
+        String DbPw = "1111";
+        private string GetConnectionString()
+        {
+            return
+                "User Id=" + DbUser + "; Password=" + DbPw + "; " +
+                "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))" +
+                "(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=xe)))";
+        }
+        private void btnStatistics_Click(object sender, EventArgs e)
+        {
+            // 현재 사용 중인 접속 문자열 재사용
+            using (var frm = new TradeStatisticsForm(GetConnectionString()))
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
