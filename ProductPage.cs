@@ -38,6 +38,7 @@ namespace _2025_CS_Project
                 table.Columns.Add("상품코드", typeof(int));
                 table.Columns.Add("상품명", typeof(string));
                 table.Columns.Add("단가" , typeof(int));
+                table.Columns.Add("최소수량", typeof(int));
                 table.Columns.Add("구분", typeof(string));
                 foreach (DataRow row in db.DS.Tables["Product"].Rows)
                 {
@@ -45,6 +46,12 @@ namespace _2025_CS_Project
                     newRow["상품코드"] = row["ProductID"]; 
                     newRow["상품명"] = row["ProductName"];
                     newRow["단가"] = row["UnitPrice"];
+
+                    if (row["MinStock"] != DBNull.Value)
+                        newRow["최소수량"] = row["MinStock"];
+                    else
+                        newRow["최소수량"] = 0;
+
                     newRow["구분"] = row["category"];
                     table.Rows.Add(newRow);
                 }
@@ -97,6 +104,13 @@ namespace _2025_CS_Project
                     return;
                 }
 
+                int minStock = 5;
+                if (!string.IsNullOrEmpty(txtMinStock.Text))
+                {
+                    if (!isNum(txtMinStock.Text, "최소수량을 숫자로 입력하세요.")) return;
+                    minStock = Convert.ToInt32(txtMinStock.Text);
+                }
+
                 // 기존 행 찾기
                 DataTable table = db.DS.Tables["Product"];
                 table.PrimaryKey = new DataColumn[] { table.Columns["ProductID"] }; // Primary Key 설정
@@ -112,6 +126,9 @@ namespace _2025_CS_Project
                 pRow["ProductID"] = Convert.ToInt32(txtProductNum.Text);
                 pRow["ProductName"] = txtProductName.Text;
                 pRow["UnitPrice"] = Convert.ToInt32(txtPrice.Text);
+
+                pRow["MinStock"] = minStock;
+
                 if (ProductType.SelectedIndex==0)
                     pRow["category"] = "원재료";
                 else
@@ -163,9 +180,19 @@ namespace _2025_CS_Project
                 if (!isNum(txtPrice.Text, "가격을 숫자로 입력하세요."))
                     return;
 
+                int minStock = 5;
+                if (!string.IsNullOrEmpty(txtMinStock.Text))
+                {
+                    if (!isNum(txtMinStock.Text, "최소수량을 숫자로 입력하세요.")) return;
+                    minStock = Convert.ToInt32(txtMinStock.Text);
+                }
+
                 // 안전하게 실제 DB Row 수정
                 pRow["ProductName"] = txtProductName.Text;
                 pRow["UnitPrice"] = Convert.ToInt32(txtPrice.Text);
+
+                pRow["MinStock"] = minStock;
+
                 if (ProductType.SelectedIndex == 0)
                     pRow["category"] = "원재료";
                 else
@@ -243,6 +270,9 @@ namespace _2025_CS_Project
             txtProductNum.Text = row.Cells["상품코드"].Value?.ToString();
             txtProductName.Text = row.Cells["상품명"].Value?.ToString();
             txtPrice.Text = row.Cells["단가"].Value?.ToString();
+
+            txtMinStock.Text = row.Cells["최소수량"].Value?.ToString();
+
             if (row.Cells["구분"].Value?.ToString() == "원재료")
                 ProductType.SelectedIndex = 0;
             else

@@ -5,8 +5,8 @@ using System.Windows.Forms;
 
 public class DBCLASS
 {
-    string id = "park";
-    string pw = "tiger";
+    string id = "hong1";
+    string pw = "1111";
 
     private int selectedRowIndex;
     private int selectedKeyValue;

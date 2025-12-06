@@ -1,69 +1,85 @@
--- ê¸°ì¡´ í…Œì´ë¸” ì‚­ì œ(ì¡´ì¬í•˜ì§€ ì•Šì•„ë„ ì—ëŸ¬ ë¬´ì‹œí•˜ë ¤ë©´ ì§ì ‘ BEGIN...EXCEPTION ì‚¬ìš©)
+-------------------------------------------------
+-- ±âÁ¸ Å×ÀÌºí »èÁ¦ (¼ø¼­ Áß¿ä: ÀÚ½Ä ¡æ ºÎ¸ğ)
+-------------------------------------------------
 DROP TABLE TradeDetail;
 DROP TABLE Trade;
 DROP TABLE Inventory;
+DROP TABLE Customer;   -- °Å·¡Ã³ Å×ÀÌºí
 DROP TABLE Warehouse;
 DROP TABLE Product;
 
 -------------------------------------------------
--- ìƒí’ˆ í…Œì´ë¸” : Product
+-- »óÇ° Å×ÀÌºí : Product
 -------------------------------------------------
-CREATE TABLE Product ( -- ìƒí’ˆ
-    ProductID   NUMBER(10)      PRIMARY KEY,          -- ìƒí’ˆì½”ë“œ
-    ProductName VARCHAR2(100)   NOT NULL,             -- ìƒí’ˆëª…
-    UnitPrice   NUMBER(12,2),                         -- ê¸°ì¤€ë‹¨ê°€
-    category    VARCHAR2(20),                         -- ìƒí’ˆêµ¬ë¶„(ì™„ì œí’ˆ/ì›ì¬ë£Œ)
-    CONSTRAINT chk_category CHECK (category IN ('ì™„ì œí’ˆ','ì›ì¬ë£Œ'))
+CREATE TABLE Product (     -- »óÇ°
+    ProductID   NUMBER(10)      PRIMARY KEY,   -- »óÇ°ÄÚµå
+    ProductName VARCHAR2(100)   NOT NULL,      -- »óÇ°¸í
+    UnitPrice   NUMBER(12,2),                  -- ±âÁØ´Ü°¡
+    category    VARCHAR2(20),                  -- »óÇ°±¸ºĞ(¿ÏÁ¦Ç°/¿øÀç·á)
+    MinStock    NUMBER(10) DEFAULT 0,	--ÃÖ¼Ò¼ö·®
+    CONSTRAINT chk_category CHECK (category IN ('¿ÏÁ¦Ç°','¿øÀç·á'))
 );
 
 -------------------------------------------------
--- ì°½ê³  í…Œì´ë¸” : Warehouse
+-- Ã¢°í Å×ÀÌºí : Warehouse
 -------------------------------------------------
-CREATE TABLE Warehouse ( -- ì°½ê³ 
-    WarehouseID   NUMBER(10) PRIMARY KEY,             -- ì°½ê³ ì½”ë“œ
-    WarehouseName VARCHAR2(100)                       -- ì°½ê³ ëª…
+CREATE TABLE Warehouse (   -- Ã¢°í
+    WarehouseID   NUMBER(10) PRIMARY KEY,      -- Ã¢°íÄÚµå
+    WarehouseName VARCHAR2(100)                -- Ã¢°í¸í
 );
 
 -------------------------------------------------
--- ì¬ê³  í…Œì´ë¸” : Inventory (í˜„ì¬ê³ )
+-- Àç°í Å×ÀÌºí : Inventory (ÇöÀç°í)
 -------------------------------------------------
-CREATE TABLE Inventory ( -- ì¬ê³ 
-    WarehouseID NUMBER(10),                           -- ì°½ê³ ì½”ë“œ(FK)
-    ProductID   NUMBER(10),                           -- ìƒí’ˆì½”ë“œ(FK)
-    Quantity    NUMBER(10) DEFAULT 0,                 -- í˜„ì¬ìˆ˜ëŸ‰
+CREATE TABLE Inventory (   -- Àç°í
+    WarehouseID NUMBER(10),                    -- Ã¢°íÄÚµå(FK)
+    ProductID   NUMBER(10),                    -- »óÇ°ÄÚµå(FK)
+    Quantity    NUMBER(10) DEFAULT 0,          -- ÇöÀç¼ö·®
     CONSTRAINT PK_Inventory PRIMARY KEY (WarehouseID, ProductID),
     CONSTRAINT FK_Inventory_Warehouse FOREIGN KEY (WarehouseID) REFERENCES Warehouse(WarehouseID),
     CONSTRAINT FK_Inventory_Product FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
 );
 
 -------------------------------------------------
--- ê±°ë˜ í—¤ë” í…Œì´ë¸” : Trade (ë§¤ë§¤ê´€ë¦¬ ìƒë‹¨)
+-- °Å·¡Ã³ Å×ÀÌºí : Customer
 -------------------------------------------------
-CREATE TABLE Trade (
-    TradeID        NUMBER(10)    PRIMARY KEY,         -- ê±°ë˜ë²ˆí˜¸
-    TradeDate      DATE          NOT NULL,            -- ê±°ë˜ì¼ì
-    TradeType      VARCHAR2(10)  NOT NULL,            -- ë§¤ì… / ë§¤ì¶œ êµ¬ë¶„
-    CustomerID     NUMBER(10),                        -- ê±°ë˜ì²˜ë²ˆí˜¸(FK, ì¶”í›„ ì¶”ê°€)
-    StaffID        NUMBER(10),                        -- ë‹´ë‹¹ìë²ˆí˜¸(FK, ì¶”í›„ ì¶”ê°€)
-    DefaultWhID    NUMBER(10),                        -- ê¸°ë³¸ ì°½ê³ (í•´ë‹¹ ê±°ë˜ì˜ ì°½ê³ )
-    PaymentMethod  VARCHAR2(30),                      -- ê²°ì œìˆ˜ë‹¨
-    TotalAmount    NUMBER(12,2) DEFAULT 0,            -- ì´ê¸ˆì•¡
-    CONSTRAINT chk_trade_type CHECK (TradeType IN ('ë§¤ì…','ë§¤ì¶œ')),
-    CONSTRAINT fk_trade_wh FOREIGN KEY (DefaultWhID) REFERENCES Warehouse(WarehouseID)
-    -- fk_trade_customer, fk_trade_staff ì œì•½ì¡°ê±´ì€
-    -- ê±°ë˜ì²˜/ì§ì› í…Œì´ë¸” ì„¤ê³„ í›„ ì¶”ê°€ ì˜ˆì •
+CREATE TABLE Customer (    -- °Å·¡Ã³
+    CustomerID      NUMBER(10)    PRIMARY KEY,   -- °Å·¡Ã³¹øÈ£
+    BusinessNo      VARCHAR2(20),                -- »ç¾÷ÀÚ¹øÈ£
+    CustomerName    VARCHAR2(100) NOT NULL,      -- °Å·¡Ã³¸í
+    Address         VARCHAR2(200),               -- ÁÖ¼Ò
+    Representative  VARCHAR2(50),                -- ´ëÇ¥ÀÚÀÌ¸§
+    Phone           VARCHAR2(20),                -- ÀüÈ­¹øÈ£
+    Fax             VARCHAR2(20)                 -- FAX¹øÈ£
 );
 
 -------------------------------------------------
--- ê±°ë˜ ìƒì„¸ í…Œì´ë¸” : TradeDetail (ë§¤ë§¤ìƒì„¸ ê·¸ë¦¬ë“œ)
+-- °Å·¡ Çì´õ Å×ÀÌºí : Trade (¸Å¸Å°ü¸® »ó´Ü)
+-------------------------------------------------
+CREATE TABLE Trade (
+    TradeID        NUMBER(10)    PRIMARY KEY,   -- °Å·¡¹øÈ£
+    TradeDate      DATE          NOT NULL,      -- °Å·¡ÀÏÀÚ
+    TradeType      VARCHAR2(10)  NOT NULL,      -- '¸ÅÀÔ' ¶Ç´Â '¸ÅÃâ'
+    CustomerID     NUMBER(10),                  -- °Å·¡Ã³¹øÈ£(FK)
+    StaffID        NUMBER(10),                  -- ´ã´çÁ÷¿ø¹øÈ£(ÃßÈÄ Staff Å×ÀÌºí°ú ¿¬°á)
+    DefaultWhID    NUMBER(10),                  -- ±âº» Ã¢°í
+    PaymentMethod  VARCHAR2(30),                -- °áÁ¦¼ö´Ü
+    TotalAmount    NUMBER(12,2) DEFAULT 0,      -- ÃÑ±İ¾×
+    CONSTRAINT chk_trade_type CHECK (TradeType IN ('¸ÅÀÔ','¸ÅÃâ')),
+    CONSTRAINT fk_trade_wh FOREIGN KEY (DefaultWhID) REFERENCES Warehouse(WarehouseID),
+    CONSTRAINT fk_trade_customer FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID)
+);
+
+-------------------------------------------------
+-- °Å·¡ »ó¼¼ Å×ÀÌºí : TradeDetail (¸Å¸Å»ó¼¼ ±×¸®µå)
 -------------------------------------------------
 CREATE TABLE TradeDetail (
-    TradeID     NUMBER(10)   NOT NULL,               -- ê±°ë˜ë²ˆí˜¸(FK, í—¤ë”ì™€ ì—°ê²°)
-    LineNo      NUMBER(4)    NOT NULL,               -- í–‰ë²ˆí˜¸(1,2,3... ìˆœë²ˆ)
-    ProductID   NUMBER(10)   NOT NULL,               -- ìƒí’ˆì½”ë“œ(FK â†’ Product)
-    Quantity    NUMBER(10)   NOT NULL,               -- ìˆ˜ëŸ‰
-    UnitPrice   NUMBER(12,2) NOT NULL,               -- ë‹¨ê°€(ê±°ë˜ ì‹œì  ê°€ê²© ìŠ¤ëƒ…ìƒ·)
-    Amount      NUMBER(12,2) NOT NULL,               -- ê¸ˆì•¡ = ìˆ˜ëŸ‰ * ë‹¨ê°€
+    TradeID     NUMBER(10)   NOT NULL,          -- °Å·¡¹øÈ£(FK)
+    LineNo      NUMBER(4)    NOT NULL,          -- Çà¹øÈ£(1,2,3...)
+    ProductID   NUMBER(10)   NOT NULL,          -- »óÇ°ÄÚµå(FK)
+    Quantity    NUMBER(10)   NOT NULL,          -- ¼ö·®
+    UnitPrice   NUMBER(12,2) NOT NULL,          -- ´Ü°¡
+    Amount      NUMBER(12,2) NOT NULL,          -- ±İ¾× = ¼ö·® * ´Ü°¡
     CONSTRAINT PK_TradeDetail PRIMARY KEY (TradeID, LineNo),
     CONSTRAINT FK_TD_Trade   FOREIGN KEY (TradeID) REFERENCES Trade(TradeID),
     CONSTRAINT FK_TD_Product FOREIGN KEY (ProductID) REFERENCES Product(ProductID)

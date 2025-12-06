@@ -16,6 +16,7 @@ namespace _2025_CS_Project
         DBCLASS db = new DBCLASS();   // Warehouse 전용
         DBCLASS db2 = new DBCLASS();  // Inventory 전용
 
+        List<string> dangerWarehouseNames = new List<string>();
         public InventoryPage()
         {
             InitializeComponent();
@@ -23,25 +24,92 @@ namespace _2025_CS_Project
             db.DB_Open("SELECT * FROM Warehouse");
             db2.DB_ObjCreate();
             dataGridViewInventory.ContextMenuStrip = contextMenuStrip1;
+
+            dataGridViewInventory.DataBindingComplete += DataGridViewInventory_DataBindingComplete;
+            WarehouseList.DrawMode = DrawMode.OwnerDrawFixed;
+            WarehouseList.DrawItem += WarehouseList_DrawItem;
         }
 
         void ShowList()
         {
             try
             {
+                // 1. 먼저 재고가 부족한 창고들의 이름을 파악합니다.
+                dangerWarehouseNames.Clear();
+
+                // SQL: 재고(Inventory) 테이블에서 수량이 5 이하인 창고ID를 찾고, 
+                // Warehouse 테이블과 조인하여 창고 이름을 가져옴 (중복 제거 DISTINCT)
+                string checkSql =
+                     $"SELECT DISTINCT w.WarehouseName " +
+                     $"FROM Warehouse w " +
+                     $"JOIN Inventory i ON w.WarehouseID = i.WarehouseID " +
+                     $"JOIN Product p ON i.ProductID = p.ProductID " +  // Product 조인 추가
+                     $"WHERE i.Quantity <= p.MinStock";
+
+                // 잠깐 db2를 빌려 써서 조회 (어차피 아래에서 다시 씀)
+                db2.DB_ObjCreate();
+                db2.DB_Open(checkSql);
+                db2.DBAdapter.Fill(db2.DS, "DangerList");
+
+                if (db2.DS.Tables.Contains("DangerList"))
+                {
+                    foreach (DataRow row in db2.DS.Tables["DangerList"].Rows)
+                    {
+                        dangerWarehouseNames.Add(row["WarehouseName"].ToString());
+                    }
+                    db2.DS.Tables["DangerList"].Clear(); // 다 썼으니 비움
+                }
+
+
+                // 2. 원래 하던 창고 목록 조회 로직
                 db.DS.Clear();
                 db.DBAdapter.Fill(db.DS, "Warehouse");
                 WarehouseList.Items.Clear();
+
                 foreach (DataRow row in db.DS.Tables["Warehouse"].Rows)
                 {
                     string name = row["WarehouseName"].ToString();
                     WarehouseList.Items.Add(name);
                 }
             }
-            catch (DataException DE)
+            catch (Exception ex) // DataException -> Exception으로 변경 (더 포괄적)
             {
-                MessageBox.Show(DE.Message);
+                MessageBox.Show("목록 로드 중 오류: " + ex.Message);
             }
+        }
+
+        private void WarehouseList_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            // 현재 그릴 아이템의 텍스트(창고이름) 가져오기
+            string text = WarehouseList.Items[e.Index].ToString();
+
+            // 1. 배경 그리기
+            if (dangerWarehouseNames.Contains(text))
+            {
+                e.Graphics.FillRectangle(Brushes.Red, e.Bounds);
+            }
+            else
+            {
+                // ★ 안전한 창고: 기본 동작 (선택 시 파란색, 평소 흰색)
+                e.DrawBackground();
+            }
+
+            // 2. 글자 색상 결정
+            Brush textBrush = Brushes.Black; // 기본 검은색
+
+            // 위험하지 않은 창고가 '선택'되었을 때만 글자를 흰색으로 (배경이 파랗기 때문)
+            if (!dangerWarehouseNames.Contains(text))
+            {
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    textBrush = Brushes.White;
+                }
+            }
+            e.Graphics.DrawString(text, e.Font, textBrush, e.Bounds.X + 1, e.Bounds.Y + 1);
+
+            e.DrawFocusRectangle();
         }
 
         void InventoryPage_Load(object sender, EventArgs e)
@@ -179,14 +247,16 @@ namespace _2025_CS_Project
             try
             {
                 db2.DB_Close();
-                db2.DB_Open(
-                     "SELECT p.ProductID AS \"상품번호\", " +
-            "p.ProductName AS \"상품명\", " +
-            "i.Quantity AS \"재고수\" " +
-            "FROM Inventory i " +
-            "JOIN Product p ON i.ProductID = p.ProductID " +
-            "WHERE i.WarehouseID = :WarehouseID"
-                );
+                string sql =
+                    "SELECT p.ProductID AS \"상품번호\", " +
+                    "p.ProductName AS \"상품명\", " +
+                    "i.Quantity AS \"재고수\", " +
+                    "p.MinStock AS \"최소재고\" " + // ★ 여기 추가됨
+                    "FROM Inventory i " +
+                    "JOIN Product p ON i.ProductID = p.ProductID " +
+                    "WHERE i.WarehouseID = :WarehouseID";
+
+                db2.DB_Open(sql);
 
                 db2.DBAdapter.SelectCommand.Parameters.Clear();
                 db2.DBAdapter.SelectCommand.Parameters.Add("WarehouseID", warehouseID);
@@ -308,6 +378,38 @@ namespace _2025_CS_Project
             }
 
             dataGridViewInventory.DataSource = dv;
+        }
+        private void DataGridViewInventory_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewInventory.Rows)
+            {
+                // ★ "재고수" 와 "최소재고" 값을 모두 가져와서 비교
+                if (row.Cells["재고수"].Value != null && row.Cells["최소재고"].Value != null)
+                {
+                    int qty = 0;
+                    int minStock = 0;
+
+                    // 둘 다 숫자로 변환 성공했을 때만 로직 수행
+                    bool isQtyOk = int.TryParse(row.Cells["재고수"].Value.ToString(), out qty);
+                    bool isMinOk = int.TryParse(row.Cells["최소재고"].Value.ToString(), out minStock);
+
+                    if (isQtyOk && isMinOk)
+                    {
+                        // ★ 내 재고가 내 최소수량 이하면 빨간색
+                        if (qty <= minStock)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Red;
+                            row.DefaultCellStyle.ForeColor = Color.White;
+                            row.DefaultCellStyle.SelectionBackColor = Color.DarkRed;
+                        }
+                        else
+                        {
+                            row.DefaultCellStyle.BackColor = Color.White;
+                            row.DefaultCellStyle.ForeColor = Color.Black;
+                        }
+                    }
+                }
+            }
         }
     }
 }

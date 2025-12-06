@@ -43,7 +43,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuTrade,
@@ -54,8 +53,7 @@
             this.MenuTrader});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1407, 41);
+            this.menuStrip1.Size = new System.Drawing.Size(1125, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,7 +61,7 @@
             // 
             this.MenuTrade.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTrade.Name = "MenuTrade";
-            this.MenuTrade.Size = new System.Drawing.Size(106, 35);
+            this.MenuTrade.Size = new System.Drawing.Size(102, 31);
             this.MenuTrade.Text = "거래관리";
             this.MenuTrade.Click += new System.EventHandler(this.MenuTrade_Click);
             // 
@@ -71,7 +69,7 @@
             // 
             this.MenuProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuProduct.Name = "MenuProduct";
-            this.MenuProduct.Size = new System.Drawing.Size(106, 35);
+            this.MenuProduct.Size = new System.Drawing.Size(102, 31);
             this.MenuProduct.Text = "상품관리";
             this.MenuProduct.Click += new System.EventHandler(this.MenuProduct_Click);
             // 
@@ -79,14 +77,15 @@
             // 
             this.MenuProduce.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuProduce.Name = "MenuProduce";
-            this.MenuProduce.Size = new System.Drawing.Size(106, 35);
+            this.MenuProduce.Size = new System.Drawing.Size(102, 31);
             this.MenuProduce.Text = "생산관리";
+            this.MenuProduce.Click += new System.EventHandler(this.MenuProduce_Click);
             // 
             // MenuStock
             // 
             this.MenuStock.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuStock.Name = "MenuStock";
-            this.MenuStock.Size = new System.Drawing.Size(106, 35);
+            this.MenuStock.Size = new System.Drawing.Size(102, 31);
             this.MenuStock.Text = "재고관리";
             this.MenuStock.Click += new System.EventHandler(this.MenuStock_Click);
             // 
@@ -94,15 +93,17 @@
             // 
             this.MenuEmployee.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuEmployee.Name = "MenuEmployee";
-            this.MenuEmployee.Size = new System.Drawing.Size(106, 35);
+            this.MenuEmployee.Size = new System.Drawing.Size(102, 31);
             this.MenuEmployee.Text = "직원관리";
+            this.MenuEmployee.Click += new System.EventHandler(this.MenuEmployee_Click);
             // 
             // MenuTrader
             // 
             this.MenuTrader.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTrader.Name = "MenuTrader";
-            this.MenuTrader.Size = new System.Drawing.Size(125, 35);
+            this.MenuTrader.Size = new System.Drawing.Size(121, 31);
             this.MenuTrader.Text = "거래처관리";
+            this.MenuTrader.Click += new System.EventHandler(this.MenuTrader_Click);
             // 
             // contextMenuStrip1
             // 
@@ -113,22 +114,22 @@
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(0, 41);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelMain.Location = new System.Drawing.Point(0, 35);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1407, 737);
+            this.panelMain.Size = new System.Drawing.Size(1125, 614);
             this.panelMain.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1407, 778);
+            this.ClientSize = new System.Drawing.Size(1125, 649);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
