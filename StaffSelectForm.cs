@@ -11,6 +11,7 @@ namespace _2025_CS_Project
         // TradePage 에서 받아갈 값들
         public int SelectedStaffId { get; private set; }
         public string SelectedStaffName { get; private set; }
+        private DataTable _staffTable;
 
         public StaffSelectForm()
         {
@@ -28,8 +29,9 @@ namespace _2025_CS_Project
 
                 // DataSet 에 "Employee" 라는 이름으로 채움
                 dbc.DBAdapter.Fill(dbc.DS, "Employee");
+                _staffTable = dbc.DS.Tables["Employee"];
 
-                dgvStaff.DataSource = dbc.DS.Tables["Employee"];
+                dgvStaff.DataSource = _staffTable;
                 dgvStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 // 그리드 컬럼 헤더 한글로 변경 (선택 사항)
@@ -62,6 +64,112 @@ namespace _2025_CS_Project
 
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        // ─────────────────────────────────────
+        // 현재 그리드 선택을 TextBox 에 표시
+        // ─────────────────────────────────────
+        private void UpdateSelectedStaffTextFromGrid()
+        {
+            if (dgvStaff.CurrentRow == null)
+            {
+                txtSelectedStaff.Text = "";
+                return;
+            }
+
+            var row = dgvStaff.CurrentRow;
+
+            // 컬럼명은 실제 테이블에 맞게 수정 (예: EMPLOYEEID, NAME)
+            object idObj = row.Cells["EMPLOYEEID"].Value;
+            object nameObj = row.Cells["NAME"].Value;
+
+            if (idObj == null || idObj == DBNull.Value) return;
+
+            int id = Convert.ToInt32(idObj);
+            string name = Convert.ToString(nameObj);
+
+            txtSelectedStaff.Text = name;
+
+            SelectedStaffId = id;
+            SelectedStaffName = name;
+        }
+
+        // 셀 클릭 시
+        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            UpdateSelectedStaffTextFromGrid();
+        }
+
+        // 선택 변경 시
+        private void dgvStaff_SelectionChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedStaffTextFromGrid();
+        }
+
+        // 확인 버튼
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (dgvStaff.CurrentRow == null)
+            {
+                MessageBox.Show("직원을 선택하세요.", "안내",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            UpdateSelectedStaffTextFromGrid();
+
+            if (SelectedStaffId <= 0)
+            {
+                MessageBox.Show("직원을 선택하세요.", "안내",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        // 취소 버튼
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void txtSearchStaff_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnSearchStaff_Click(sender, EventArgs.Empty);
+            }
+        }
+
+
+        private void btnSearchStaff_Click(object sender, EventArgs e)
+        {
+            if (_staffTable == null) return;
+
+            string keyword = txtSearchStaff.Text.Trim();
+            keyword = keyword.Replace("'", "''");
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                _staffTable.DefaultView.RowFilter = "";
+            }
+            else
+            {
+                // 이름 컬럼명 확인: NAME / STAFFNAME 등
+                _staffTable.DefaultView.RowFilter =
+                    $"NAME LIKE '%{keyword}%'";
+            }
+
+            if (dgvStaff.Rows.Count > 0)
+            {
+                dgvStaff.CurrentCell = dgvStaff.Rows[0].Cells[0];
+            }
+            UpdateSelectedStaffTextFromGrid(); 
         }
     }
 }

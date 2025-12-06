@@ -45,13 +45,13 @@
             this.cboTypeFilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -65,9 +65,9 @@
             this.lblTotalPurchase.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTotalPurchase.Location = new System.Drawing.Point(158, 49);
             this.lblTotalPurchase.Name = "lblTotalPurchase";
-            this.lblTotalPurchase.Size = new System.Drawing.Size(112, 24);
+            this.lblTotalPurchase.Size = new System.Drawing.Size(22, 24);
             this.lblTotalPurchase.TabIndex = 0;
-            this.lblTotalPurchase.Text = "총 매입금액";
+            this.lblTotalPurchase.Text = "-";
             // 
             // lblTotalSales
             // 
@@ -75,9 +75,9 @@
             this.lblTotalSales.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTotalSales.Location = new System.Drawing.Point(158, 82);
             this.lblTotalSales.Name = "lblTotalSales";
-            this.lblTotalSales.Size = new System.Drawing.Size(112, 24);
+            this.lblTotalSales.Size = new System.Drawing.Size(22, 24);
             this.lblTotalSales.TabIndex = 1;
-            this.lblTotalSales.Text = "총 매출금액";
+            this.lblTotalSales.Text = "-";
             // 
             // lblNetProfit
             // 
@@ -85,9 +85,9 @@
             this.lblNetProfit.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblNetProfit.Location = new System.Drawing.Point(158, 115);
             this.lblNetProfit.Name = "lblNetProfit";
-            this.lblNetProfit.Size = new System.Drawing.Size(64, 24);
+            this.lblNetProfit.Size = new System.Drawing.Size(22, 24);
             this.lblNetProfit.TabIndex = 2;
-            this.lblNetProfit.Text = "순이익";
+            this.lblNetProfit.Text = "-";
             // 
             // label4
             // 
@@ -137,9 +137,9 @@
             this.lblProdQty.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblProdQty.Location = new System.Drawing.Point(158, 137);
             this.lblProdQty.Name = "lblProdQty";
-            this.lblProdQty.Size = new System.Drawing.Size(112, 24);
+            this.lblProdQty.Size = new System.Drawing.Size(22, 24);
             this.lblProdQty.TabIndex = 7;
-            this.lblProdQty.Text = "총 판매수량";
+            this.lblProdQty.Text = "-";
             // 
             // lblProdAmount
             // 
@@ -147,9 +147,9 @@
             this.lblProdAmount.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblProdAmount.Location = new System.Drawing.Point(158, 179);
             this.lblProdAmount.Name = "lblProdAmount";
-            this.lblProdAmount.Size = new System.Drawing.Size(112, 24);
+            this.lblProdAmount.Size = new System.Drawing.Size(22, 24);
             this.lblProdAmount.TabIndex = 8;
-            this.lblProdAmount.Text = "총 판매금액";
+            this.lblProdAmount.Text = "-";
             // 
             // lblCustCount
             // 
@@ -157,9 +157,9 @@
             this.lblCustCount.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblCustCount.Location = new System.Drawing.Point(176, 137);
             this.lblCustCount.Name = "lblCustCount";
-            this.lblCustCount.Size = new System.Drawing.Size(94, 24);
+            this.lblCustCount.Size = new System.Drawing.Size(22, 24);
             this.lblCustCount.TabIndex = 9;
-            this.lblCustCount.Text = "거래 횟수";
+            this.lblCustCount.Text = "-";
             // 
             // lblCustAmount
             // 
@@ -167,9 +167,9 @@
             this.lblCustAmount.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblCustAmount.Location = new System.Drawing.Point(176, 179);
             this.lblCustAmount.Name = "lblCustAmount";
-            this.lblCustAmount.Size = new System.Drawing.Size(112, 24);
+            this.lblCustAmount.Size = new System.Drawing.Size(22, 24);
             this.lblCustAmount.TabIndex = 10;
-            this.lblCustAmount.Text = "총 거래금액";
+            this.lblCustAmount.Text = "-";
             // 
             // dtpFrom
             // 
@@ -234,38 +234,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "전체 통계";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.cboProduct);
-            this.groupBox2.Controls.Add(this.lblProdQty);
-            this.groupBox2.Controls.Add(this.lblProdAmount);
-            this.groupBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(79, 323);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 238);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "상품통계";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.cboCustomer);
-            this.groupBox3.Controls.Add(this.lblCustCount);
-            this.groupBox3.Controls.Add(this.lblCustAmount);
-            this.groupBox3.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox3.Location = new System.Drawing.Point(445, 323);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(360, 238);
-            this.groupBox3.TabIndex = 18;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "거래처통계";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -296,15 +264,31 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "순이익";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.cboProduct);
+            this.groupBox2.Controls.Add(this.lblProdQty);
+            this.groupBox2.Controls.Add(this.lblProdAmount);
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(79, 323);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(360, 238);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "상품통계";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(31, 137);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 24);
+            this.label8.Size = new System.Drawing.Size(46, 24);
             this.label8.TabIndex = 9;
-            this.label8.Text = "총 판매수량";
+            this.label8.Text = "수량";
             // 
             // label9
             // 
@@ -312,9 +296,25 @@
             this.label9.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(31, 179);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 24);
+            this.label9.Size = new System.Drawing.Size(46, 24);
             this.label9.TabIndex = 10;
-            this.label9.Text = "총 판매금액";
+            this.label9.Text = "금액";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.cboCustomer);
+            this.groupBox3.Controls.Add(this.lblCustCount);
+            this.groupBox3.Controls.Add(this.lblCustAmount);
+            this.groupBox3.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Location = new System.Drawing.Point(445, 323);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(360, 238);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "거래처통계";
             // 
             // label10
             // 
