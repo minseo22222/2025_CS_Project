@@ -13,9 +13,12 @@ namespace _2025_CS_Project
 {
     public partial class Form1 : Form
     {
+        FactoryLine factoryLine = new FactoryLine();
         ProductPage productPage = new ProductPage();
         TradePage tradePage = new TradePage();
         InventoryPage inventoryPage = new InventoryPage();
+        Customer customer = new Customer();
+        employee emp = new employee();
         private void ShowPage(UserControl page)
         {
             panelMain.Controls.Clear();   
@@ -46,6 +49,21 @@ namespace _2025_CS_Project
         private void MenuStock_Click(object sender, EventArgs e)
         {
             ShowPage(inventoryPage);
+        }
+
+        private void MenuTrader_Click(object sender, EventArgs e)
+        {
+            ShowPage(customer);
+        }
+
+        private void MenuEmployee_Click(object sender, EventArgs e)
+        {
+            ShowPage(emp);
+        }
+
+        private void MenuProduce_Click(object sender, EventArgs e)
+        {
+            ShowPage(factoryLine);
         }
     }
 }

@@ -50,7 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerSelectForm.Designer.cs">
+      <DependentUpon>CustomerSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DBCLASS.cs" />
+    <Compile Include="employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeSearch.Designer.cs">
+      <DependentUpon>EmployeeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FactoryLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FactoryLine.Designer.cs">
+      <DependentUpon>FactoryLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +98,18 @@
     </Compile>
     <Compile Include="ProductInfo.Designer.cs">
       <DependentUpon>ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSelectForm.Designer.cs">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffSelectForm.Designer.cs">
+      <DependentUpon>StaffSelectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TradeManageForm.cs">
       <SubType>Form</SubType>
@@ -101,6 +143,39 @@
     <Compile Include="TradePage.Designer.cs">
       <DependentUpon>TradePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="TradeSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeSearchForm.Designer.cs">
+      <DependentUpon>TradeSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradeStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeStatisticsForm.Designer.cs">
+      <DependentUpon>TradeStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseSelectForm.Designer.cs">
+      <DependentUpon>WarehouseSelectForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Customer.resx">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSelectForm.resx">
+      <DependentUpon>CustomerSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeSearch.resx">
+      <DependentUpon>EmployeeSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FactoryLine.resx">
+      <DependentUpon>FactoryLine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InventoryInfo.resx">
       <DependentUpon>InventoryInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductInfo.resx">
       <DependentUpon>ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSelectForm.resx">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffSelectForm.resx">
+      <DependentUpon>StaffSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TradeManageForm.resx">
       <DependentUpon>TradeManageForm.cs</DependentUpon>
@@ -133,6 +214,15 @@
     </Compile>
     <EmbeddedResource Include="TradePage.resx">
       <DependentUpon>TradePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeSearchForm.resx">
+      <DependentUpon>TradeSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeStatisticsForm.resx">
+      <DependentUpon>TradeStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseSelectForm.resx">
+      <DependentUpon>WarehouseSelectForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
