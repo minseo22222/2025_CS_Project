@@ -84,3 +84,6 @@ CREATE TABLE TradeDetail (
     CONSTRAINT FK_TD_Trade   FOREIGN KEY (TradeID) REFERENCES Trade(TradeID),
     CONSTRAINT FK_TD_Product FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
 );
+
+INSERT INTO WAREHOUSE (WarehouseID, WarehouseName) VALUES (1, '메인창고');
+COMMIT;

@@ -141,7 +141,6 @@ C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.Customer.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.CustomerSelectForm.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.employee.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.EmployeeSearch.resources
-C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.FactoryLine.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.InventoryInfo.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.InventroyUpdate.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.ProductInfo.resources
@@ -161,3 +160,5 @@ C:\Unity\2025_CS_Project\obj\Debug\2025_CS_Project.csproj.CoreCompileInputs.cach
 C:\Unity\2025_CS_Project\obj\Debug\2025_CS_.FEBF1F47.Up2Date
 C:\Unity\2025_CS_Project\obj\Debug\2025_CS_Project.exe
 C:\Unity\2025_CS_Project\obj\Debug\2025_CS_Project.pdb
+C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.factorycs.resources
+C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.ProductionDetailForm.resources

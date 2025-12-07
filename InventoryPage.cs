@@ -29,13 +29,35 @@ namespace _2025_CS_Project
             WarehouseList.DrawMode = DrawMode.OwnerDrawFixed;
             WarehouseList.DrawItem += WarehouseList_DrawItem;
         }
+        public void RefreshInventory()
+        {
+            ShowList(); // 창고 목록 새로고침
 
+            // 현재 선택된 창고가 있으면 재고도 새로고침
+            if (!string.IsNullOrEmpty(txtWarehouseNum.Text))
+            {
+                int warehouseID;
+                if (int.TryParse(txtWarehouseNum.Text, out warehouseID))
+                {
+                    ShowInventoryByWarehouse(warehouseID);
+                }
+            }
+        }
         void ShowList()
         {
             try
             {
                 // 1. 먼저 재고가 부족한 창고들의 이름을 파악합니다.
                 dangerWarehouseNames.Clear();
+
+                if (db2.DS.Tables.Contains("DangerList"))
+                {
+                    db2.DS.Tables["DangerList"].Dispose();
+                    db2.DS.Tables.Remove("DangerList");
+                }
+
+                // db2를 새로 초기화
+                db2.DB_Close();
 
                 // SQL: 재고(Inventory) 테이블에서 수량이 5 이하인 창고ID를 찾고, 
                 // Warehouse 테이블과 조인하여 창고 이름을 가져옴 (중복 제거 DISTINCT)
@@ -71,6 +93,8 @@ namespace _2025_CS_Project
                     string name = row["WarehouseName"].ToString();
                     WarehouseList.Items.Add(name);
                 }
+
+                WarehouseList.Refresh();
             }
             catch (Exception ex) // DataException -> Exception으로 변경 (더 포괄적)
             {
@@ -287,6 +311,7 @@ namespace _2025_CS_Project
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 ShowInventoryByWarehouse(warehouseID);
+                ShowList();
             }
         }
 
@@ -309,6 +334,7 @@ namespace _2025_CS_Project
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 ShowInventoryByWarehouse(warehouseID);
+                ShowList();
             }
         }
 
@@ -343,6 +369,7 @@ namespace _2025_CS_Project
                         db2.DBAdapter.Update(db2.DS, "Inventory");
                         MessageBox.Show("재고가 삭제되었습니다.");
                         ShowInventoryByWarehouse(warehouseID);
+                        ShowList();
                     }
                 }
                 else

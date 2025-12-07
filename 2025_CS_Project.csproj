@@ -75,11 +75,11 @@
     <Compile Include="EmployeeSearch.Designer.cs">
       <DependentUpon>EmployeeSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="FactoryLine.cs">
+    <Compile Include="factorycs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FactoryLine.Designer.cs">
-      <DependentUpon>FactoryLine.cs</DependentUpon>
+    <Compile Include="factorycs.Designer.cs">
+      <DependentUpon>factorycs.cs</DependentUpon>
     </Compile>
     <Compile Include="InventoryInfo.cs">
       <SubType>Form</SubType>
@@ -98,6 +98,12 @@
     </Compile>
     <Compile Include="ProductInfo.Designer.cs">
       <DependentUpon>ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionDetailForm.Designer.cs">
+      <DependentUpon>ProductionDetailForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductSelectForm.cs">
       <SubType>Form</SubType>
@@ -173,8 +179,8 @@
     <EmbeddedResource Include="EmployeeSearch.resx">
       <DependentUpon>EmployeeSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FactoryLine.resx">
-      <DependentUpon>FactoryLine.cs</DependentUpon>
+    <EmbeddedResource Include="factorycs.resx">
+      <DependentUpon>factorycs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryInfo.resx">
       <DependentUpon>InventoryInfo.cs</DependentUpon>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductInfo.resx">
       <DependentUpon>ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionDetailForm.resx">
+      <DependentUpon>ProductionDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductSelectForm.resx">
       <DependentUpon>ProductSelectForm.cs</DependentUpon>

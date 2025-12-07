@@ -13,7 +13,7 @@ namespace _2025_CS_Project
 {
     public partial class Form1 : Form
     {
-        FactoryLine factoryLine = new FactoryLine();
+        factorycs Factorycs = new factorycs();
         ProductPage productPage = new ProductPage();
         TradePage tradePage = new TradePage();
         InventoryPage inventoryPage = new InventoryPage();
@@ -63,7 +63,7 @@ namespace _2025_CS_Project
 
         private void MenuProduce_Click(object sender, EventArgs e)
         {
-            ShowPage(factoryLine);
+            ShowPage(Factorycs);
         }
     }
 }
