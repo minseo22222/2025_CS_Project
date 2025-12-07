@@ -19,8 +19,21 @@ namespace _2025_CS_Project
         {
             InitializeComponent();
             InitializeMaterialGrid();
+            ProductPage.StaticProductListChanged += ProductDataChanged_RefreshCombos;
+        }
+        private void ProductDataChanged_RefreshCombos(object sender, EventArgs e)
+        {
+            // 상품 데이터가 변경되었다는 알림을 받으면 콤보박스 목록을 DB에서 다시 로드
+            LoadProductCombo();
+            LoadMaterialCombo();
+            MessageBox.Show("상품 목록이 업데이트되어 생산 콤보박스를 새로고침했습니다.", "알림");
         }
 
+        private void factorycs_Disposed(object sender, EventArgs e)
+        {
+            // 컨트롤이 해제될 때 정적 이벤트 구독을 해지하여 메모리 누수를 방지
+            ProductPage.StaticProductListChanged -= ProductDataChanged_RefreshCombos;
+        }
         private void Production_Load(object sender, EventArgs e)
         {
             LoadProductCombo(); // 완제품 목록 불러오기
@@ -113,11 +126,13 @@ namespace _2025_CS_Project
         {
             dtTempMaterials.Columns.Add("MaterialID", typeof(int));    // 숨겨진 ID
             dtTempMaterials.Columns.Add("MaterialName", typeof(string));
+            dtTempMaterials.Columns.Add("UnitQty", typeof(int));
             dtTempMaterials.Columns.Add("TotalQty", typeof(int));      // 총 투입 수량
 
             dgvMaterials.DataSource = dtTempMaterials;
 
             dgvMaterials.Columns["MaterialID"].Visible = false; // ID는 안보이게
+            dgvMaterials.Columns["UnitQty"].Visible = false;
             dgvMaterials.Columns["MaterialName"].HeaderText = "원자재명";
             dgvMaterials.Columns["TotalQty"].HeaderText = "총 투입량";
 
@@ -208,6 +223,7 @@ namespace _2025_CS_Project
                         DataRow row = dtTempMaterials.NewRow();
                         row["MaterialID"] = rdr["ChildID"];
                         row["MaterialName"] = rdr["ProductName"];
+                        row["UnitQty"] = rdr["RequiredQty"];
                         row["TotalQty"] = 0; // 일단 0, 아래 Recalculate에서 계산
                         dtTempMaterials.Rows.Add(row);
                     }
@@ -263,10 +279,10 @@ namespace _2025_CS_Project
 
                 try
                 {
-                    // (1) 생산 ID 생성 (P + 날짜 + 순번)
+                    // (1) 생산 ID 생성
                     string newProdID = GetNextProductionID(conn);
 
-                    // (2) 생산 이력 저장 (ProductionHistory)
+                    // (2) 생산 이력 저장
                     string sqlHist = "INSERT INTO PRODUCTIONHISTORY (ProdID, ProductID, ProdDate, TotalQty, DefectQty, GoodQty, Manager) " +
                                      "VALUES (:id, :pid, SYSDATE, :total, :defect, :good, :mgr)";
 
@@ -280,7 +296,7 @@ namespace _2025_CS_Project
                     cmdHist.Parameters.Add("mgr", txtManager.Text);
                     cmdHist.ExecuteNonQuery();
 
-                    // (3) 생산 자재 저장 및 **원자재 재고 차감**
+                    // (3) 생산 자재 저장 및 원자재 재고 차감
                     foreach (DataRow row in dtTempMaterials.Rows)
                     {
                         int matID = Convert.ToInt32(row["MaterialID"]);
@@ -296,12 +312,9 @@ namespace _2025_CS_Project
                         cmdMat.Parameters.Add("qty", usedQty);
                         cmdMat.ExecuteNonQuery();
 
-                        // 3-2. Inventory 테이블에서 원자재 감소 (모든 창고 합산 혹은 특정 창고 지정 필요. 여기선 임의의 창고나 전체 감소 로직 필요)
-                        // **주의**: Inventory는 (WarehouseID, ProductID)가 PK입니다.
-                        // 로직 단순화를 위해 1번 창고(WarehouseID=1)에서 뺀다고 가정하겠습니다.
+                        // 3-2. 원자재 재고 차감
                         string sqlInvenMinus = "UPDATE INVENTORY SET Quantity = Quantity - :qty " +
                                                "WHERE ProductID = :pid AND WarehouseID = 1";
-                        // 만약 데이터가 없으면 Insert가 필요할 수도 있으나, 원자재는 보통 입고가 먼저 되어있다고 가정.
 
                         OracleCommand cmdInvM = new OracleCommand(sqlInvenMinus, conn);
                         cmdInvM.Transaction = trans;
@@ -309,10 +322,8 @@ namespace _2025_CS_Project
                         cmdInvM.Parameters.Add("pid", matID);
                         int updated = cmdInvM.ExecuteNonQuery();
 
-                        if (updated == 0) // 해당 창고에 재고 데이터가 아예 없던 경우
+                        if (updated == 0)
                         {
-                            // 에러를 띄우거나, 마이너스 재고로 Insert (정책에 따라 다름)
-                            // 여기서는 0에서 뺌
                             string sqlInsert = "INSERT INTO INVENTORY (WarehouseID, ProductID, Quantity) VALUES (1, :pid, -:qty)";
                             OracleCommand cmdIns = new OracleCommand(sqlInsert, conn);
                             cmdIns.Transaction = trans;
@@ -322,7 +333,7 @@ namespace _2025_CS_Project
                         }
                     }
 
-                    // (4) **완제품 재고 증가** (Inventory) - 역시 1번 창고 가정
+                    // (4) 완제품 재고 증가
                     string sqlInvenPlus = "MERGE INTO INVENTORY i " +
                                           "USING DUAL ON (i.WarehouseID = 1 AND i.ProductID = :pid) " +
                                           "WHEN MATCHED THEN UPDATE SET Quantity = Quantity + :qty " +
@@ -331,17 +342,25 @@ namespace _2025_CS_Project
                     OracleCommand cmdInvP = new OracleCommand(sqlInvenPlus, conn);
                     cmdInvP.Transaction = trans;
                     cmdInvP.Parameters.Add("pid", prodID);
-                    cmdInvP.Parameters.Add("qty", goodQty); // 양품 수량만큼 증가
+                    cmdInvP.Parameters.Add("qty", goodQty);
                     cmdInvP.ExecuteNonQuery();
 
                     trans.Commit();
-                    MessageBox.Show("생산 완료! 재고가 반영되었습니다.");
-                    LoadHistory();
 
-                    RefreshInventoryPage();
-                    // 초기화
-                    numTotal.Value = 0;
-                    dtTempMaterials.Clear();
+                    // ========== DB 저장 완료 후 UI 업데이트 (오류 무시) ==========
+                    try
+                    {
+                        MessageBox.Show("생산 완료! 재고가 반영되었습니다.");
+                        LoadHistory();
+                        RefreshInventoryPage();
+                        ClearForm();
+                    }
+                    catch (Exception uiEx)
+                    {
+                        // UI 갱신 오류는 로그만 남기고 무시 (데이터는 이미 저장됨)
+                        System.Diagnostics.Debug.WriteLine($"UI 갱신 오류: {uiEx.Message}");
+                    }
+                    // ============================================================
                 }
                 catch (Exception ex)
                 {
@@ -353,18 +372,35 @@ namespace _2025_CS_Project
 
         private void RefreshInventoryPage()
         {
-            // 부모 폼(Form1)을 찾아서 InventoryPage를 새로고침
-            Form parentForm = this.FindForm();
-            if (parentForm != null)
+            try
             {
-                foreach (Control ctrl in parentForm.Controls)
+                // 부모 폼(Form1)을 찾아서 InventoryPage를 새로고침
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
                 {
-                    if (ctrl is InventoryPage)
+                    foreach (Control ctrl in parentForm.Controls)
                     {
-                        ((InventoryPage)ctrl).RefreshInventory();
-                        break;
+                        if (ctrl is InventoryPage)
+                        {
+                            InventoryPage invPage = (InventoryPage)ctrl;
+
+                            // ========== 수정 ==========
+                            // 직접 ShowList를 호출하는 방법 추가
+                            invPage.RefreshInventory();
+
+                            // 약간의 지연 후 다시 한 번 강제 새로고침
+                            Application.DoEvents();
+                            invPage.RefreshInventory();
+                            // ==========================
+
+                            break;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"재고 페이지 새로고침 중 UI 오류 발생: {ex.Message}");
             }
         }
 

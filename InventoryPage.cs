@@ -42,6 +42,8 @@ namespace _2025_CS_Project
                     ShowInventoryByWarehouse(warehouseID);
                 }
             }
+            WarehouseList.Invalidate();
+            WarehouseList.Update();
         }
         void ShowList()
         {
@@ -59,33 +61,42 @@ namespace _2025_CS_Project
                 // db2를 새로 초기화
                 db2.DB_Close();
 
-                // SQL: 재고(Inventory) 테이블에서 수량이 5 이하인 창고ID를 찾고, 
+                // SQL: 재고(Inventory) 테이블에서 수량이 최소재고 이하인 창고ID를 찾고, 
                 // Warehouse 테이블과 조인하여 창고 이름을 가져옴 (중복 제거 DISTINCT)
                 string checkSql =
-                     $"SELECT DISTINCT w.WarehouseName " +
-                     $"FROM Warehouse w " +
-                     $"JOIN Inventory i ON w.WarehouseID = i.WarehouseID " +
-                     $"JOIN Product p ON i.ProductID = p.ProductID " +  // Product 조인 추가
-                     $"WHERE i.Quantity <= p.MinStock";
+                     "SELECT DISTINCT w.WarehouseName " +
+                     "FROM WAREHOUSE w " +
+                     "JOIN INVENTORY i ON w.WarehouseID = i.WarehouseID " +
+                     "JOIN PRODUCT p ON i.ProductID = p.ProductID " +
+                     "WHERE i.Quantity <= p.MinStock";
 
-                // 잠깐 db2를 빌려 써서 조회 (어차피 아래에서 다시 씀)
                 db2.DB_ObjCreate();
                 db2.DB_Open(checkSql);
                 db2.DBAdapter.Fill(db2.DS, "DangerList");
+
+                System.Diagnostics.Debug.WriteLine($"위험 창고 조회 결과: {db2.DS.Tables["DangerList"].Rows.Count}개");
 
                 if (db2.DS.Tables.Contains("DangerList"))
                 {
                     foreach (DataRow row in db2.DS.Tables["DangerList"].Rows)
                     {
-                        dangerWarehouseNames.Add(row["WarehouseName"].ToString());
-                    }
-                    db2.DS.Tables["DangerList"].Clear(); // 다 썼으니 비움
-                }
+                        string warehouseName = row["WarehouseName"].ToString();
+                        dangerWarehouseNames.Add(warehouseName);
 
+                        // ========== 디버깅 추가 ==========
+                        System.Diagnostics.Debug.WriteLine($"위험 창고 추가: {warehouseName}");
+                        // ================================
+                    }
+                }
 
                 // 2. 원래 하던 창고 목록 조회 로직
                 db.DS.Clear();
                 db.DBAdapter.Fill(db.DS, "Warehouse");
+
+                // ========== 수정 부분 ==========
+                // 현재 선택된 항목 저장
+                int selectedIndex = WarehouseList.SelectedIndex;
+
                 WarehouseList.Items.Clear();
 
                 foreach (DataRow row in db.DS.Tables["Warehouse"].Rows)
@@ -94,9 +105,19 @@ namespace _2025_CS_Project
                     WarehouseList.Items.Add(name);
                 }
 
-                WarehouseList.Refresh();
+                // 이전 선택 복원
+                if (selectedIndex >= 0 && selectedIndex < WarehouseList.Items.Count)
+                {
+                    WarehouseList.SelectedIndex = selectedIndex;
+                }
+                System.Diagnostics.Debug.WriteLine($"위험 창고 목록: {string.Join(", ", dangerWarehouseNames)}");
+
+                // 강제로 다시 그리기
+                WarehouseList.Invalidate();
+                WarehouseList.Update();
+                // ================================
             }
-            catch (Exception ex) // DataException -> Exception으로 변경 (더 포괄적)
+            catch (Exception ex)
             {
                 MessageBox.Show("목록 로드 중 오류: " + ex.Message);
             }
