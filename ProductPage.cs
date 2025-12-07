@@ -15,6 +15,8 @@ namespace _2025_CS_Project
 {
     public partial class ProductPage : UserControl
     {
+        public static event EventHandler StaticProductListChanged;
+
         DBCLASS db = new DBCLASS();
         DataTable table;
         public ProductPage()
@@ -26,6 +28,12 @@ namespace _2025_CS_Project
 
             DBGrid.ContextMenuStrip = contextMenuStrip1;
             
+        }
+
+        protected virtual void OnProductListChanged(EventArgs e)
+        {
+            // 인스턴스가 아닌 정적 이벤트를 호출
+            StaticProductListChanged?.Invoke(null, e); // sender는 null로 설정
         }
         void ShowTable()
         {
@@ -136,6 +144,7 @@ namespace _2025_CS_Project
 
                 db.DS.Tables["Product"].Rows.Add(pRow);
                 db.DBAdapter.Update(db.DS, "Product");
+                OnProductListChanged(EventArgs.Empty);
             }
             catch (DataException DE)
             {
@@ -199,6 +208,7 @@ namespace _2025_CS_Project
                     pRow["category"] = "완제품";
 
                 db.DBAdapter.Update(db.DS, "Product");
+                OnProductListChanged(EventArgs.Empty);
             }
             catch (DataException DE)
             {
@@ -225,6 +235,7 @@ namespace _2025_CS_Project
                 DataRow pRow = db.DS.Tables["Product"].Rows[rowIndex];
                 pRow.Delete();
                 db.DBAdapter.Update(db.DS, "Product");
+                OnProductListChanged(EventArgs.Empty);
             }
             catch (DataException DE)
             {

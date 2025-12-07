@@ -187,6 +187,11 @@
             // numDefect
             // 
             this.numDefect.Location = new System.Drawing.Point(354, 193);
+            this.numDefect.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numDefect.Name = "numDefect";
             this.numDefect.Size = new System.Drawing.Size(120, 28);
             this.numDefect.TabIndex = 9;
@@ -204,6 +209,11 @@
             // numTotal
             // 
             this.numTotal.Location = new System.Drawing.Point(109, 193);
+            this.numTotal.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numTotal.Name = "numTotal";
             this.numTotal.Size = new System.Drawing.Size(120, 28);
             this.numTotal.TabIndex = 7;
@@ -380,7 +390,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Factory);
             this.Name = "factorycs";
-            this.Size = new System.Drawing.Size(1064, 654);
+            this.Size = new System.Drawing.Size(1043, 633);
             this.Load += new System.EventHandler(this.Production_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.groupBox3.ResumeLayout(false);
