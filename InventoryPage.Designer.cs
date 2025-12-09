@@ -56,10 +56,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(21, 78);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.Size = new System.Drawing.Size(76, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "창고명";
             // 
@@ -67,10 +67,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(21, 40);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(26, 48);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.Size = new System.Drawing.Size(97, 29);
             this.label2.TabIndex = 12;
             this.label2.Text = "창고번호";
             // 
@@ -85,11 +85,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("SimSun", 14.25F);
-            this.groupBox1.Location = new System.Drawing.Point(24, 28);
+            this.groupBox1.Location = new System.Drawing.Point(30, 34);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(438, 626);
+            this.groupBox1.Size = new System.Drawing.Size(548, 751);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "창고관리";
@@ -97,10 +97,10 @@
             // ShowBtn
             // 
             this.ShowBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ShowBtn.Location = new System.Drawing.Point(266, 124);
-            this.ShowBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ShowBtn.Location = new System.Drawing.Point(332, 149);
+            this.ShowBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ShowBtn.Name = "ShowBtn";
-            this.ShowBtn.Size = new System.Drawing.Size(150, 35);
+            this.ShowBtn.Size = new System.Drawing.Size(188, 42);
             this.ShowBtn.TabIndex = 17;
             this.ShowBtn.Text = "조회";
             this.ShowBtn.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DeleteBtn.Location = new System.Drawing.Point(317, 78);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.DeleteBtn.Location = new System.Drawing.Point(396, 94);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(100, 40);
+            this.DeleteBtn.Size = new System.Drawing.Size(125, 48);
             this.DeleteBtn.TabIndex = 16;
             this.DeleteBtn.Text = "삭제";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -121,10 +121,10 @@
             // AppendBtn
             // 
             this.AppendBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AppendBtn.Location = new System.Drawing.Point(317, 31);
-            this.AppendBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.AppendBtn.Location = new System.Drawing.Point(396, 37);
+            this.AppendBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.AppendBtn.Name = "AppendBtn";
-            this.AppendBtn.Size = new System.Drawing.Size(100, 40);
+            this.AppendBtn.Size = new System.Drawing.Size(125, 48);
             this.AppendBtn.TabIndex = 14;
             this.AppendBtn.Text = "확인";
             this.AppendBtn.UseVisualStyleBackColor = true;
@@ -132,28 +132,28 @@
             // 
             // txtWarehouseName
             // 
-            this.txtWarehouseName.Location = new System.Drawing.Point(106, 78);
-            this.txtWarehouseName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtWarehouseName.Location = new System.Drawing.Point(132, 94);
+            this.txtWarehouseName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtWarehouseName.Name = "txtWarehouseName";
-            this.txtWarehouseName.Size = new System.Drawing.Size(185, 35);
+            this.txtWarehouseName.Size = new System.Drawing.Size(230, 40);
             this.txtWarehouseName.TabIndex = 15;
             // 
             // txtWarehouseNum
             // 
-            this.txtWarehouseNum.Location = new System.Drawing.Point(106, 40);
-            this.txtWarehouseNum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtWarehouseNum.Location = new System.Drawing.Point(132, 48);
+            this.txtWarehouseNum.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtWarehouseNum.Name = "txtWarehouseNum";
-            this.txtWarehouseNum.Size = new System.Drawing.Size(185, 35);
+            this.txtWarehouseNum.Size = new System.Drawing.Size(230, 40);
             this.txtWarehouseNum.TabIndex = 14;
             // 
             // WarehouseList
             // 
             this.WarehouseList.FormattingEnabled = true;
-            this.WarehouseList.ItemHeight = 24;
-            this.WarehouseList.Location = new System.Drawing.Point(25, 174);
+            this.WarehouseList.ItemHeight = 29;
+            this.WarehouseList.Location = new System.Drawing.Point(31, 209);
             this.WarehouseList.Margin = new System.Windows.Forms.Padding(2);
             this.WarehouseList.Name = "WarehouseList";
-            this.WarehouseList.Size = new System.Drawing.Size(391, 436);
+            this.WarehouseList.Size = new System.Drawing.Size(488, 497);
             this.WarehouseList.TabIndex = 13;
             this.WarehouseList.SelectedIndexChanged += new System.EventHandler(this.WarehouseList_SelectedIndexChanged);
             // 
@@ -161,12 +161,12 @@
             // 
             this.dataGridViewInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInventory.Location = new System.Drawing.Point(21, 78);
+            this.dataGridViewInventory.Location = new System.Drawing.Point(26, 94);
             this.dataGridViewInventory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.RowHeadersWidth = 62;
             this.dataGridViewInventory.RowTemplate.Height = 30;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(513, 532);
+            this.dataGridViewInventory.Size = new System.Drawing.Size(641, 638);
             this.dataGridViewInventory.TabIndex = 14;
             // 
             // groupBox2
@@ -175,11 +175,11 @@
             this.groupBox2.Controls.Add(this.txtInvSearch);
             this.groupBox2.Controls.Add(this.dataGridViewInventory);
             this.groupBox2.Font = new System.Drawing.Font("SimSun", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(493, 28);
+            this.groupBox2.Location = new System.Drawing.Point(616, 34);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(547, 626);
+            this.groupBox2.Size = new System.Drawing.Size(684, 751);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "재고목록(우클릭으로 관리)";
@@ -187,10 +187,10 @@
             // invSearchBtn
             // 
             this.invSearchBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.invSearchBtn.Location = new System.Drawing.Point(451, 37);
-            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.invSearchBtn.Location = new System.Drawing.Point(564, 44);
+            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.invSearchBtn.Name = "invSearchBtn";
-            this.invSearchBtn.Size = new System.Drawing.Size(83, 37);
+            this.invSearchBtn.Size = new System.Drawing.Size(104, 44);
             this.invSearchBtn.TabIndex = 18;
             this.invSearchBtn.Text = "검색";
             this.invSearchBtn.UseVisualStyleBackColor = true;
@@ -198,10 +198,10 @@
             // 
             // txtInvSearch
             // 
-            this.txtInvSearch.Location = new System.Drawing.Point(21, 38);
-            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtInvSearch.Location = new System.Drawing.Point(26, 46);
+            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtInvSearch.Name = "txtInvSearch";
-            this.txtInvSearch.Size = new System.Drawing.Size(422, 35);
+            this.txtInvSearch.Size = new System.Drawing.Size(526, 40);
             this.txtInvSearch.TabIndex = 18;
             // 
             // contextMenuStrip1
@@ -212,40 +212,41 @@
             this.updateStockToolStripMenuItem,
             this.deleteStockToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 100);
             // 
             // addStockToolStripMenuItem
             // 
             this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
             this.addStockToolStripMenuItem.Text = "재고추가";
             this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
             // 
             // updateStockToolStripMenuItem
             // 
             this.updateStockToolStripMenuItem.Name = "updateStockToolStripMenuItem";
-            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
             this.updateStockToolStripMenuItem.Text = "재고수정";
             this.updateStockToolStripMenuItem.Click += new System.EventHandler(this.updateStockToolStripMenuItem_Click);
             // 
             // deleteStockToolStripMenuItem
             // 
             this.deleteStockToolStripMenuItem.Name = "deleteStockToolStripMenuItem";
-            this.deleteStockToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.deleteStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
             this.deleteStockToolStripMenuItem.Text = "재고삭제";
             this.deleteStockToolStripMenuItem.Click += new System.EventHandler(this.deleteStockToolStripMenuItem_Click);
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InventoryPage";
-            this.Size = new System.Drawing.Size(1085, 654);
+            this.Size = new System.Drawing.Size(1356, 785);
             this.Load += new System.EventHandler(this.InventoryPage_Load);
+            this.VisibleChanged += new System.EventHandler(this.InventoryPage_VisibleChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();

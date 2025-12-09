@@ -162,3 +162,14 @@ C:\Unity\2025_CS_Project\obj\Debug\2025_CS_Project.exe
 C:\Unity\2025_CS_Project\obj\Debug\2025_CS_Project.pdb
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.factorycs.resources
 C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.ProductionDetailForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.Customer.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.CustomerSelectForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.employee.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.EmployeeSearch.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.factorycs.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.ProductionDetailForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.ProductSelectForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.StaffSelectForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.TradeSearchForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.TradeStatisticsForm.resources
+C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.WarehouseSelectForm.resources

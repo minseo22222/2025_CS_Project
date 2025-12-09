@@ -261,9 +261,9 @@ namespace _2025_CS_Project
             ShowList();
         }
 
-        private void WarehouseList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (WarehouseList.SelectedItem == null) return;
+        private int GetWarehouseIndex() {
+
+            if (WarehouseList.SelectedItem == null) return -1;
 
             string selectedName = WarehouseList.SelectedItem.ToString();
             DataTable table = db.DS.Tables["Warehouse"];
@@ -276,8 +276,16 @@ namespace _2025_CS_Project
 
                 txtWarehouseNum.Text = warehouseID.ToString();
                 txtWarehouseName.Text = rows[0]["WarehouseName"].ToString();
-                ShowInventoryByWarehouse(warehouseID);
+                return warehouseID;
             }
+            return -1;
+        }
+
+        private void WarehouseList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                int warehouseID = GetWarehouseIndex();
+                if(warehouseID == -1) return;
+                ShowInventoryByWarehouse(warehouseID);
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -456,6 +464,20 @@ namespace _2025_CS_Project
                             row.DefaultCellStyle.ForeColor = Color.Black;
                         }
                     }
+                }
+            }
+        }
+
+        private void InventoryPage_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)   // 화면에 다시 나타날 때만 실행
+            {
+                ShowList();
+
+                if (!string.IsNullOrEmpty(txtWarehouseNum.Text))
+                {
+                    int warehouseID = Convert.ToInt32(txtWarehouseNum.Text);
+                    ShowInventoryByWarehouse(warehouseID);
                 }
             }
         }
