@@ -638,30 +638,19 @@ namespace _2025_CS_Project
         // ★ Del 버튼 클릭 : 선택된 거래 + 거래상세 모두 삭제
         private void btnDel_Click(object sender, EventArgs e)
         {
-            // 1) 삭제할 거래번호 확인
-            if (string.IsNullOrWhiteSpace(txtTradeNo.Text))
-            {
-                MessageBox.Show("삭제할 거래를 선택하세요.", "안내",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
             if (!int.TryParse(txtTradeNo.Text, out int tradeId))
             {
-                MessageBox.Show("거래번호 형식이 올바르지 않습니다.", "오류",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("삭제할 거래를 선택하세요.");
                 return;
             }
 
-            // 2) 사용자 확인
             var result = MessageBox.Show(
-                "선택한 거래와 해당 거래의 모든 거래상세를 삭제하시겠습니까?",
+                "선택한 거래와 재고를 모두 원상복구 하시겠습니까?",
                 "삭제 확인",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (result != DialogResult.Yes)
-                return;
+            if (result != DialogResult.Yes) return;
 
             string conStr = GetConnectionString();
 
@@ -670,65 +659,108 @@ namespace _2025_CS_Project
                 using (var conn = new OracleConnection(conStr))
                 {
                     conn.Open();
-
-                    // 트랜잭션 사용 : 둘 다 성공해야 커밋
                     using (var tran = conn.BeginTransaction())
                     {
                         try
                         {
-                            // 3-1) 거래상세 먼저 삭제 (FK 때문에 순서 중요)
-                            using (var cmdDetail = new OracleCommand(
-                                "DELETE FROM TradeDetail WHERE TradeID = :tradeId", conn))
-                            {
-                                cmdDetail.Transaction = tran;
-                                cmdDetail.Parameters.Add("tradeId", OracleDbType.Int32).Value = tradeId;
-                                cmdDetail.ExecuteNonQuery();
-                            }
+                            string tradeType = "";
+                            int whId = 0;
 
-                            // 3-2) 거래 헤더(Trade) 삭제
-                            using (var cmdHeader = new OracleCommand(
-                                "DELETE FROM Trade WHERE TradeID = :tradeId", conn))
+                            // ✅ 거래 헤더 읽기
+                            using (var cmd = new OracleCommand(
+                                "SELECT TradeType, DefaultWhID FROM Trade WHERE TradeID = :id", conn))
                             {
-                                cmdHeader.Transaction = tran;
-                                cmdHeader.Parameters.Add("tradeId", OracleDbType.Int32).Value = tradeId;
-                                int affected = cmdHeader.ExecuteNonQuery();
+                                cmd.Transaction = tran;
+                                cmd.Parameters.Add("id", OracleDbType.Int32).Value = tradeId;
 
-                                if (affected == 0)
+                                using (var rd = cmd.ExecuteReader())
                                 {
-                                    throw new Exception("해당 거래가 존재하지 않습니다.");
+                                    if (!rd.Read())
+                                        throw new Exception("거래가 존재하지 않습니다.");
+
+                                    tradeType = rd["TRADETYPE"].ToString();
+                                    whId = Convert.ToInt32(rd["DEFAULTWHID"]);
                                 }
                             }
 
-                            // 3-3) 문제 없으면 커밋
+                            // ✅ 거래 상세 조회 → 재고 복구
+                            using (var cmdDetail = new OracleCommand(
+                                "SELECT ProductID, Quantity FROM TradeDetail WHERE TradeID = :id", conn))
+                            {
+                                cmdDetail.Transaction = tran;
+                                cmdDetail.Parameters.Add("id", OracleDbType.Int32).Value = tradeId;
+
+                                using (var rd = cmdDetail.ExecuteReader())
+                                {
+                                    while (rd.Read())
+                                    {
+                                        int productId = Convert.ToInt32(rd["PRODUCTID"]);
+                                        int qty = Convert.ToInt32(rd["QUANTITY"]);
+
+                                        int restoreQty = 0;
+                                        if (tradeType == "매입") restoreQty = -qty;
+                                        else if (tradeType == "매출") restoreQty = qty;
+
+                                        using (var cmdInv = new OracleCommand(
+                                            @"UPDATE Inventory 
+                  SET Quantity = Quantity + :qty 
+                  WHERE WarehouseID = :wh AND ProductID = :pid", conn))
+                                        {
+                                            cmdInv.Transaction = tran;
+                                            cmdInv.Parameters.Add("qty", OracleDbType.Int32).Value = restoreQty;
+                                            cmdInv.Parameters.Add("wh", OracleDbType.Int32).Value = whId;
+                                            cmdInv.Parameters.Add("pid", OracleDbType.Int32).Value = productId;
+                                            cmdInv.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+
+                            // ✅ 3️⃣ 거래상세 삭제
+                            using (var cmd = new OracleCommand(
+                                "DELETE FROM TradeDetail WHERE TradeID = :id", conn))
+                            {
+                                cmd.Transaction = tran;
+                                cmd.Parameters.Add("id", OracleDbType.Int32).Value = tradeId;
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            // ✅ 4️⃣ 거래 삭제
+                            using (var cmd = new OracleCommand(
+                                "DELETE FROM Trade WHERE TradeID = :id", conn))
+                            {
+                                cmd.Transaction = tran;
+                                cmd.Parameters.Add("id", OracleDbType.Int32).Value = tradeId;
+
+                                int affected = cmd.ExecuteNonQuery();
+                                if (affected == 0)
+                                    throw new Exception("삭제할 거래가 없습니다.");
+                            }
+
+                            // ✅ 5️⃣ 커밋
                             tran.Commit();
                         }
                         catch (Exception exInner)
                         {
                             tran.Rollback();
-                            MessageBox.Show("삭제 중 오류가 발생했습니다.\n" + exInner.Message,
-                                "삭제 오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("삭제 실패\n" + exInner.Message);
                             return;
                         }
                     }
                 }
 
-                // 4) 화면 갱신
-                MessageBox.Show("거래가 삭제되었습니다.", "완료",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("거래 및 재고가 정상적으로 복구되었습니다.");
 
-                // 거래목록 다시 로드
                 LoadTradeList();
-
-                // 선택 해제 + 아래쪽 컨트롤 초기화
                 dgvTradeDetail.DataSource = null;
                 ClearTradeEditControls();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("DB 연결 또는 삭제 처리 중 오류가 발생했습니다.\n" + ex.Message,
-                    "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("삭제 처리 중 오류\n" + ex.Message);
             }
         }
+
 
         // ★ 상세 그리드의 순번(LINENO) 다시 매기기
         private void ReindexDetailLineNo()
