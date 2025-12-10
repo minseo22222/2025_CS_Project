@@ -75,7 +75,7 @@
             this.dgvTradeList.Name = "dgvTradeList";
             this.dgvTradeList.RowHeadersWidth = 62;
             this.dgvTradeList.RowTemplate.Height = 23;
-            this.dgvTradeList.Size = new System.Drawing.Size(1005, 338);
+            this.dgvTradeList.Size = new System.Drawing.Size(957, 338);
             this.dgvTradeList.TabIndex = 0;
             this.dgvTradeList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTradeList_CellClick);
             // 
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SimSun", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(1498, 34);
+            this.label2.Location = new System.Drawing.Point(413, 449);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 33);
@@ -105,12 +105,12 @@
             // 
             this.dgvTradeDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTradeDetail.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvTradeDetail.Location = new System.Drawing.Point(1105, 93);
+            this.dgvTradeDetail.Location = new System.Drawing.Point(20, 486);
             this.dgvTradeDetail.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dgvTradeDetail.Name = "dgvTradeDetail";
             this.dgvTradeDetail.RowHeadersWidth = 62;
             this.dgvTradeDetail.RowTemplate.Height = 23;
-            this.dgvTradeDetail.Size = new System.Drawing.Size(1005, 338);
+            this.dgvTradeDetail.Size = new System.Drawing.Size(957, 388);
             this.dgvTradeDetail.TabIndex = 4;
             this.dgvTradeDetail.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTradeDetail_CellEndEdit);
             // 
@@ -148,7 +148,7 @@
             // btnDel
             // 
             this.btnDel.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDel.Location = new System.Drawing.Point(962, 804);
+            this.btnDel.Location = new System.Drawing.Point(249, 637);
             this.btnDel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(155, 57);
@@ -160,7 +160,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnUpdate.Location = new System.Drawing.Point(1127, 804);
+            this.btnUpdate.Location = new System.Drawing.Point(65, 637);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(155, 57);
@@ -173,8 +173,11 @@
             // 
             this.groupBox1.Controls.Add(this.btnWarehouseSearch);
             this.groupBox1.Controls.Add(this.btnStaffSearch);
+            this.groupBox1.Controls.Add(this.btnTradeSearch);
             this.groupBox1.Controls.Add(this.btnCustomerSearch);
             this.groupBox1.Controls.Add(this.txtWarehouse);
+            this.groupBox1.Controls.Add(this.btnDel);
+            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtStaff);
             this.groupBox1.Controls.Add(this.txtCustomer);
@@ -191,18 +194,18 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 465);
+            this.groupBox1.Location = new System.Drawing.Point(1033, 93);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1262, 330);
+            this.groupBox1.Size = new System.Drawing.Size(724, 755);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "매매관리";
             // 
             // btnWarehouseSearch
             // 
-            this.btnWarehouseSearch.Location = new System.Drawing.Point(990, 182);
+            this.btnWarehouseSearch.Location = new System.Drawing.Point(430, 420);
             this.btnWarehouseSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnWarehouseSearch.Name = "btnWarehouseSearch";
             this.btnWarehouseSearch.Size = new System.Drawing.Size(132, 46);
@@ -213,7 +216,7 @@
             // 
             // btnStaffSearch
             // 
-            this.btnStaffSearch.Location = new System.Drawing.Point(1012, 70);
+            this.btnStaffSearch.Location = new System.Drawing.Point(452, 308);
             this.btnStaffSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnStaffSearch.Name = "btnStaffSearch";
             this.btnStaffSearch.Size = new System.Drawing.Size(132, 46);
@@ -235,7 +238,7 @@
             // 
             // txtWarehouse
             // 
-            this.txtWarehouse.Location = new System.Drawing.Point(738, 186);
+            this.txtWarehouse.Location = new System.Drawing.Point(178, 424);
             this.txtWarehouse.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtWarehouse.Name = "txtWarehouse";
             this.txtWarehouse.Size = new System.Drawing.Size(239, 42);
@@ -245,7 +248,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(667, 186);
+            this.label10.Location = new System.Drawing.Point(107, 424);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 29);
@@ -254,7 +257,7 @@
             // 
             // txtStaff
             // 
-            this.txtStaff.Location = new System.Drawing.Point(738, 70);
+            this.txtStaff.Location = new System.Drawing.Point(178, 308);
             this.txtStaff.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtStaff.Name = "txtStaff";
             this.txtStaff.Size = new System.Drawing.Size(239, 42);
@@ -272,7 +275,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(622, 244);
+            this.label7.Location = new System.Drawing.Point(62, 482);
             this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 29);
@@ -281,7 +284,7 @@
             // 
             // txtTotalAmount
             // 
-            this.txtTotalAmount.Location = new System.Drawing.Point(740, 238);
+            this.txtTotalAmount.Location = new System.Drawing.Point(180, 476);
             this.txtTotalAmount.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
@@ -296,7 +299,7 @@
             "카드",
             "현금",
             ""});
-            this.cboPayment.Location = new System.Drawing.Point(740, 132);
+            this.cboPayment.Location = new System.Drawing.Point(180, 370);
             this.cboPayment.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cboPayment.Name = "cboPayment";
             this.cboPayment.Size = new System.Drawing.Size(199, 38);
@@ -306,7 +309,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(622, 138);
+            this.label9.Location = new System.Drawing.Point(62, 376);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 29);
@@ -359,7 +362,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(645, 82);
+            this.label4.Location = new System.Drawing.Point(85, 320);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 29);
@@ -402,7 +405,7 @@
             // btnTradeSearch
             // 
             this.btnTradeSearch.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTradeSearch.Location = new System.Drawing.Point(1292, 482);
+            this.btnTradeSearch.Location = new System.Drawing.Point(430, 631);
             this.btnTradeSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnTradeSearch.Name = "btnTradeSearch";
             this.btnTradeSearch.Size = new System.Drawing.Size(205, 63);
@@ -429,17 +432,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 944);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnTradeSearch);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.dgvTradeDetail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTradeList);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "TradeManageForm";
-            this.Text = "거래관리";
+            this.Text = "거래내역";
             this.Load += new System.EventHandler(this.TradeManageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTradeDetail)).EndInit();

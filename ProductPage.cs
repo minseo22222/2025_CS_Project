@@ -92,7 +92,7 @@ namespace _2025_CS_Project
             return true;
         }
 
-        void AddProduct()
+        void AddProduct() //상품추가
         {
             try
             {

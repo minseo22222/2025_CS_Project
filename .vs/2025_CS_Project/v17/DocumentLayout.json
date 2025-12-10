@@ -3,52 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:customerselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradestatisticsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,16 +47,72 @@
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:trademanageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\inventroyupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventroyupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\inventoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventoryinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:tradesearchform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:employeesearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:warehouseselectform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\users\\\uBC15\uC740\uC11C\\desktop\\git_cs\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productiondetailform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,43 +130,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\WarehouseSelectForm.cs",
-              "RelativeDocumentMoniker": "WarehouseSelectForm.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\WarehouseSelectForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "DocumentIndex": 5,
+              "Title": "TradeManageForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs",
+              "RelativeDocumentMoniker": "TradeManageForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradeManageForm.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T01:15:48.547Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs",
-              "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T01:15:47.064Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TradeSearchForm.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeSearchForm.cs",
-              "RelativeDocumentMoniker": "TradeSearchForm.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeSearchForm.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "TradeSearchForm.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T01:15:43.833Z",
+              "WhenOpened": "2025-12-10T01:49:40.956Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Customer.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "Customer.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:13:17.337Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CustomerSelectForm.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\CustomerSelectForm.cs",
               "RelativeDocumentMoniker": "CustomerSelectForm.cs",
@@ -134,42 +166,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmployeeSearch.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs",
-              "RelativeDocumentMoniker": "EmployeeSearch.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "EmployeeSearch.cs [\uB514\uC790\uC778]",
+              "DocumentIndex": 2,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs",
+              "RelativeDocumentMoniker": "Customer.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs",
+              "RelativeToolTip": "Customer.cs",
+              "ViewState": "AgIAABYBAAAAAAAAAAAkwDABAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T01:15:07.714Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-12-10T01:34:05.5Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "InventoryPage.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs",
-              "RelativeDocumentMoniker": "InventoryPage.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "InventoryPage.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T00:52:18.208Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductInfo.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductInfo.cs",
-              "RelativeDocumentMoniker": "ProductInfo.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductInfo.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "ProductInfo.cs [\uB514\uC790\uC778]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T12:31:05.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "factorycs.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs",
               "RelativeDocumentMoniker": "factorycs.cs",
@@ -181,87 +191,127 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductionDetailForm.cs",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs",
-              "RelativeDocumentMoniker": "ProductionDetailForm.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs",
-              "RelativeToolTip": "ProductionDetailForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T12:31:17.023Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "factorycs.cs",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs",
               "RelativeDocumentMoniker": "factorycs.cs",
               "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\factorycs.cs",
               "RelativeToolTip": "factorycs.cs",
-              "ViewState": "AgIAAFsCAAAAAAAAAAAAAOMAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAL0BAAAAAAAAAAAQwOMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T09:13:34.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Customer.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs",
-              "RelativeDocumentMoniker": "Customer.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Customer.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "Customer.cs [\uB514\uC790\uC778]",
+              "DocumentIndex": 6,
+              "Title": "TradeStatisticsForm.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs",
+              "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs",
+              "RelativeToolTip": "TradeStatisticsForm.cs",
+              "ViewState": "AgIAABUBAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T09:13:17.337Z"
+              "WhenOpened": "2025-12-10T02:06:03.441Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DBCLASS.cs",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\DBCLASS.cs",
-              "RelativeDocumentMoniker": "DBCLASS.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\DBCLASS.cs",
-              "RelativeToolTip": "DBCLASS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T09:12:22.504Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "TradePage.cs",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs",
-              "RelativeDocumentMoniker": "TradePage.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs",
-              "RelativeToolTip": "TradePage.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAADwvywAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T01:44:04.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 8,
               "Title": "TradeManageForm.cs",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs",
               "RelativeDocumentMoniker": "TradeManageForm.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs*",
-              "RelativeToolTip": "TradeManageForm.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAfAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs",
+              "RelativeToolTip": "TradeManageForm.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAgwBYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T01:44:14.605Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
+              "Title": "TradePage.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs",
+              "RelativeDocumentMoniker": "TradePage.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs",
+              "RelativeToolTip": "TradePage.cs",
+              "ViewState": "AgIAAHwDAAAAAAAAAAAswCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:44:04.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TradePage.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs",
               "RelativeDocumentMoniker": "TradePage.cs",
               "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradePage.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "TradePage.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T01:44:01.807Z"
+              "WhenOpened": "2025-12-03T01:44:01.807Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs",
+              "RelativeDocumentMoniker": "TradeStatisticsForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeStatisticsForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradeStatisticsForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T01:15:47.064Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductionDetailForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs",
+              "RelativeDocumentMoniker": "ProductionDetailForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "ProductionDetailForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:41:31.377Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProductPage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductPage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "ProductPage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:25:41.258Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "main.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs",
+              "RelativeDocumentMoniker": "main.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "main.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T01:15:34.6Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventoryPage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs",
+              "RelativeDocumentMoniker": "InventoryPage.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "InventoryPage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T00:52:18.208Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
@@ -272,18 +322,157 @@
               "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventroyUpdate.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "InventroyUpdate.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T01:43:57.138Z"
+              "WhenOpened": "2025-12-03T01:43:57.138Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "main.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs",
-              "RelativeDocumentMoniker": "main.cs",
-              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\main.cs [\uB514\uC790\uC778]",
-              "RelativeToolTip": "main.cs [\uB514\uC790\uC778]",
+              "Title": "ProductInfo.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductInfo.cs",
+              "RelativeDocumentMoniker": "ProductInfo.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductInfo.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "ProductInfo.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T01:15:34.6Z"
+              "WhenOpened": "2025-12-07T12:31:05.528Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "InventoryInfo.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryInfo.cs",
+              "RelativeDocumentMoniker": "InventoryInfo.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryInfo.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "InventoryInfo.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:41:24.695Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "TradeSearchForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeSearchForm.cs",
+              "RelativeDocumentMoniker": "TradeSearchForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeSearchForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "TradeSearchForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T01:15:43.833Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "InventoryPage.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs",
+              "RelativeDocumentMoniker": "InventoryPage.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs",
+              "RelativeToolTip": "InventoryPage.cs",
+              "ViewState": "AgIAACQBAAAAAAAAAAAswBcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:43:20.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:41:35.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EmployeeSearch.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs",
+              "RelativeDocumentMoniker": "EmployeeSearch.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs",
+              "RelativeToolTip": "EmployeeSearch.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAqwE4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:37:56.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "employee.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\employee.cs",
+              "RelativeDocumentMoniker": "employee.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\employee.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "employee.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:37:53.622Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\WarehouseSelectForm.cs",
+              "RelativeDocumentMoniker": "WarehouseSelectForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "WarehouseSelectForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T01:15:48.547Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EmployeeSearch.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs",
+              "RelativeDocumentMoniker": "EmployeeSearch.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\EmployeeSearch.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "EmployeeSearch.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T01:15:07.714Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ProductPage.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductPage.cs",
+              "RelativeToolTip": "ProductPage.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAYwF4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T01:25:44.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProductionDetailForm.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs",
+              "RelativeDocumentMoniker": "ProductionDetailForm.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\ProductionDetailForm.cs",
+              "RelativeToolTip": "ProductionDetailForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T12:31:17.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DBCLASS.cs",
+              "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\DBCLASS.cs",
+              "RelativeDocumentMoniker": "DBCLASS.cs",
+              "ToolTip": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\DBCLASS.cs",
+              "RelativeToolTip": "DBCLASS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T09:12:22.504Z"
             }
           ]
         }

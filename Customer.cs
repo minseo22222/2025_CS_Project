@@ -20,6 +20,19 @@ namespace _2025_CS_Project
         /// <summary>
         /// customer 테이블을 가져오고 PrimaryKey(CUSTOMERID)를 설정해 주는 공통 함수
         /// </summary>
+        /// 
+        private void SetGridHeaderKorean()
+        {
+            if (DBGrid.Columns.Count == 0) return;
+
+            DBGrid.Columns["CUSTOMERID"].HeaderText = "거래처번호";
+            DBGrid.Columns["BUSINESSNO"].HeaderText = "사업자번호";
+            DBGrid.Columns["CUSTOMERNAME"].HeaderText = "거래처명";
+            DBGrid.Columns["ADDRESS"].HeaderText = "주소";
+            DBGrid.Columns["REPRESENTATIVE"].HeaderText = "대표자이름";
+            DBGrid.Columns["PHONE"].HeaderText = "전화번호";
+            DBGrid.Columns["FAX"].HeaderText = "FAX번호";
+        }
         private DataTable GetCustomerTable()
         {
             // DataSet 안에 아직 customer 테이블이 없으면 채움
@@ -57,6 +70,7 @@ namespace _2025_CS_Project
                 DBGrid.Columns["REPRESENTATIVE"].HeaderText = "대표자이름";
                 DBGrid.Columns["PHONE"].HeaderText = "전화번호";
                 DBGrid.Columns["FAX"].HeaderText = "FAX번호";
+                SetGridHeaderKorean();
             }
             catch (DataException de) { MessageBox.Show(de.Message); }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
@@ -109,6 +123,7 @@ namespace _2025_CS_Project
                 dbc.DBAdapter.Update(dbc.DS, "customer");
 
                 DBGrid.DataSource = table.DefaultView;
+                SetGridHeaderKorean();
             }
             catch (DataException de)
             {
@@ -159,6 +174,7 @@ namespace _2025_CS_Project
                 dbc.DBAdapter.Update(dbc.DS, "customer");
 
                 DBGrid.DataSource = table.DefaultView;
+                SetGridHeaderKorean();
             }
             catch (DataException de)
             {
@@ -204,6 +220,7 @@ namespace _2025_CS_Project
                 dbc.DBAdapter.Update(dbc.DS, "customer");
 
                 DBGrid.DataSource = table.DefaultView;
+                SetGridHeaderKorean();
             }
             catch (DataException de)
             {
@@ -285,6 +302,7 @@ namespace _2025_CS_Project
                 }
 
                 DBGrid.DataSource = view;
+                SetGridHeaderKorean();
             }
             catch (DataException de)
             {
