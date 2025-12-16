@@ -38,12 +38,13 @@
             this.MenuTrader = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelMain = new System.Windows.Forms.Panel();
+            this.거래내역ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.거래통계ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuTrade,
@@ -54,16 +55,24 @@
             this.MenuTrader});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< Updated upstream
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1406, 39);
+=======
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1125, 35);
+>>>>>>> Stashed changes
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // MenuTrade
             // 
+            this.MenuTrade.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.거래내역ToolStripMenuItem,
+            this.거래통계ToolStripMenuItem});
             this.MenuTrade.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTrade.Name = "MenuTrade";
-            this.MenuTrade.Size = new System.Drawing.Size(106, 35);
+            this.MenuTrade.Size = new System.Drawing.Size(102, 31);
             this.MenuTrade.Text = "거래관리";
             this.MenuTrade.Click += new System.EventHandler(this.MenuTrade_Click);
             // 
@@ -71,7 +80,7 @@
             // 
             this.MenuProduct.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuProduct.Name = "MenuProduct";
-            this.MenuProduct.Size = new System.Drawing.Size(106, 35);
+            this.MenuProduct.Size = new System.Drawing.Size(102, 31);
             this.MenuProduct.Text = "상품관리";
             this.MenuProduct.Click += new System.EventHandler(this.MenuProduct_Click);
             // 
@@ -79,7 +88,7 @@
             // 
             this.MenuProduce.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuProduce.Name = "MenuProduce";
-            this.MenuProduce.Size = new System.Drawing.Size(106, 35);
+            this.MenuProduce.Size = new System.Drawing.Size(102, 31);
             this.MenuProduce.Text = "생산관리";
             this.MenuProduce.Click += new System.EventHandler(this.MenuProduce_Click);
             // 
@@ -87,7 +96,7 @@
             // 
             this.MenuStock.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuStock.Name = "MenuStock";
-            this.MenuStock.Size = new System.Drawing.Size(106, 35);
+            this.MenuStock.Size = new System.Drawing.Size(102, 31);
             this.MenuStock.Text = "재고관리";
             this.MenuStock.Click += new System.EventHandler(this.MenuStock_Click);
             // 
@@ -95,7 +104,7 @@
             // 
             this.MenuEmployee.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuEmployee.Name = "MenuEmployee";
-            this.MenuEmployee.Size = new System.Drawing.Size(106, 35);
+            this.MenuEmployee.Size = new System.Drawing.Size(102, 31);
             this.MenuEmployee.Text = "직원관리";
             this.MenuEmployee.Click += new System.EventHandler(this.MenuEmployee_Click);
             // 
@@ -103,7 +112,7 @@
             // 
             this.MenuTrader.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MenuTrader.Name = "MenuTrader";
-            this.MenuTrader.Size = new System.Drawing.Size(125, 35);
+            this.MenuTrader.Size = new System.Drawing.Size(121, 31);
             this.MenuTrader.Text = "거래처관리";
             this.MenuTrader.Click += new System.EventHandler(this.MenuTrader_Click);
             // 
@@ -116,22 +125,51 @@
             // panelMain
             // 
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+<<<<<<< Updated upstream
             this.panelMain.Location = new System.Drawing.Point(0, 39);
             this.panelMain.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1406, 740);
+=======
+            this.panelMain.Location = new System.Drawing.Point(0, 35);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1125, 614);
+>>>>>>> Stashed changes
             this.panelMain.TabIndex = 2;
+            // 
+            // 거래내역ToolStripMenuItem
+            // 
+            this.거래내역ToolStripMenuItem.Name = "거래내역ToolStripMenuItem";
+            this.거래내역ToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.거래내역ToolStripMenuItem.Text = "거래 내역";
+            this.거래내역ToolStripMenuItem.Click += new System.EventHandler(this.거래내역ToolStripMenuItem_Click);
+            // 
+            // 거래통계ToolStripMenuItem
+            // 
+            this.거래통계ToolStripMenuItem.Name = "거래통계ToolStripMenuItem";
+            this.거래통계ToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.거래통계ToolStripMenuItem.Text = "거래 통계";
+            this.거래통계ToolStripMenuItem.Click += new System.EventHandler(this.거래통계ToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1406, 779);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+=======
+            this.ClientSize = new System.Drawing.Size(1125, 649);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+>>>>>>> Stashed changes
             this.Name = "Form1";
             this.Text = "공공장장";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -153,6 +191,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuTrader;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.ToolStripMenuItem 거래내역ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 거래통계ToolStripMenuItem;
     }
 }
 

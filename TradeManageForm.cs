@@ -977,5 +977,83 @@ namespace _2025_CS_Project
         {
             this.Close();
         }
+<<<<<<< Updated upstream
+=======
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTradeNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpTradeDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboTradeType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStaff_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboPayment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtWarehouse_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

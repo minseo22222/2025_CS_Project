@@ -173,3 +173,7 @@ C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.StaffSelectForm.res
 C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.TradeSearchForm.resources
 C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.TradeStatisticsForm.resources
 C:\Users\박은서\Desktop\git_cs\obj\Debug\_2025_CS_Project.WarehouseSelectForm.resources
+<<<<<<< Updated upstream
+=======
+C:\Unity\2025_CS_Project\obj\Debug\_2025_CS_Project.InventoryProduct.resources
+>>>>>>> Stashed changes

@@ -19,12 +19,19 @@ namespace _2025_CS_Project
 
             try
             {
+<<<<<<< Updated upstream
                 // Employee 테이블(직원)에서 목록 조회
                 //  ※ 컬럼명은 EMPLOYEEID / NAME / DEPARTMENT / PHONENUMBER
+=======
+>>>>>>> Stashed changes
                 dbc.DB_ObjCreate();
                 dbc.DB_Open(
                     "SELECT EmployeeID, Name, Department, PhoneNumber " +
                     "FROM Employee " +
+<<<<<<< Updated upstream
+=======
+                    "WHERE ResignationDate IS NULL " + 
+>>>>>>> Stashed changes
                     "ORDER BY EmployeeID");
 
                 // DataSet 에 "Employee" 라는 이름으로 채움

@@ -300,15 +300,28 @@ namespace _2025_CS_Project
             try
             {
                 db2.DB_Close();
+<<<<<<< Updated upstream
+=======
+
+                // [수정] "단가" 관련 코드는 여기서 뺍니다. (오류 방지)
+>>>>>>> Stashed changes
                 string sql =
                     "SELECT p.ProductID AS \"상품번호\", " +
                     "p.ProductName AS \"상품명\", " +
                     "i.Quantity AS \"재고수\", " +
+<<<<<<< Updated upstream
                     "p.MinStock AS \"최소재고\" " + // ★ 여기 추가됨
+=======
+                    "p.MinStock AS \"최소재고\" " + // 콤마 제거, 여기서 끝냄
+>>>>>>> Stashed changes
                     "FROM Inventory i " +
                     "JOIN Product p ON i.ProductID = p.ProductID " +
                     "WHERE i.WarehouseID = :WarehouseID";
 
+<<<<<<< Updated upstream
+=======
+                db2.DB_ObjCreate();
+>>>>>>> Stashed changes
                 db2.DB_Open(sql);
 
                 db2.DBAdapter.SelectCommand.Parameters.Clear();
@@ -481,5 +494,85 @@ namespace _2025_CS_Project
                 }
             }
         }
+<<<<<<< Updated upstream
+=======
+
+        private void 생산내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInventory.SelectedRows.Count == 0) return;
+
+            string selectedID = dataGridViewInventory.SelectedRows[0].Cells["상품번호"].Value.ToString();
+            string selectedName = dataGridViewInventory.SelectedRows[0].Cells["상품명"].Value.ToString();
+
+            ProductionDetailForm form = new ProductionDetailForm(selectedID, selectedName);
+
+            form.Show();
+        }
+
+        private void 제품내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInventory.CurrentRow == null)
+            {
+                MessageBox.Show("제품을 선택해주세요.");
+                return;
+            }
+
+            string prodID = dataGridViewInventory.CurrentRow.Cells["상품번호"].Value.ToString();
+            string qty = dataGridViewInventory.CurrentRow.Cells["재고수"].Value.ToString();
+            string warehouseName = txtWarehouseName.Text;
+
+            string price = "0";
+            string prodDate = DateTime.Now.ToString(); // 기본값: 오늘
+
+            try
+            {
+                using (Oracle.DataAccess.Client.OracleConnection conn = new Oracle.DataAccess.Client.OracleConnection("User Id=hong1; Password=1111; Data Source=localhost:1521/xe"))
+                {
+                    conn.Open();
+
+                    string sqlPrice = "SELECT UnitPrice FROM Product WHERE ProductID = :id";
+                    using (Oracle.DataAccess.Client.OracleCommand cmd = new Oracle.DataAccess.Client.OracleCommand(sqlPrice, conn))
+                    {
+                        cmd.Parameters.Add("id", prodID);
+                        object result = cmd.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                            price = result.ToString();
+                    }
+
+                    string sqlDate = "SELECT MAX(ProdDate) FROM ProductionHistory WHERE ProductID = :id";
+                    using (Oracle.DataAccess.Client.OracleCommand cmd = new Oracle.DataAccess.Client.OracleCommand(sqlDate, conn))
+                    {
+                        cmd.Parameters.Add("id", prodID);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            prodDate = result.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("상세 정보 조회 실패: " + ex.Message);
+            }
+
+            InventoryProduct form2 = new InventoryProduct(prodID, warehouseName, qty, price, prodDate);
+
+            form2.ShowDialog();
+
+        }
+
+        private void dataGridViewInventory_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right && e.RowIndex >= 0)
+            {
+                dataGridViewInventory.ClearSelection();
+                dataGridViewInventory.Rows[e.RowIndex].Selected = true;
+
+                dataGridViewInventory.CurrentCell = dataGridViewInventory.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
+        }
+>>>>>>> Stashed changes
     }
 }

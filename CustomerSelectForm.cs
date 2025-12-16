@@ -193,5 +193,12 @@ namespace _2025_CS_Project
             UpdateSelectedCustomerTextFromGrid();   // 之前我们写过的函数
         }
 
+<<<<<<< Updated upstream
+=======
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }

@@ -10,6 +10,7 @@ namespace _2025_CS_Project
         string connectionString = "User Id=hong1; Password=1111; Data Source=localhost:1521/xe";
         private string _prodID;
         private DataTable dtAllProductions; // 전체 생산 기록 저장용
+<<<<<<< Updated upstream
 
         // UI 컨트롤 이름 추정:
         // 검색 콤보박스: cboSearchField
@@ -25,6 +26,16 @@ namespace _2025_CS_Project
             _prodID = prodID;
             this.Text = "생산 기록 상세";
             this.Load += ProdDetailForm_Load;
+=======
+        private string _initialProductName;
+
+        public ProductionDetailForm(string prodID, string productName)
+        {
+            InitializeComponent();
+            _prodID = prodID;
+            _initialProductName = productName;
+            this.Text = "생산 기록 상세";
+>>>>>>> Stashed changes
 
             // 이벤트 핸들러 연결 (기존 코드에 없었다면 추가 필요)
             btnSearch.Click += btnSearch_Click;
@@ -33,21 +44,50 @@ namespace _2025_CS_Project
 
         private void ProdDetailForm_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             LoadAllProductions(); // 전체 생산 기록 로드
 
             // *** 콤보박스를 검색 필드 선택용으로 변경 (LoadProductCombo() 대체) ***
             SetupSearchCombo();
 
             // 전달받은 생산번호가 있으면 해당 기록 표시
+=======
+            LoadAllProductions(); 
+            SetupSearchCombo();
+
+            if (!string.IsNullOrEmpty(_initialProductName))
+            {
+
+                DataView dv = new DataView(dtAllProductions);
+
+                dv.RowFilter = $"제품명 = '{_initialProductName.Replace("'", "''")}'";
+
+                if (dv.Count == 0)
+                {
+                    MessageBox.Show($"'{_initialProductName}' 제품의 생산 내역이 없습니다.",
+                                    "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close(); // 창 닫기
+                    return;
+                }
+
+                cboSearchField.SelectedItem = "제품명";
+                txtSearch.Text = _initialProductName;
+                btnSearch.PerformClick(); // 검색 실행
+            }
+
+>>>>>>> Stashed changes
             if (!string.IsNullOrEmpty(_prodID))
             {
                 LoadDetailByProdID(_prodID);
             }
         }
 
+<<<<<<< Updated upstream
         // ===================================
         // 전체 생산 기록 조회
         // ===================================
+=======
+>>>>>>> Stashed changes
         private void LoadAllProductions()
         {
             using (OracleConnection conn = new OracleConnection(connectionString))

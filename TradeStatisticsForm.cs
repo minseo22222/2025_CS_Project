@@ -10,15 +10,26 @@ namespace _2025_CS_Project
         // DB 접속 문자열
         private readonly string _connectionString;
 
+<<<<<<< Updated upstream
+=======
+        public TradeStatisticsForm()
+        {
+            InitializeComponent();
+            _connectionString = "User Id=hong1; Password=1111; Data Source=localhost:1521/xe";
+        }
+>>>>>>> Stashed changes
         public TradeStatisticsForm(string connectionString)
         {
             InitializeComponent();
             _connectionString = connectionString;
         }
 
+<<<<<<< Updated upstream
         // ─────────────────────────────────────
         // Form Load : 요약 통계 + 콤보박스 로드 + 필터 초기화
         // ─────────────────────────────────────
+=======
+>>>>>>> Stashed changes
         private void TradeStatisticsForm_Load(object sender, EventArgs e)
         {
             // 날짜 필터 기본값 : 올해 1월 1일 ~ 오늘

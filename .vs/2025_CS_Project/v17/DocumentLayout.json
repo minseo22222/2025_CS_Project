@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\",
   "Documents": [
     {
@@ -113,6 +114,41 @@
     {
       "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:dbclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Unity\\2025_CS_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|c:\\unity\\2025_cs_project\\inventoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventorypage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:factorycs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\inventoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:inventoryproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|C:\\Unity\\2025_CS_Project\\productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0614CB2-7ED0-4D2D-9F0C-E2EF244BF465}|2025_CS_Project.csproj|solutionrelative:productpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -122,6 +158,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 3,
           "Children": [
             {
@@ -151,10 +188,61 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-10T01:49:40.956Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
+=======
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "factorycs.cs",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\factorycs.cs",
+              "RelativeDocumentMoniker": "factorycs.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\factorycs.cs",
+              "RelativeToolTip": "factorycs.cs",
+              "ViewState": "AgIAAHkCAAAAAAAAAAAswI4CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T02:19:15.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "factorycs.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\factorycs.cs",
+              "RelativeDocumentMoniker": "factorycs.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\factorycs.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "factorycs.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T02:19:12.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductPage.cs",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\ProductPage.cs",
+              "RelativeToolTip": "ProductPage.cs",
+              "ViewState": "AgIAAIYBAAAAAAAAAAAAAJwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T02:10:36.102Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "TradeManageForm.cs",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeManageForm.cs",
               "RelativeDocumentMoniker": "TradeManageForm.cs",
@@ -188,11 +276,22 @@
               "ViewState": "AgIAAFIDAAAAAAAAAAAswFADAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-03T01:44:04.083Z",
+=======
+              "Title": "InventoryProduct.cs",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\InventoryProduct.cs",
+              "RelativeDocumentMoniker": "InventoryProduct.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\InventoryProduct.cs",
+              "RelativeToolTip": "InventoryProduct.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T02:03:14.285Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+<<<<<<< Updated upstream
               "Title": "TradeSearchForm.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\TradeSearchForm.cs",
               "RelativeDocumentMoniker": "TradeSearchForm.cs",
@@ -201,10 +300,32 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T01:15:43.833Z",
               "EditorCaption": " [\uB514\uC790\uC778]"
+=======
+              "Title": "InventoryProduct.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\InventoryProduct.cs",
+              "RelativeDocumentMoniker": "InventoryProduct.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\InventoryProduct.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "InventoryProduct.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T01:46:21.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InventoryPage.cs",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\InventoryPage.cs",
+              "RelativeDocumentMoniker": "InventoryPage.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\InventoryPage.cs",
+              "RelativeToolTip": "InventoryPage.cs",
+              "ViewState": "AgIAAOYBAAAAAAAAAAAswPQBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T01:55:53.133Z"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+<<<<<<< Updated upstream
               "Title": "InventoryPage.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\\uBC15\uC740\uC11C\\Desktop\\git_cs\\InventoryPage.cs",
               "RelativeDocumentMoniker": "InventoryPage.cs",
@@ -473,6 +594,26 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T09:12:22.504Z"
+=======
+              "Title": "ProductPage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\ProductPage.cs",
+              "RelativeDocumentMoniker": "ProductPage.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\ProductPage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "ProductPage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T01:30:23.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InventoryPage.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Unity\\2025_CS_Project\\InventoryPage.cs",
+              "RelativeDocumentMoniker": "InventoryPage.cs",
+              "ToolTip": "C:\\Unity\\2025_CS_Project\\InventoryPage.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "InventoryPage.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T01:30:10.08Z"
+>>>>>>> Stashed changes
             }
           ]
         }

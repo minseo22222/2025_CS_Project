@@ -639,6 +639,7 @@ namespace _2025_CS_Project
         }
         private void ShowSelectedRecordDetail()
         {
+<<<<<<< Updated upstream
             // 1. 선택된 행 확인
             if (dgvHistory.SelectedRows.Count == 0)
             {
@@ -652,6 +653,18 @@ namespace _2025_CS_Project
 
             // 3. 상세 폼 표시
             ProductionDetailForm detailForm = new ProductionDetailForm(selectedProdID);
+=======
+            if (dgvHistory.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("목록을 선택하세요.");
+                return;
+            }
+
+            string selectedProdID = dgvHistory.SelectedRows[0].Cells["ProdID"].Value.ToString();
+
+            ProductionDetailForm detailForm = new ProductionDetailForm(selectedProdID, "");
+
+>>>>>>> Stashed changes
             detailForm.ShowDialog();
         }
     }

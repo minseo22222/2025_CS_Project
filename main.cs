@@ -65,5 +65,20 @@ namespace _2025_CS_Project
         {
             ShowPage(Factorycs);
         }
+<<<<<<< Updated upstream
+=======
+
+        private void 거래내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TradeManageForm form = new TradeManageForm();
+            form.Show();
+        }
+
+        private void 거래통계ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TradeStatisticsForm form = new TradeStatisticsForm();
+            form.Show();
+        }
+>>>>>>> Stashed changes
     }
 }
