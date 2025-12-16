@@ -1,0 +1,180 @@
+﻿namespace _2025_CS_Project
+{
+    partial class WarehouseSelectForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.dgvWarehouse = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearchWarehouse = new System.Windows.Forms.Button();
+            this.txtSearchWarehouse = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSelectedWarehouse = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWarehouse)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvWarehouse
+            // 
+            this.dgvWarehouse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWarehouse.Location = new System.Drawing.Point(71, 128);
+            this.dgvWarehouse.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvWarehouse.Name = "dgvWarehouse";
+            this.dgvWarehouse.RowHeadersWidth = 51;
+            this.dgvWarehouse.RowTemplate.Height = 23;
+            this.dgvWarehouse.Size = new System.Drawing.Size(652, 404);
+            this.dgvWarehouse.TabIndex = 0;
+            this.dgvWarehouse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWarehouse_CellClick);
+            this.dgvWarehouse.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWarehouse_CellDoubleClick);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(66, 75);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 25);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "창고명";
+            // 
+            // btnSearchWarehouse
+            // 
+            this.btnSearchWarehouse.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSearchWarehouse.Location = new System.Drawing.Point(591, 66);
+            this.btnSearchWarehouse.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchWarehouse.Name = "btnSearchWarehouse";
+            this.btnSearchWarehouse.Size = new System.Drawing.Size(133, 42);
+            this.btnSearchWarehouse.TabIndex = 20;
+            this.btnSearchWarehouse.Text = "검색";
+            this.btnSearchWarehouse.UseVisualStyleBackColor = true;
+            this.btnSearchWarehouse.Click += new System.EventHandler(this.btnSearchWarehouse_Click);
+            // 
+            // txtSearchWarehouse
+            // 
+            this.txtSearchWarehouse.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSearchWarehouse.Location = new System.Drawing.Point(140, 72);
+            this.txtSearchWarehouse.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchWarehouse.Name = "txtSearchWarehouse";
+            this.txtSearchWarehouse.Size = new System.Drawing.Size(440, 35);
+            this.txtSearchWarehouse.TabIndex = 19;
+            this.txtSearchWarehouse.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchWarehouse_KeyDown);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("SimSun", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(16, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 28);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "창고 선택";
+            // 
+            // txtSelectedWarehouse
+            // 
+            this.txtSelectedWarehouse.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSelectedWarehouse.Location = new System.Drawing.Point(245, 562);
+            this.txtSelectedWarehouse.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSelectedWarehouse.Name = "txtSelectedWarehouse";
+            this.txtSelectedWarehouse.ReadOnly = true;
+            this.txtSelectedWarehouse.Size = new System.Drawing.Size(199, 30);
+            this.txtSelectedWarehouse.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("SimSun", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(63, 555);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 37);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "선택한 창고";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCancel.Location = new System.Drawing.Point(593, 555);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(133, 42);
+            this.btnCancel.TabIndex = 23;
+            this.btnCancel.Text = "취소";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOk.Location = new System.Drawing.Point(452, 555);
+            this.btnOk.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(133, 42);
+            this.btnOk.TabIndex = 22;
+            this.btnOk.Text = "확인";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // WarehouseSelectForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(803, 618);
+            this.Controls.Add(this.txtSelectedWarehouse);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnSearchWarehouse);
+            this.Controls.Add(this.txtSearchWarehouse);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dgvWarehouse);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "WarehouseSelectForm";
+            this.Text = "WarehouseSelectForm";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWarehouse)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dgvWarehouse;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSearchWarehouse;
+        private System.Windows.Forms.TextBox txtSearchWarehouse;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSelectedWarehouse;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOk;
+    }
+}
