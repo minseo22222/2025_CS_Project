@@ -16,6 +16,7 @@ namespace _2025_CS_Project
         DBCLASS db = new DBCLASS();   // Warehouse 전용
         DBCLASS db2 = new DBCLASS();  // Inventory 전용
 
+        List<string> dangerWarehouseNames = new List<string>();
         public InventoryPage()
         {
             InitializeComponent();
@@ -23,25 +24,137 @@ namespace _2025_CS_Project
             db.DB_Open("SELECT * FROM Warehouse");
             db2.DB_ObjCreate();
             dataGridViewInventory.ContextMenuStrip = contextMenuStrip1;
-        }
 
+            dataGridViewInventory.DataBindingComplete += DataGridViewInventory_DataBindingComplete;
+            WarehouseList.DrawMode = DrawMode.OwnerDrawFixed;
+            WarehouseList.DrawItem += WarehouseList_DrawItem;
+        }
+        public void RefreshInventory()
+        {
+            ShowList(); // 창고 목록 새로고침
+
+            // 현재 선택된 창고가 있으면 재고도 새로고침
+            if (!string.IsNullOrEmpty(txtWarehouseNum.Text))
+            {
+                int warehouseID;
+                if (int.TryParse(txtWarehouseNum.Text, out warehouseID))
+                {
+                    ShowInventoryByWarehouse(warehouseID);
+                }
+            }
+            WarehouseList.Invalidate();
+            WarehouseList.Update();
+        }
         void ShowList()
         {
             try
             {
+                // 1. 먼저 재고가 부족한 창고들의 이름을 파악합니다.
+                dangerWarehouseNames.Clear();
+
+                if (db2.DS.Tables.Contains("DangerList"))
+                {
+                    db2.DS.Tables["DangerList"].Dispose();
+                    db2.DS.Tables.Remove("DangerList");
+                }
+
+                // db2를 새로 초기화
+                db2.DB_Close();
+
+                // SQL: 재고(Inventory) 테이블에서 수량이 최소재고 이하인 창고ID를 찾고, 
+                // Warehouse 테이블과 조인하여 창고 이름을 가져옴 (중복 제거 DISTINCT)
+                string checkSql =
+                     "SELECT DISTINCT w.WarehouseName " +
+                     "FROM WAREHOUSE w " +
+                     "JOIN INVENTORY i ON w.WarehouseID = i.WarehouseID " +
+                     "JOIN PRODUCT p ON i.ProductID = p.ProductID " +
+                     "WHERE i.Quantity <= p.MinStock";
+
+                db2.DB_ObjCreate();
+                db2.DB_Open(checkSql);
+                db2.DBAdapter.Fill(db2.DS, "DangerList");
+
+                System.Diagnostics.Debug.WriteLine($"위험 창고 조회 결과: {db2.DS.Tables["DangerList"].Rows.Count}개");
+
+                if (db2.DS.Tables.Contains("DangerList"))
+                {
+                    foreach (DataRow row in db2.DS.Tables["DangerList"].Rows)
+                    {
+                        string warehouseName = row["WarehouseName"].ToString();
+                        dangerWarehouseNames.Add(warehouseName);
+
+                        // ========== 디버깅 추가 ==========
+                        System.Diagnostics.Debug.WriteLine($"위험 창고 추가: {warehouseName}");
+                        // ================================
+                    }
+                }
+
+                // 2. 원래 하던 창고 목록 조회 로직
                 db.DS.Clear();
                 db.DBAdapter.Fill(db.DS, "Warehouse");
+
+                // ========== 수정 부분 ==========
+                // 현재 선택된 항목 저장
+                int selectedIndex = WarehouseList.SelectedIndex;
+
                 WarehouseList.Items.Clear();
+
                 foreach (DataRow row in db.DS.Tables["Warehouse"].Rows)
                 {
                     string name = row["WarehouseName"].ToString();
                     WarehouseList.Items.Add(name);
                 }
+
+                // 이전 선택 복원
+                if (selectedIndex >= 0 && selectedIndex < WarehouseList.Items.Count)
+                {
+                    WarehouseList.SelectedIndex = selectedIndex;
+                }
+                System.Diagnostics.Debug.WriteLine($"위험 창고 목록: {string.Join(", ", dangerWarehouseNames)}");
+
+                // 강제로 다시 그리기
+                WarehouseList.Invalidate();
+                WarehouseList.Update();
+                // ================================
             }
-            catch (DataException DE)
+            catch (Exception ex)
             {
-                MessageBox.Show(DE.Message);
+                MessageBox.Show("목록 로드 중 오류: " + ex.Message);
             }
+        }
+
+        private void WarehouseList_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            // 현재 그릴 아이템의 텍스트(창고이름) 가져오기
+            string text = WarehouseList.Items[e.Index].ToString();
+
+            // 1. 배경 그리기
+            if (dangerWarehouseNames.Contains(text))
+            {
+                e.Graphics.FillRectangle(Brushes.Red, e.Bounds);
+            }
+            else
+            {
+                // ★ 안전한 창고: 기본 동작 (선택 시 파란색, 평소 흰색)
+                e.DrawBackground();
+            }
+
+            // 2. 글자 색상 결정
+            Brush textBrush = Brushes.Black; // 기본 검은색
+
+            // 위험하지 않은 창고가 '선택'되었을 때만 글자를 흰색으로 (배경이 파랗기 때문)
+            if (!dangerWarehouseNames.Contains(text))
+            {
+                if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+                {
+                    textBrush = Brushes.White;
+                }
+            }
+            e.Graphics.DrawString(text, e.Font, textBrush, e.Bounds.X + 1, e.Bounds.Y + 1);
+
+            e.DrawFocusRectangle();
         }
 
         void InventoryPage_Load(object sender, EventArgs e)
@@ -148,9 +261,9 @@ namespace _2025_CS_Project
             ShowList();
         }
 
-        private void WarehouseList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (WarehouseList.SelectedItem == null) return;
+        private int GetWarehouseIndex() {
+
+            if (WarehouseList.SelectedItem == null) return -1;
 
             string selectedName = WarehouseList.SelectedItem.ToString();
             DataTable table = db.DS.Tables["Warehouse"];
@@ -163,8 +276,16 @@ namespace _2025_CS_Project
 
                 txtWarehouseNum.Text = warehouseID.ToString();
                 txtWarehouseName.Text = rows[0]["WarehouseName"].ToString();
-                ShowInventoryByWarehouse(warehouseID);
+                return warehouseID;
             }
+            return -1;
+        }
+
+        private void WarehouseList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+                int warehouseID = GetWarehouseIndex();
+                if(warehouseID == -1) return;
+                ShowInventoryByWarehouse(warehouseID);
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -179,14 +300,19 @@ namespace _2025_CS_Project
             try
             {
                 db2.DB_Close();
-                db2.DB_Open(
-                     "SELECT p.ProductID AS \"상품번호\", " +
-            "p.ProductName AS \"상품명\", " +
-            "i.Quantity AS \"재고수\" " +
-            "FROM Inventory i " +
-            "JOIN Product p ON i.ProductID = p.ProductID " +
-            "WHERE i.WarehouseID = :WarehouseID"
-                );
+
+                // [수정] "단가" 관련 코드는 여기서 뺍니다. (오류 방지)
+                string sql =
+                    "SELECT p.ProductID AS \"상품번호\", " +
+                    "p.ProductName AS \"상품명\", " +
+                    "i.Quantity AS \"재고수\", " +
+                    "p.MinStock AS \"최소재고\" " + // 콤마 제거, 여기서 끝냄
+                    "FROM Inventory i " +
+                    "JOIN Product p ON i.ProductID = p.ProductID " +
+                    "WHERE i.WarehouseID = :WarehouseID";
+
+                db2.DB_ObjCreate();
+                db2.DB_Open(sql);
 
                 db2.DBAdapter.SelectCommand.Parameters.Clear();
                 db2.DBAdapter.SelectCommand.Parameters.Add("WarehouseID", warehouseID);
@@ -217,6 +343,7 @@ namespace _2025_CS_Project
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 ShowInventoryByWarehouse(warehouseID);
+                ShowList();
             }
         }
 
@@ -239,6 +366,7 @@ namespace _2025_CS_Project
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 ShowInventoryByWarehouse(warehouseID);
+                ShowList();
             }
         }
 
@@ -273,6 +401,7 @@ namespace _2025_CS_Project
                         db2.DBAdapter.Update(db2.DS, "Inventory");
                         MessageBox.Show("재고가 삭제되었습니다.");
                         ShowInventoryByWarehouse(warehouseID);
+                        ShowList();
                     }
                 }
                 else
@@ -308,6 +437,129 @@ namespace _2025_CS_Project
             }
 
             dataGridViewInventory.DataSource = dv;
+        }
+        private void DataGridViewInventory_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridViewInventory.Rows)
+            {
+                // ★ "재고수" 와 "최소재고" 값을 모두 가져와서 비교
+                if (row.Cells["재고수"].Value != null && row.Cells["최소재고"].Value != null)
+                {
+                    int qty = 0;
+                    int minStock = 0;
+
+                    // 둘 다 숫자로 변환 성공했을 때만 로직 수행
+                    bool isQtyOk = int.TryParse(row.Cells["재고수"].Value.ToString(), out qty);
+                    bool isMinOk = int.TryParse(row.Cells["최소재고"].Value.ToString(), out minStock);
+
+                    if (isQtyOk && isMinOk)
+                    {
+                        // ★ 내 재고가 내 최소수량 이하면 빨간색
+                        if (qty <= minStock)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Red;
+                            row.DefaultCellStyle.ForeColor = Color.White;
+                            row.DefaultCellStyle.SelectionBackColor = Color.DarkRed;
+                        }
+                        else
+                        {
+                            row.DefaultCellStyle.BackColor = Color.White;
+                            row.DefaultCellStyle.ForeColor = Color.Black;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void InventoryPage_VisibleChanged(object sender, EventArgs e)
+        {
+            if (this.Visible)   // 화면에 다시 나타날 때만 실행
+            {
+                ShowList();
+
+                if (!string.IsNullOrEmpty(txtWarehouseNum.Text))
+                {
+                    int warehouseID = Convert.ToInt32(txtWarehouseNum.Text);
+                    ShowInventoryByWarehouse(warehouseID);
+                }
+            }
+        }
+
+        private void 생산내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInventory.SelectedRows.Count == 0) return;
+
+            string selectedID = dataGridViewInventory.SelectedRows[0].Cells["상품번호"].Value.ToString();
+            string selectedName = dataGridViewInventory.SelectedRows[0].Cells["상품명"].Value.ToString();
+
+            ProductionDetailForm form = new ProductionDetailForm(selectedID, selectedName);
+
+            form.Show();
+        }
+
+        private void 제품내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewInventory.CurrentRow == null)
+            {
+                MessageBox.Show("제품을 선택해주세요.");
+                return;
+            }
+
+            string prodID = dataGridViewInventory.CurrentRow.Cells["상품번호"].Value.ToString();
+            string qty = dataGridViewInventory.CurrentRow.Cells["재고수"].Value.ToString();
+            string warehouseName = txtWarehouseName.Text;
+
+            string price = "0";
+            string prodDate = DateTime.Now.ToString(); // 기본값: 오늘
+
+            try
+            {
+                using (Oracle.DataAccess.Client.OracleConnection conn = new Oracle.DataAccess.Client.OracleConnection("User Id=hong1; Password=1111; Data Source=localhost:1521/xe"))
+                {
+                    conn.Open();
+
+                    string sqlPrice = "SELECT UnitPrice FROM Product WHERE ProductID = :id";
+                    using (Oracle.DataAccess.Client.OracleCommand cmd = new Oracle.DataAccess.Client.OracleCommand(sqlPrice, conn))
+                    {
+                        cmd.Parameters.Add("id", prodID);
+                        object result = cmd.ExecuteScalar();
+                        if (result != null && result != DBNull.Value)
+                            price = result.ToString();
+                    }
+
+                    string sqlDate = "SELECT MAX(ProdDate) FROM ProductionHistory WHERE ProductID = :id";
+                    using (Oracle.DataAccess.Client.OracleCommand cmd = new Oracle.DataAccess.Client.OracleCommand(sqlDate, conn))
+                    {
+                        cmd.Parameters.Add("id", prodID);
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            prodDate = result.ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine("상세 정보 조회 실패: " + ex.Message);
+            }
+
+            InventoryProduct form2 = new InventoryProduct(prodID, warehouseName, qty, price, prodDate);
+
+            form2.ShowDialog();
+
+        }
+
+        private void dataGridViewInventory_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right && e.RowIndex >= 0)
+            {
+                dataGridViewInventory.ClearSelection();
+                dataGridViewInventory.Rows[e.RowIndex].Selected = true;
+
+                dataGridViewInventory.CurrentCell = dataGridViewInventory.Rows[e.RowIndex].Cells[e.ColumnIndex];
+            }
         }
     }
 }
