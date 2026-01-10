@@ -40,12 +40,17 @@
             this.WarehouseList = new System.Windows.Forms.ListBox();
             this.dataGridViewInventory = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.invSearchBtn = new System.Windows.Forms.Button();
+            this.txtInvSearch = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtInvSearch = new System.Windows.Forms.TextBox();
-            this.invSearchBtn = new System.Windows.Forms.Button();
+<<<<<<< Updated upstream
+=======
+            this.생산내역ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.제품내역ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> Stashed changes
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -56,10 +61,15 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(26, 93);
+<<<<<<< Updated upstream
+            this.label1.Location = new System.Drawing.Point(26, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+=======
+            this.label1.Location = new System.Drawing.Point(21, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+>>>>>>> Stashed changes
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 29);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "창고명";
             // 
@@ -67,10 +77,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(26, 48);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(21, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 29);
+            this.label2.Size = new System.Drawing.Size(82, 24);
             this.label2.TabIndex = 12;
             this.label2.Text = "창고번호";
             // 
@@ -85,9 +95,19 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("SimSun", 14.25F);
-            this.groupBox1.Location = new System.Drawing.Point(54, 46);
+<<<<<<< Updated upstream
+            this.groupBox1.Location = new System.Drawing.Point(30, 34);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(548, 866);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(548, 751);
+=======
+            this.groupBox1.Location = new System.Drawing.Point(24, 28);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(438, 626);
+>>>>>>> Stashed changes
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "창고관리";
@@ -95,10 +115,15 @@
             // ShowBtn
             // 
             this.ShowBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ShowBtn.Location = new System.Drawing.Point(333, 149);
+<<<<<<< Updated upstream
+            this.ShowBtn.Location = new System.Drawing.Point(332, 149);
             this.ShowBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+=======
+            this.ShowBtn.Location = new System.Drawing.Point(266, 124);
+            this.ShowBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+>>>>>>> Stashed changes
             this.ShowBtn.Name = "ShowBtn";
-            this.ShowBtn.Size = new System.Drawing.Size(188, 42);
+            this.ShowBtn.Size = new System.Drawing.Size(150, 35);
             this.ShowBtn.TabIndex = 17;
             this.ShowBtn.Text = "조회";
             this.ShowBtn.UseVisualStyleBackColor = true;
@@ -107,10 +132,15 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DeleteBtn.Location = new System.Drawing.Point(396, 93);
+<<<<<<< Updated upstream
+            this.DeleteBtn.Location = new System.Drawing.Point(396, 94);
             this.DeleteBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+=======
+            this.DeleteBtn.Location = new System.Drawing.Point(317, 78);
+            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+>>>>>>> Stashed changes
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(125, 48);
+            this.DeleteBtn.Size = new System.Drawing.Size(100, 40);
             this.DeleteBtn.TabIndex = 16;
             this.DeleteBtn.Text = "삭제";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -119,10 +149,10 @@
             // AppendBtn
             // 
             this.AppendBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.AppendBtn.Location = new System.Drawing.Point(396, 37);
-            this.AppendBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.AppendBtn.Location = new System.Drawing.Point(317, 31);
+            this.AppendBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.AppendBtn.Name = "AppendBtn";
-            this.AppendBtn.Size = new System.Drawing.Size(125, 48);
+            this.AppendBtn.Size = new System.Drawing.Size(100, 40);
             this.AppendBtn.TabIndex = 14;
             this.AppendBtn.Text = "확인";
             this.AppendBtn.UseVisualStyleBackColor = true;
@@ -130,27 +160,46 @@
             // 
             // txtWarehouseName
             // 
-            this.txtWarehouseName.Location = new System.Drawing.Point(133, 93);
+<<<<<<< Updated upstream
+            this.txtWarehouseName.Location = new System.Drawing.Point(132, 94);
             this.txtWarehouseName.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+=======
+            this.txtWarehouseName.Location = new System.Drawing.Point(106, 78);
+            this.txtWarehouseName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+>>>>>>> Stashed changes
             this.txtWarehouseName.Name = "txtWarehouseName";
-            this.txtWarehouseName.Size = new System.Drawing.Size(230, 40);
+            this.txtWarehouseName.Size = new System.Drawing.Size(185, 35);
             this.txtWarehouseName.TabIndex = 15;
             // 
             // txtWarehouseNum
             // 
-            this.txtWarehouseNum.Location = new System.Drawing.Point(133, 48);
+<<<<<<< Updated upstream
+            this.txtWarehouseNum.Location = new System.Drawing.Point(132, 48);
             this.txtWarehouseNum.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+=======
+            this.txtWarehouseNum.Location = new System.Drawing.Point(106, 40);
+            this.txtWarehouseNum.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+>>>>>>> Stashed changes
             this.txtWarehouseNum.Name = "txtWarehouseNum";
-            this.txtWarehouseNum.Size = new System.Drawing.Size(230, 40);
+            this.txtWarehouseNum.Size = new System.Drawing.Size(185, 35);
             this.txtWarehouseNum.TabIndex = 14;
             // 
             // WarehouseList
             // 
             this.WarehouseList.FormattingEnabled = true;
+<<<<<<< Updated upstream
             this.WarehouseList.ItemHeight = 29;
-            this.WarehouseList.Location = new System.Drawing.Point(31, 198);
+            this.WarehouseList.Location = new System.Drawing.Point(31, 209);
+            this.WarehouseList.Margin = new System.Windows.Forms.Padding(2);
             this.WarehouseList.Name = "WarehouseList";
-            this.WarehouseList.Size = new System.Drawing.Size(431, 642);
+            this.WarehouseList.Size = new System.Drawing.Size(488, 497);
+=======
+            this.WarehouseList.ItemHeight = 24;
+            this.WarehouseList.Location = new System.Drawing.Point(25, 174);
+            this.WarehouseList.Margin = new System.Windows.Forms.Padding(2);
+            this.WarehouseList.Name = "WarehouseList";
+            this.WarehouseList.Size = new System.Drawing.Size(391, 412);
+>>>>>>> Stashed changes
             this.WarehouseList.TabIndex = 13;
             this.WarehouseList.SelectedIndexChanged += new System.EventHandler(this.WarehouseList_SelectedIndexChanged);
             // 
@@ -158,12 +207,22 @@
             // 
             this.dataGridViewInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInventory.Location = new System.Drawing.Point(26, 92);
+<<<<<<< Updated upstream
+            this.dataGridViewInventory.Location = new System.Drawing.Point(26, 94);
+=======
+            this.dataGridViewInventory.Location = new System.Drawing.Point(21, 78);
+>>>>>>> Stashed changes
+            this.dataGridViewInventory.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewInventory.Name = "dataGridViewInventory";
             this.dataGridViewInventory.RowHeadersWidth = 62;
             this.dataGridViewInventory.RowTemplate.Height = 30;
-            this.dataGridViewInventory.Size = new System.Drawing.Size(883, 696);
+<<<<<<< Updated upstream
+            this.dataGridViewInventory.Size = new System.Drawing.Size(641, 638);
+=======
+            this.dataGridViewInventory.Size = new System.Drawing.Size(513, 532);
+>>>>>>> Stashed changes
             this.dataGridViewInventory.TabIndex = 14;
+            this.dataGridViewInventory.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewInventory_CellMouseClick);
             // 
             // groupBox2
             // 
@@ -171,12 +230,56 @@
             this.groupBox2.Controls.Add(this.txtInvSearch);
             this.groupBox2.Controls.Add(this.dataGridViewInventory);
             this.groupBox2.Font = new System.Drawing.Font("SimSun", 14.25F);
-            this.groupBox2.Location = new System.Drawing.Point(629, 60);
+<<<<<<< Updated upstream
+            this.groupBox2.Location = new System.Drawing.Point(616, 34);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(927, 852);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(684, 751);
+=======
+            this.groupBox2.Location = new System.Drawing.Point(493, 28);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(547, 626);
+>>>>>>> Stashed changes
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "재고목록(우클릭으로 관리)";
+            // 
+            // invSearchBtn
+            // 
+            this.invSearchBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+<<<<<<< Updated upstream
+            this.invSearchBtn.Location = new System.Drawing.Point(564, 44);
+            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.invSearchBtn.Name = "invSearchBtn";
+            this.invSearchBtn.Size = new System.Drawing.Size(104, 44);
+=======
+            this.invSearchBtn.Location = new System.Drawing.Point(451, 37);
+            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.invSearchBtn.Name = "invSearchBtn";
+            this.invSearchBtn.Size = new System.Drawing.Size(83, 37);
+>>>>>>> Stashed changes
+            this.invSearchBtn.TabIndex = 18;
+            this.invSearchBtn.Text = "검색";
+            this.invSearchBtn.UseVisualStyleBackColor = true;
+            this.invSearchBtn.Click += new System.EventHandler(this.invSearchBtn_Click);
+            // 
+            // txtInvSearch
+            // 
+<<<<<<< Updated upstream
+            this.txtInvSearch.Location = new System.Drawing.Point(26, 46);
+            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtInvSearch.Name = "txtInvSearch";
+            this.txtInvSearch.Size = new System.Drawing.Size(526, 40);
+=======
+            this.txtInvSearch.Location = new System.Drawing.Point(21, 38);
+            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtInvSearch.Name = "txtInvSearch";
+            this.txtInvSearch.Size = new System.Drawing.Size(422, 35);
+>>>>>>> Stashed changes
+            this.txtInvSearch.TabIndex = 18;
             // 
             // contextMenuStrip1
             // 
@@ -184,60 +287,66 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addStockToolStripMenuItem,
             this.updateStockToolStripMenuItem,
-            this.deleteStockToolStripMenuItem});
+            this.deleteStockToolStripMenuItem,
+            this.생산내역ToolStripMenuItem,
+            this.제품내역ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 100);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 124);
             // 
             // addStockToolStripMenuItem
             // 
             this.addStockToolStripMenuItem.Name = "addStockToolStripMenuItem";
-            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.addStockToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.addStockToolStripMenuItem.Text = "재고추가";
             this.addStockToolStripMenuItem.Click += new System.EventHandler(this.addStockToolStripMenuItem_Click);
             // 
             // updateStockToolStripMenuItem
             // 
             this.updateStockToolStripMenuItem.Name = "updateStockToolStripMenuItem";
-            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.updateStockToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.updateStockToolStripMenuItem.Text = "재고수정";
             this.updateStockToolStripMenuItem.Click += new System.EventHandler(this.updateStockToolStripMenuItem_Click);
             // 
             // deleteStockToolStripMenuItem
             // 
             this.deleteStockToolStripMenuItem.Name = "deleteStockToolStripMenuItem";
-            this.deleteStockToolStripMenuItem.Size = new System.Drawing.Size(156, 32);
+            this.deleteStockToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteStockToolStripMenuItem.Text = "재고삭제";
             this.deleteStockToolStripMenuItem.Click += new System.EventHandler(this.deleteStockToolStripMenuItem_Click);
             // 
-            // txtInvSearch
+<<<<<<< Updated upstream
+=======
+            // 생산내역ToolStripMenuItem
             // 
-            this.txtInvSearch.Location = new System.Drawing.Point(26, 45);
-            this.txtInvSearch.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtInvSearch.Name = "txtInvSearch";
-            this.txtInvSearch.Size = new System.Drawing.Size(785, 40);
-            this.txtInvSearch.TabIndex = 18;
+            this.생산내역ToolStripMenuItem.Name = "생산내역ToolStripMenuItem";
+            this.생산내역ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.생산내역ToolStripMenuItem.Text = "생산내역";
+            this.생산내역ToolStripMenuItem.Click += new System.EventHandler(this.생산내역ToolStripMenuItem_Click);
             // 
-            // invSearchBtn
+            // 제품내역ToolStripMenuItem
             // 
-            this.invSearchBtn.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.invSearchBtn.Location = new System.Drawing.Point(830, 43);
-            this.invSearchBtn.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.invSearchBtn.Name = "invSearchBtn";
-            this.invSearchBtn.Size = new System.Drawing.Size(79, 42);
-            this.invSearchBtn.TabIndex = 18;
-            this.invSearchBtn.Text = "검색";
-            this.invSearchBtn.UseVisualStyleBackColor = true;
-            this.invSearchBtn.Click += new System.EventHandler(this.invSearchBtn_Click);
+            this.제품내역ToolStripMenuItem.Name = "제품내역ToolStripMenuItem";
+            this.제품내역ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.제품내역ToolStripMenuItem.Text = "제품내역";
+            this.제품내역ToolStripMenuItem.Click += new System.EventHandler(this.제품내역ToolStripMenuItem_Click);
             // 
+>>>>>>> Stashed changes
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InventoryPage";
-            this.Size = new System.Drawing.Size(1573, 984);
+<<<<<<< Updated upstream
+            this.Size = new System.Drawing.Size(1356, 785);
+=======
+            this.Size = new System.Drawing.Size(1085, 654);
+>>>>>>> Stashed changes
             this.Load += new System.EventHandler(this.InventoryPage_Load);
+            this.VisibleChanged += new System.EventHandler(this.InventoryPage_VisibleChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInventory)).EndInit();
@@ -267,5 +376,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteStockToolStripMenuItem;
         private System.Windows.Forms.Button invSearchBtn;
         private System.Windows.Forms.TextBox txtInvSearch;
+        private System.Windows.Forms.ToolStripMenuItem 생산내역ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 제품내역ToolStripMenuItem;
     }
 }
